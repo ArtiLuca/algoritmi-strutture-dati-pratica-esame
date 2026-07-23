@@ -46,7 +46,7 @@ $$
 q(n)\ \middle|\
 \exists c>0,\ \exists n_0\in\mathbb{N}
 \text{ tali che }
-\forall n\ge n_0,\
+\forall n\ge n_0,\ 
 0\le c\,h(n)\le q(n)
 \right\}.
 $$
@@ -74,7 +74,7 @@ f(n)=\Omega(n^2).
 $$
 
 Quindi esistono una costante $c_1>0$ e un valore $n_1\in\mathbb{N}$ tali
-che, per ogni $n\ge n_1$,
+che, per ogni $n\ge n_1$:
 
 $$
 f(n)\ge c_1n^2.
@@ -110,7 +110,7 @@ cn^2+cg(n)
 c\bigl(n^2+g(n)\bigr).
 $$
 
-Pertanto, per ogni $n\ge n_1$,
+Pertanto, per ogni $n\ge n_1$:
 
 $$
 f(n)+g(n)
@@ -143,39 +143,43 @@ Questa affermazione è falsa.
 Consideriamo, per $n\ge 3$, le due funzioni positive:
 
 $$
-f(n)=\frac12n^2
+f(n)=\frac{1}{2}n^2
 $$
 
 e:
 
 $$
-g(n)=\frac12n^2-n.
+g(n)=\frac{1}{2}n^2-n.
 $$
 
 La funzione $f(n)$ appartiene chiaramente a $\Omega(n^2)$, perché:
 
 $$
-f(n)=\frac12n^2.
+f(n)=\frac{1}{2}n^2.
 $$
 
 Calcoliamo ora la differenza:
 
 $$
+\begin{aligned}
 f(n)-g(n)
-=
-\frac12n^2-\left(\frac12n^2-n\right)
-=
-n.
+&=
+\frac{1}{2}n^2-
+\left(\frac{1}{2}n^2-n\right)\\
+&=n.
+\end{aligned}
 $$
 
 D'altra parte:
 
 $$
+\begin{aligned}
 n^2-g(n)
-=
-n^2-\left(\frac12n^2-n\right)
-=
-\frac12n^2+n.
+&=
+n^2-\left(\frac{1}{2}n^2-n\right)\\
+&=
+\frac{1}{2}n^2+n.
+\end{aligned}
 $$
 
 Se fosse vero che:
@@ -185,29 +189,29 @@ f(n)-g(n)=\Omega(n^2-g(n)),
 $$
 
 allora dovrebbero esistere $c>0$ e $n_0\in\mathbb{N}$ tali che, per ogni
-$n\ge n_0$,
+$n\ge n_0$:
 
 $$
 n
 \ge
-c\left(\frac12n^2+n\right).
+c\left(\frac{1}{2}n^2+n\right).
 $$
 
-Dividendo entrambi i membri per $\frac12n^2+n>0$, otterremmo:
+Dividendo entrambi i membri per $\frac{1}{2}n^2+n>0$, otterremmo:
 
 $$
 c
 \le
-\frac{n}{\frac12n^2+n}
+\frac{n}{\frac{1}{2}n^2+n}
 =
-\frac{1}{\frac12n+1}.
+\frac{1}{\frac{1}{2}n+1}.
 $$
 
 Tuttavia:
 
 $$
 \lim_{n\to+\infty}
-\frac{1}{\frac12n+1}
+\frac{1}{\frac{1}{2}n+1}
 =
 0.
 $$

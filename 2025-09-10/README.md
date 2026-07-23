@@ -137,10 +137,8 @@ La ricorrenza è:
 $$
 M(i,j)=
 \begin{cases}
-1
-& \text{se } i=j, \\[4pt]
-2
-& \text{se } j=i+1, \\[4pt]
+1 & \text{se } i=j, \\[4pt]
+2 & \text{se } j=i+1, \\[4pt]
 M(i+1,j-1)\cdot M(i+1,j)\cdot M(i,j-1)
 & \text{se } j>i+1.
 \end{cases}

@@ -20,8 +20,9 @@ materiale ufficiale del corso.
 |---|---|---|
 | Domanda A | Classe Ω e proprietà asintotiche | [Completata](domanda_a.md) |
 | Domanda B | Codifica di Huffman | [Completata](domanda_b.md) |
-| Esercizio 1 | Ricerca della chiave più vicina in un ABR | Da completare |
-| Esercizio 2 | Memoizzazione e conteggio esatto delle operazioni | Da completare |
+| Esercizio 1 | Ricerca della chiave più vicina in un ABR | [Completata](esercizio_1.md) |
+| Esercizio 2 | Memoizzazione e conteggio esatto delle operazioni | [Completata](esercizio_2.md) |
+
 
 ---
 

@@ -6,14 +6,14 @@
 
 **Esercizio 1 (10 punti)**
 
-Siano dati due array `A[1..2n]` e `B[1..n]` organizzati a max-heap, entrambi
+Siano dati due array $A[1 \dots 2n]$ e $B[1 \dots n]$ organizzati a max-heap, entrambi
 contenenti $n$ elementi (`heapsize=n`).
 
-Realizzare una procedura `SortJoin(A, B, n)` che dati in input array `A` e `B`
-con le proprietà sopra descritte, ritorna in `A` un array ordinato contenente
-tutti i $2n$ elementi originariamente presenti in `A` e `B`.
+Realizzare una procedura `SortJoin(A, B, n)` che dati in input array $A$ e $B$
+con le proprietà sopra descritte, ritorna in $A$ un array ordinato contenente
+tutti i $2n$ elementi originariamente presenti in $A$ e $B$.
 
-L'array `B` può essere modificato durante l'esecuzione della procedura, se
+L'array $B$ può essere modificato durante l'esecuzione della procedura, se
 necessario, ma l'algoritmo dovrà operare in *spazio costante*.
 
 Dare lo pseudocodice della procedura, motivarne la correttezza e valutarne la
@@ -24,30 +24,28 @@ esplicitamente.
 
 ## Soluzione
 
-L'idea è sfruttare il fatto che `A` e `B` sono già due max-heap.
+L'idea è sfruttare il fatto che $A$ e $B$ sono già due max-heap.
 
 In un max-heap, il massimo elemento si trova sempre nella radice. Quindi, finché
 ci sono elementi nei due heap, il massimo tra tutti gli elementi non ancora
 inseriti nell'array finale si trova necessariamente in una delle due radici:
 
-```text
-A[1] oppure B[1].
-```
+$$ A[1] \quad \text{oppure} \quad B[1] $$
 
-Riempiamo quindi l'array `A` da destra verso sinistra, cioè dalle posizioni
-`2n, 2n-1, ..., 1`.
+Riempiamo quindi l'array $A$ da destra verso sinistra, cioè dalle posizioni
+$2n, 2n-1, \dots, 1$.
 
 A ogni passo:
 
 - se uno dei due heap è vuoto, estraiamo dall'altro;
 - altrimenti confrontiamo le due radici;
 - estraiamo il massimo tra le due radici;
-- lo inseriamo nella posizione corrente di `A`.
+- lo inseriamo nella posizione corrente di $A$.
 
 In questo modo, gli elementi più grandi vengono messi nelle posizioni finali di
-`A`, e alla fine `A[1..2n]` risulta ordinato in senso crescente.
+$A$, e alla fine $A[1 \dots 2n]$ risulta ordinato in senso crescente.
 
-Poiché l'array `A` ha dimensione `2n`, le posizioni oltre `A.heapsize` vengono
+Poiché l'array $A$ ha dimensione $2n$, le posizioni oltre `A.heapsize` vengono
 usate per costruire l'output. L'algoritmo usa solo un numero costante di
 variabili ausiliarie.
 
@@ -57,7 +55,7 @@ variabili ausiliarie.
 
 Usiamo le seguenti operazioni su max-heap.
 
-La procedura `MaxHeapify` assume che i figli del nodo in posizione `i`, se
+La procedura `MaxHeapify` assume che i figli del nodo in posizione $i$, se
 esistono, siano già radici di max-heap validi. La procedura ripristina la
 proprietà di max-heap scendendo lungo l'albero.
 
@@ -136,25 +134,23 @@ SortJoin(A, B, n)
 
 Dimostriamo la correttezza tramite il seguente invariante di ciclo.
 
-All'inizio di ogni iterazione del ciclo con indice `i`:
+All'inizio di ogni iterazione del ciclo con indice $i$:
 
-1. `A[1..heapA]` è un max-heap;
-2. `B[1..heapB]` è un max-heap;
+1. $A[1 \dots \text{heapA}]$ è un max-heap;
+2. $B[1 \dots \text{heapB}]$ è un max-heap;
 3. questi due heap contengono esattamente gli elementi non ancora inseriti nella
    parte ordinata finale;
-4. `A[i+1..2n]` contiene i `2n-i` elementi più grandi tra quelli originari di
-   `A` e `B`, ordinati in senso crescente.
+4. $A[i+1 \dots 2n]$ contiene i $2n - i$ elementi più grandi tra quelli originari di
+   $A$ e $B$, ordinati in senso crescente.
 
 ### Inizializzazione
 
-All'inizio del ciclo, per `i=2n`, entrambi gli array sono max-heap per ipotesi:
+All'inizio del ciclo, per $i = 2n$, entrambi gli array sono max-heap per ipotesi:
 
-```text
-heapA = n
-heapB = n
-```
+$$ \text{heapA} = n $$
+$$ \text{heapB} = n $$
 
-La parte `A[i+1..2n]` è vuota, quindi contiene correttamente zero elementi già
+La parte $A[i+1 \dots 2n]$ è vuota, quindi contiene correttamente zero elementi già
 ordinati. L'invariante vale.
 
 ### Mantenimento
@@ -163,27 +159,27 @@ Supponiamo che l'invariante valga all'inizio di un'iterazione.
 
 Il massimo tra tutti gli elementi non ancora inseriti deve trovarsi in una delle
 due radici, perché entrambi gli array ancora attivi sono max-heap. Quindi il
-massimo è in `A[1]` oppure in `B[1]`.
+massimo è in $A[1]$ oppure in $B[1]$.
 
-L'algoritmo confronta queste due radici, estrae il maggiore dei due elementi e
-lo inserisce in `A[i]`.
+L'algoritmo confronta queste due radici, estrae il maggiore dei doppi elementi e
+lo inserisce in $A[i]$.
 
 Dopo l'estrazione, `ExtractMax` richiama `MaxHeapify`, quindi lo heap da cui è
 stato rimosso l'elemento torna a soddisfare la proprietà di max-heap. L'altro
 heap non viene modificato.
 
-Inoltre, l'elemento inserito in `A[i]` è il massimo tra quelli non ancora
-ordinati. Poiché `A[i+1..2n]` conteneva già gli elementi più grandi inseriti in
-precedenza, `A[i..2n]` rimane ordinato in senso crescente.
+Inoltre, l'elemento inserito in $A[i]$ è il massimo tra quelli non ancora
+ordinati. Poiché $A[i+1 \dots 2n]$ conteneva già gli elementi più grandi inseriti in
+precedenza, $A[i \dots 2n]$ rimane ordinato in senso crescente.
 
 L'invariante è quindi mantenuto.
 
 ### Terminazione
 
-Il ciclo termina dopo avere riempito tutte le posizioni da `2n` fino a `1`.
+Il ciclo termina dopo avere riempito tutte le posizioni da $2n$ fino a $1$.
 
-Per l'invariante, `A[1..2n]` contiene tutti gli elementi originariamente presenti
-in `A` e `B`, ordinati in senso crescente.
+Per l'invariante, $A[1 \dots 2n]$ contiene tutti gli elementi originariamente presenti
+in $A$ e $B$, ordinati in senso crescente.
 
 Quindi `SortJoin` è corretta.
 
@@ -191,19 +187,19 @@ Quindi `SortJoin` è corretta.
 
 ## Nota sullo spazio costante
 
-L'algoritmo scrive il risultato direttamente dentro `A`.
+L'algoritmo scrive il risultato direttamente dentro $A$.
 
-L'assegnazione in `A[i]` non sovrascrive elementi ancora da estrarre dallo heap
-di `A`: infatti, all'inizio di ogni iterazione, gli elementi ancora non ordinati
-sono esattamente `heapA + heapB = i`.
+L'assegnazione in $A[i]$ non sovrascrive elementi ancora da estrarre dallo heap
+di $A$: infatti, all'inizio di ogni iterazione, gli elementi ancora non ordinati
+sono esattamente $\text{heapA} + \text{heapB} = i$.
 
-Se `heapB > 0`, allora `i > heapA`, quindi `A[i]` è fuori dalla porzione di `A`
+Se $\text{heapB} > 0$, allora $i > \text{heapA}$, quindi $A[i]$ è fuori dalla porzione di $A$
 usata come heap.
 
-Se invece `heapB = 0`, l'algoritmo estrae prima da `A`, diminuendo `heapA`, e
-solo dopo scrive in `A[i]`.
+Se invece $\text{heapB} = 0$, l'algoritmo estrae prima da $A$, diminuendo $\text{heapA}$, e
+solo dopo scrive in $A[i]$.
 
-Quindi l'output può essere costruito in `A` senza usare memoria aggiuntiva non
+Quindi l'output può essere costruito in $A$ senza usare memoria aggiuntiva non
 costante.
 
 ---
@@ -212,29 +208,21 @@ costante.
 
 La procedura `MaxHeapify` costa:
 
-```math
-O(\log n).
-```
+$$ O(\log n) $$
 
 Anche `ExtractMax` costa:
 
-```math
-O(\log n),
-```
+$$ O(\log n) $$
 
 perché esegue una chiamata a `MaxHeapify`.
 
-Il ciclo principale esegue esattamente `2n` estrazioni. Quindi il tempo totale è:
+Il ciclo principale esegue esattamente $2n$ estrazioni. Quindi il tempo totale è:
 
-```math
-\Theta(n\log n).
-```
+$$ \Theta(n \log n) $$
 
 La complessità spaziale è:
 
-```math
-O(1),
-```
+$$ O(1) $$
 
 perché l'algoritmo usa solo un numero costante di variabili ausiliarie e
 `MaxHeapify` è iterativa.

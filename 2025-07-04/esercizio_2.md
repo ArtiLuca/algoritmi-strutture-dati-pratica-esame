@@ -6,21 +6,23 @@
 
 **Esercizio 2 (9 punti)**
 
-Data una stringa `X = x_1, x_2, ..., x_n`, si consideri la seguente quantità
-`l(i, j)`, definita per `1 <= i <= j <= n`:
+Data una stringa $X = x_1, x_2, \dots, x_n$, si consideri la seguente quantità
+$\ell(i, j)$, definita per $1 \le i \le j \le n$:
 
-```text
-l(i, j) =
-    1                                    se i = j
-    2                                    se i = j - 1
-    2 + l(i + 1, j - 1)                  se i < j - 1 e x_i = x_j
-    sum_{k=i}^{j-1}(l(i,k) + l(k+1,j))   se i < j - 1 e x_i != x_j
-```
+$$
+\ell(i, j) =
+\begin{cases}
+1 & \text{se } i = j \\
+2 & \text{se } i = j - 1 \\
+2 + \ell(i + 1, j - 1) & \text{se } i < j - 1 \text{ e } x_i = x_j \\
+\sum_{k=i}^{j-1}(\ell(i,k) + \ell(k+1,j)) & \text{se } i < j - 1 \text{ e } x_i \ne x_j
+\end{cases}
+$$
 
 **(1)** Scrivere una coppia di algoritmi `INIT_L(X)` e `REC_L(i, j)` per il
-calcolo memoizzato di `l(1, n)`.
+calcolo memoizzato di $\ell(1, n)$.
 
-**(2)** Si determini la complessità al caso migliore `T_best(n)` supponendo che
+**(2)** Si determini la complessità al caso migliore $T_{\text{best}}(n)$ supponendo che
 le uniche operazioni di costo unitario e non nullo siano i confronti tra
 caratteri.
 
@@ -30,24 +32,24 @@ caratteri.
 
 ## Punto (1)
 
-Usiamo una tabella `L[1...n, 1...n]`, dove `L[i, j]` rappresenta il valore della
-ricorrenza `l(i, j)`.
+Usiamo una tabella $L[1 \dots n, 1 \dots n]$, dove $L[i, j]$ rappresenta il valore della
+ricorrenza $\ell(i, j)$.
 
 La procedura `INIT_L(X)`:
 
-1. calcola la lunghezza `n` della stringa;
-2. gestisce direttamente i casi base `n = 1` e `n = 2`;
-3. alloca la tabella `L`;
+1. calcola la lunghezza $n$ della stringa;
+2. gestisce direttamente i casi base $n = 1$ e $n = 2$;
+3. alloca la tabella $L$;
 4. inizializza i casi base;
-5. inizializza a `0` gli stati non ancora calcolati;
+5. inizializza a $0$ gli stati non ancora calcolati;
 6. invoca la procedura ricorsiva `REC_L(X, 1, n)`.
 
-Uso il valore `0` come sentinella per indicare che un valore non è ancora stato
+Uso il valore $0$ come sentinella per indicare che un valore non è ancora stato
 calcolato. Questo è sicuro perché tutti i valori della ricorrenza sono positivi.
 
 Ho scelto di scrivere la procedura ricorsiva come `REC_L(X, i, j)`, passando
-anche la stringa `X`, perché la procedura deve confrontare i caratteri `X[i]` e
-`X[j]`.
+anche la stringa $X$, perché la procedura deve confrontare i caratteri $X[i]$ e
+$X[j]$.
 
 ---
 
@@ -109,57 +111,47 @@ Ora calcoliamo la complessità al caso migliore, contando solo i confronti tra
 caratteri come operazioni di costo unitario e non nullo.
 
 Il caso migliore si verifica quando, in ogni chiamata ricorsiva su un intervallo
-di lunghezza almeno `3`, il confronto tra i due caratteri estremi risulta vero:
+di lunghezza almeno $3$, il confronto tra i due caratteri estremi risulta vero:
 
-```text
-X[i] == X[j]
-```
+$$ X[i] == X[j] $$
 
 In questo caso non viene eseguita la sommatoria. La ricorsione procede solo sul
 sottoproblema interno:
 
-```text
-REC_L(X, i + 1, j - 1)
-```
+`REC_L(X, i + 1, j - 1)`
 
-Quindi, se `n = j - i + 1` è la lunghezza dell'intervallo considerato, il costo
+Quindi, se $n = j - i + 1$ è la lunghezza dell'intervallo considerato, il costo
 nel caso migliore soddisfa:
 
-```text
-T_best(n) = T_best(n - 2) + 1
-```
+$$ T_{\text{best}}(n) = T_{\text{best}}(n - 2) + 1 $$
 
-dove `+1` rappresenta il confronto tra `X[i]` e `X[j]`.
+dove $+1$ rappresenta il confronto tra $X[i]$ e $X[j]$.
 
-I casi base sono gli intervalli di lunghezza `1` e `2`, dove non viene eseguito
+I casi base sono gli intervalli di lunghezza $1$ e $2$, dove non viene eseguito
 alcun confronto tra caratteri.
 
 Srotolando la ricorrenza:
 
-```text
-T_best(n) = T_best(n - 2) + 1
-          = T_best(n - 4) + 2
-          = T_best(n - 6) + 3
-          ...
-          = T_best(n - 2k) + k
-```
+$$
+\begin{aligned}
+T_{\text{best}}(n) &= T_{\text{best}}(n - 2) + 1 \\
+                   &= T_{\text{best}}(n - 4) + 2 \\
+                   &= T_{\text{best}}(n - 6) + 3 \\
+                   &\dots \\
+                   &= T_{\text{best}}(n - 2k) + k
+\end{aligned}
+$$
 
-La ricorsione termina quando la lunghezza residua diventa `1` oppure `2`.
+La ricorsione termina quando la lunghezza residua diventa $1$ oppure $2$.
 
 Il numero di confronti eseguiti è quindi:
 
-```text
-floor((n - 1) / 2)
-```
+$$ \lfloor (n - 1) / 2 \rfloor $$
 
 Quindi:
 
-```text
-T_best(n) = floor((n - 1) / 2)
-```
+$$ T_{\text{best}}(n) = \lfloor (n - 1) / 2 \rfloor $$
 
 e in notazione asintotica:
 
-```text
-T_best(n) = Theta(n)
-```
+$$ T_{\text{best}}(n) = \Theta(n) $$

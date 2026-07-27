@@ -116,7 +116,7 @@ Ad esempio, dato il seguente albero:
 la funzione `mdist(T, 8)` deve restituire il nodo con chiave `9`, mentre
 `mdist(T, 28)` deve restituire il nodo con chiave `30`.
 
-**Soluzione da completare.**
+**[Vai alla soluzione](esercizio_1.md)**
 
 ---
 
@@ -165,4 +165,4 @@ durante il calcolo di:
 M(1,n).
 ```
 
-**Soluzione da completare.**
+**[Vai alla soluzione](esercizio_2.md)**

@@ -19,7 +19,7 @@ preparazione dell'esame.
 Gli appelli sono presi dalla pagina ufficiale del corso:
 
 ```text
-https://www.math.unipd.it/~baldan/Algoritmi/Exams/
+[https://www.math.unipd.it/~baldan/Algoritmi/Exams/](https://www.math.unipd.it/~baldan/Algoritmi/Exams/)
 ```
 
 I PDF originali non sono inclusi nel repository.
@@ -57,11 +57,11 @@ Ogni cartella contiene:
 
 | Data | Domanda A | Domanda B | Esercizio 1 | Esercizio 2 | Stato |
 |---|---|---|---|---|---|
-| 2025-01-24 | ⬜ | ⬜ | ⬜ | ⬜ | Da completare |
-| 2025-02-07 | ⬜ | ⬜ | ⬜ | ⬜ | Da completare |
-| 2025-06-18 | ⬜ | ⬜ | ⬜ | ⬜ | Da completare |
-| 2025-07-04 | ⬜ | ⬜ | ⬜ | ⬜ | Da completare |
-| 2025-09-10 | ⬜ | ⬜ | ⬜ | ⬜ | Da completare |
+| 2025-01-24 | ✅ | ✅ | ✅ | ✅ | [Completato](2025-01-24/) |
+| 2025-02-07 | ✅ | ✅ | ✅ | ✅ | [Completato](2025-02-07/) |
+| 2025-06-18 | ⬜ | ⬜ | ⬜ | ⬜ | [Da completare](2025-06-18/) |
+| 2025-07-04 | ✅ | ✅ | ✅ | ✅ | [Completato](2025-07-04/) |
+| 2025-09-10 | ✅ | ✅ | ✅ | ✅ | [Completato](2025-09-10/) |
 
 ## Formato delle soluzioni
 

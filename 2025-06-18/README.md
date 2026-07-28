@@ -5,12 +5,7 @@ Questa cartella contiene le mie soluzioni personali all'appello del
 
 ## Fonte
 
-Il testo dell'appello è disponibile nella pagina ufficiale del corso:
-
-```text
-https://www.math.unipd.it/~baldan/Algoritmi/Exams/
-```
-
+Il testo dell'appello è disponibile nella pagina ufficiale del corso.
 Le soluzioni presenti in questa cartella sono personali e non costituiscono
 materiale ufficiale del corso.
 

@@ -16,7 +16,7 @@ preparazione dell'esame.
 
 ## Fonte degli appelli
 
-Gli appelli sono presi dalla pagina ufficiale del corso.
+Gli appelli sono presi dalla pagina ufficiale del corso:
 I PDF originali non sono inclusi nel repository.
 
 ## Nota

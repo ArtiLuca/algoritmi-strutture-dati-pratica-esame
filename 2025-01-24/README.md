@@ -24,7 +24,7 @@
 Dare la definizione di max-heap.
 
 Dato un insieme $S$ di elementi, memorizzato in parte in un min-heap $A$ e in
-parte in un max-heap $B$, entrambi non vuoti, dare un algoritmo $\min(A, B)$ per
+parte in un max-heap $B$, entrambi non vuoti, dare un algoritmo `min(A, B)` per
 trovare il minimo di $S$ nelle due situazioni seguenti:
 
 **(a)** ogni elemento di $A$ è minore o uguale a ogni elemento di $B$;
@@ -74,15 +74,11 @@ Se il titolo non si stabilizza su valori positivi, ritornare $0$.
 
 Ad esempio, se l'array è:
 
-```text
-V = [-1, -2, 2, -1, 6, 3]
-```
+$$ V = [-1, -2, 2, -1, 6, 3] $$
 
 l'indice da ritornare sarà $5$, mentre per:
 
-```text
-V = [-1, -2, 2, -1, 6, -3]
-```
+$$ V = [-1, -2, 2, -1, 6, -3] $$
 
 si ritornerà $0$.
 

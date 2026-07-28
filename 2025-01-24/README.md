@@ -33,6 +33,8 @@ trovare il minimo di `S` nelle due situazioni seguenti:
 
 In entrambi i casi scrivere lo pseudocodice e valutare la complessità.
 
+**[Vai alla soluzione](domanda_a.md)**
+
 ### Domanda B
 
 **Domanda B (7 punti)**
@@ -45,6 +47,8 @@ Si consideri il problema di selezione di attività compatibili:
 
 **(c)** Fornire un esempio di algoritmo greedy *non* ottimo, motivandone la non
 ottimalità.
+
+**[Vai alla soluzione](domanda_b.md)**
 
 ---
 
@@ -85,6 +89,8 @@ si ritornerà `0`.
 Fornire lo pseudocodice di `Split(V)`, motivarne la correttezza e individuarne
 la complessità. Si assuma che non ci siano valori nulli.
 
+**[Vai alla soluzione](esercizio_1.md)**
+
 ### Esercizio 2
 
 **Esercizio 2 (8 punti)**
@@ -110,3 +116,5 @@ q = max { ell(i, j) : 0 <= i <= m, 0 <= j <= n }.
 
 **(b)** Determinare la complessità esatta dell'algoritmo, supponendo che le
 uniche operazioni di costo unitario e non nullo siano i confronti tra caratteri.
+
+**[Vai alla soluzione](esercizio_2.md)**

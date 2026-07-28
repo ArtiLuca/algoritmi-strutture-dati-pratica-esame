@@ -21,11 +21,9 @@
 
 **Domanda A (6 punti)**
 
-Si dimostri che la ricorrenza che segue ha soluzione $T(n)=\Theta(n)$:
+Si dimostri che la ricorrenza che segue ha soluzione $T(n) = \Theta(n)$:
 
-```math
-T(n)=\frac{2}{3}T(n-1)+2n.
-```
+$$ T(n) = \frac{2}{3}T(n-1) + 2n $$
 
 **[Vai alla soluzione](domanda_a.md)**
 
@@ -58,12 +56,12 @@ risultato ottenuto.
 
 **Esercizio 1 (10 punti)**
 
-Dato un array `A[1..n]` di interi, un indice `i` si dice *stabile* se
-`A[i] = i`.
+Dato un array $A[1 \dots n]$ di interi, un indice $i$ si dice *stabile* se
+$A[i] = i$.
 
-Realizzare una procedura `stab(A, n)` che, dato in input un array `A[1..n]` di
+Realizzare una procedura `stab(A, n)` che, dato in input un array $A[1 \dots n]$ di
 interi *distinti*, ordinato in modo crescente, ritorna un indice stabile, se
-esiste, e ritorna `0` altrimenti.
+esiste, e ritorna $0$ altrimenti.
 
 Dimostrarne la correttezza e valutarne la complessità.
 
@@ -73,21 +71,23 @@ Dimostrarne la correttezza e valutarne la complessità.
 
 **Esercizio 2 (9 punti)**
 
-Data una stringa `X = x_1, x_2, ..., x_n`, si consideri la seguente quantità
-`l(i, j)`, definita per `1 <= i <= j <= n`:
+Data una stringa $X = x_1, x_2, \dots, x_n$, si consideri la seguente quantità
+$\ell(i, j)$, definita per $1 \le i \le j \le n$:
 
-```text
-l(i, j) =
-    1                                    se i = j
-    2                                    se i = j - 1
-    2 + l(i + 1, j - 1)                  se i < j - 1 e x_i = x_j
-    sum_{k=i}^{j-1}(l(i,k) + l(k+1,j))   se i < j - 1 e x_i != x_j
-```
+$$
+\ell(i, j) =
+\begin{cases}
+1 & \text{se } i = j \\
+2 & \text{se } i = j - 1 \\
+2 + \ell(i + 1, j - 1) & \text{se } i < j - 1 \text{ e } x_i = x_j \\
+\sum_{k=i}^{j-1}(\ell(i,k) + \ell(k+1,j)) & \text{se } i < j - 1 \text{ e } x_i \ne x_j
+\end{cases}
+$$
 
 **(1)** Scrivere una coppia di algoritmi `INIT_L(X)` e `REC_L(i, j)` per il
-calcolo memoizzato di `l(1, n)`.
+calcolo memoizzato di $\ell(1, n)$.
 
-**(2)** Si determini la complessità al caso migliore `T_best(n)` supponendo che
+**(2)** Si determini la complessità al caso migliore $T_{\text{best}}(n)$ supponendo che
 le uniche operazioni di costo unitario e non nullo siano i confronti tra
 caratteri.
 

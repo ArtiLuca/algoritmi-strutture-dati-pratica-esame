@@ -16,12 +16,7 @@ preparazione dell'esame.
 
 ## Fonte degli appelli
 
-Gli appelli sono presi dalla pagina ufficiale del corso:
-
-```text
-[https://www.math.unipd.it/~baldan/Algoritmi/Exams/](https://www.math.unipd.it/~baldan/Algoritmi/Exams/)
-```
-
+Gli appelli sono presi dalla pagina ufficiale del corso.
 I PDF originali non sono inclusi nel repository.
 
 ## Nota

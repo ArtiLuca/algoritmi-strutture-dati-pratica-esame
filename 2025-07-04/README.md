@@ -27,6 +27,8 @@ Si dimostri che la ricorrenza che segue ha soluzione $T(n)=\Theta(n)$:
 T(n)=\frac{2}{3}T(n-1)+2n.
 ```
 
+**[Vai alla soluzione](domanda_a.md)**
+
 ### Domanda B
 
 **Domanda B (7 punti)**
@@ -46,6 +48,8 @@ si indichi l'albero ottenuto.
 Sia per gli inserimenti che per la cancellazione, motivare sinteticamente il
 risultato ottenuto.
 
+**[Vai alla soluzione](domanda_b.md)**
+
 ---
 
 ## Esercizi
@@ -62,6 +66,8 @@ interi *distinti*, ordinato in modo crescente, ritorna un indice stabile, se
 esiste, e ritorna `0` altrimenti.
 
 Dimostrarne la correttezza e valutarne la complessità.
+
+**[Vai alla soluzione](esercizio_1.md)**
 
 ### Esercizio 2
 
@@ -84,3 +90,5 @@ calcolo memoizzato di `l(1, n)`.
 **(2)** Si determini la complessità al caso migliore `T_best(n)` supponendo che
 le uniche operazioni di costo unitario e non nullo siano i confronti tra
 caratteri.
+
+**[Vai alla soluzione](esercizio_2.md)**

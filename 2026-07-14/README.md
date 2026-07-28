@@ -5,7 +5,11 @@ Questa cartella contiene le mie soluzioni personali all'appello del
 
 ## Fonte
 
-Il testo dell'appello è disponibile nella pagina ufficiale del corso.
+Questo appello non risulta disponibile nella pagina ufficiale degli appelli passati.
+
+Il testo è stato ricostruito dal compito cartaceo consegnato in aula il
+14 luglio 2026, che il docente ha lasciato agli studenti al termine della prova.
+
 Le soluzioni presenti in questa cartella sono personali e non costituiscono
 materiale ufficiale del corso.
 

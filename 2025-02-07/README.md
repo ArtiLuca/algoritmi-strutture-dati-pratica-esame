@@ -27,6 +27,8 @@ Si determini la soluzione asintotica della seguente equazione di ricorrenza:
 T(n)=3T(n/3)+n^2+1.
 ```
 
+**[Vai alla soluzione](domanda_a.md)**
+
 ### Domanda B
 
 **Domanda B (7 punti)**
@@ -54,6 +56,8 @@ specifichi il risultato dell'inserzione della sequenza di chiavi:
 Sarebbe appropriato lavorare con una tabella di dimensione $m=8$ e le stesse
 funzioni hash?
 
+**[Vai alla soluzione](domanda_b.md)**
+
 ---
 
 ## Esercizi
@@ -75,6 +79,8 @@ necessario, ma l'algoritmo dovrà operare in *spazio costante*.
 Dare lo pseudocodice della procedura, motivarne la correttezza e valutarne la
 complessità. Se si utilizzano operazioni sui max-heap andranno definite
 esplicitamente.
+
+**[Vai alla soluzione](esercizio_1.md)**
 
 ### Esercizio 2
 
@@ -105,3 +111,5 @@ seguenti vettori **s** e **f** di tempi di inizio e fine:
 
 **(c)** Dimostrare la proprietà di scelta greedy, cioè che esiste soluzione
 ottima che contiene l'attività che inizia per ultima.
+
+**[Vai alla soluzione](esercizio_2.md)**

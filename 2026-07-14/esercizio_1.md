@@ -17,9 +17,9 @@ La procedura restituisce una coppia `(swapped, newPtr)`, dove `swapped` agisce d
 
 ### Pseudocodice
 
-    // Cerca ed esegue scambio, restituendo coppia (swapped, newPtr)  
+    // Cerca ed esegue scambio, restituendo coppia (swapped, newPtr)
+    findAndSwap(A, ind, ptr, val, lim)  
     
-    findAndSwap(A, ind, ptr, val, lim)
         while ptr <= lim and A[ptr] != val
             ptr = ptr + 1
 
@@ -32,7 +32,8 @@ La procedura restituisce una coppia `(swapped, newPtr)`, dove `swapped` agisce d
 
 
     // Ordina A in senso crescente
-    TriSort(A)
+    TriSort(A)  
+    
         n = A.length
 
         // variabili di conteggio (degli 0 e 1)

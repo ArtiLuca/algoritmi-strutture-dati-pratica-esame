@@ -101,7 +101,8 @@ Ad ogni iterazione, si valuta il valore in $A[\text{mid}]$. Se è un valore 0 o 
 
 ### Pseudocodice
 
-    TriSort(A)
+    TriSort(A)  
+    
         n = A.length
         low = 1
         mid = 1

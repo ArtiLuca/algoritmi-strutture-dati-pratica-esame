@@ -17,10 +17,10 @@ materiale ufficiale del corso.
 
 | Problema | Argomento principale | Stato |
 |---|---|---|
-| Domanda A | Ricorrenze e classi O e Ω | [Da completare](domanda_a.md) |
-| Domanda B | Ricorrenza per Longest Common Subsequence (LCS) | [Da completare](domanda_b.md) |
-| Esercizio 1 | Ordinamento in loco (TriSort) | [Da completare](esercizio_1.md) |
-| Esercizio 2 | Algoritmo greedy per il resto delle monete | [Da completare](esercizio_2.md) |
+| Domanda A | Ricorrenze e classi O e Ω | [Completato](domanda_a.md) |
+| Domanda B | Ricorrenza per Longest Common Subsequence (LCS) | [Completato](domanda_b.md) |
+| Esercizio 1 | Ordinamento in loco (TriSort) | [Completato](esercizio_1.md) |
+| Esercizio 2 | Algoritmo greedy per il resto delle monete | [Completato](esercizio_2.md) |
 
 ---
 

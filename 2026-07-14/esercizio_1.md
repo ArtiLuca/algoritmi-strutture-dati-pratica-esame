@@ -17,55 +17,53 @@ La procedura restituisce una coppia `(swapped, newPtr)`, dove `swapped` agisce d
 
 ### Pseudocodice
 
-```text
-// Cerca ed esegue scambio, restituendo coppia (swapped, newPtr)
-findAndSwap(A, ind, ptr, val, lim)
-    while ptr <= lim and A[ptr] != val
-        ptr = ptr + 1
+    // Cerca ed esegue scambio, restituendo coppia (swapped, newPtr)
+    findAndSwap(A, ind, ptr, val, lim)
+        while ptr <= lim and A[ptr] != val
+            ptr = ptr + 1
 
-    if ptr <= lim
-        A[ind] ↔ A[ptr]
-        return (true, ptr + 1)
+        if ptr <= lim
+            A[ind] ↔ A[ptr]
+            return (true, ptr + 1)
 
-    // altrimenti
-    return (false, ptr)
+        // altrimenti
+        return (false, ptr)
 
 
-// Ordina A in senso crescente
-TriSort(A)
-    n = A.length
+    // Ordina A in senso crescente
+    TriSort(A)
+        n = A.length
 
-    // variabili di conteggio (degli 0 e 1)
-    c0 = 0
-    c1 = 0
+        // variabili di conteggio (degli 0 e 1)
+        c0 = 0
+        c1 = 0
 
-    // fase di conteggio
-    for i = 1 to n
-        if A[i] == 0
-            c0 = c0 + 1
-        else if A[i] == 1
-            c1 = c1 + 1
+        // fase di conteggio
+        for i = 1 to n
+            if A[i] == 0
+                c0 = c0 + 1
+            else if A[i] == 1
+                c1 = c1 + 1
 
-    // fase gestione dei valori 0
-    ptr1 = c0 + 1
-    ptr2 = c0 + c1 + 1
+        // fase gestione dei valori 0
+        ptr1 = c0 + 1
+        ptr2 = c0 + c1 + 1
 
-    for ptr0 = 1 to c0
-        if A[ptr0] != 0
-            // cerco uno 0 nella zona degli 1, se non c'è lo cerco nella zona dei 2
-            (swapped, ptr1) = findAndSwap(A, ptr0, ptr1, 0, c0 + c1)
+        for ptr0 = 1 to c0
+            if A[ptr0] != 0
+                // cerco uno 0 nella zona degli 1, se non c'è lo cerco nella zona dei 2
+                (swapped, ptr1) = findAndSwap(A, ptr0, ptr1, 0, c0 + c1)
 
-            if swapped == false
-                (swapped, ptr2) = findAndSwap(A, ptr0, ptr2, 0, n)
+                if swapped == false
+                    (swapped, ptr2) = findAndSwap(A, ptr0, ptr2, 0, n)
 
-    // fase gestione dei valori 1
-    // ptr1 riparte dall'inizio della sua zona solo se non ha già superato il limite
-    ptr1 = max(ptr1, c0 + 1)
+        // fase gestione dei valori 1
+        // ptr1 riparte dall'inizio della sua zona solo se non ha già superato il limite
+        ptr1 = max(ptr1, c0 + 1)
 
-    for i = c0 + 1 to c0 + c1
-        if A[i] != 1
-            (swapped, ptr2) = findAndSwap(A, i, ptr2, 1, n)
-```
+        for i = c0 + 1 to c0 + c1
+            if A[i] != 1
+                (swapped, ptr2) = findAndSwap(A, i, ptr2, 1, n)
 
 ### Correttezza
 
@@ -101,24 +99,22 @@ Ad ogni iterazione, si valuta il valore in $A[\text{mid}]$. Se è un valore 0 o 
 
 ### Pseudocodice
 
-```text
-TriSort(A)
-    n = A.length
-    low = 1
-    mid = 1
-    high = n
+    TriSort(A)
+        n = A.length
+        low = 1
+        mid = 1
+        high = n
 
-    while mid <= high
-        if A[mid] == 0
-            A[low] ↔ A[mid]
-            low = low + 1
-            mid = mid + 1
-        else if A[mid] == 1
-            mid = mid + 1
-        else // A[mid] == 2
-            A[mid] ↔ A[high]
-            high = high - 1
-```
+        while mid <= high
+            if A[mid] == 0
+                A[low] ↔ A[mid]
+                low = low + 1
+                mid = mid + 1
+            else if A[mid] == 1
+                mid = mid + 1
+            else // A[mid] == 2
+                A[mid] ↔ A[high]
+                high = high - 1
 
 ### Correttezza
 
@@ -131,9 +127,7 @@ All'inizio di ogni iterazione, l'array è logicamente diviso in 4 regioni contig
 
 Ad ogni passo viene esaminato l'elemento $A[\text{mid}]$. A seconda del valore, cioè 0, 1, oppure 2, l'elemento viene scambiato nella rispettiva regione e si aggiornano i puntatori, riducendo di 1 la dimensione della regione degli elementi sconosciuti:
 
-```math
-\text{high} - \text{mid} + 1.
-```
+$$\text{high} - \text{mid} + 1$$
 
 Il ciclo termina quando $\text{mid} > \text{high}$, nel qual caso la regione dei valori da analizzare risulta vuota e quindi l'array finale risulta ordinato in senso crescente.
 

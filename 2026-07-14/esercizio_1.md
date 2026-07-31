@@ -52,7 +52,8 @@ La procedura restituisce una coppia `(swapped, newPtr)`, dove `swapped` agisce d
         ptr2 = c0 + c1 + 1
 
         for ptr0 = 1 to c0
-            if A[ptr0] != 0
+            if A[ptr0] != 0  
+            
                 // cerco uno 0 nella zona degli 1, se non c'è lo cerco nella zona dei 2
                 (swapped, ptr1) = findAndSwap(A, ptr0, ptr1, 0, c0 + c1)
 
@@ -108,8 +109,9 @@ Ad ogni iterazione, si valuta il valore in $A[\text{mid}]$. Se è un valore 0 o 
         mid = 1
         high = n
 
-        while mid <= high
-            if A[mid] == 0
+        while mid <= high  
+        
+            if A[mid] == 0  
                 A[low] ↔ A[mid]
                 low = low + 1
                 mid = mid + 1

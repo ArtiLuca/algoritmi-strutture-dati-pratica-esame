@@ -77,7 +77,7 @@ T(n)=O(2^n).
 
 ---
 
-## Dimostrazione del limite inferiore: `T(n) = Omega(2^n)`
+## Dimostrazione del limite inferiore: `$T(n) = Omega(2^n)$`
 
 La seconda affermazione, invece, **non è vera**.
 

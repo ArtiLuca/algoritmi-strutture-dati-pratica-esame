@@ -16,8 +16,7 @@ preparazione dell'esame.
 
 ## Fonte degli appelli
 
-Gli appelli sono presi dalla pagina ufficiale del corso:
-I PDF originali non sono inclusi nel repository.
+Gli appelli sono presi dalla pagina ufficiale del corso. I PDF originali non sono inclusi nel repository.
 
 ## Nota
 
@@ -29,7 +28,7 @@ più chiaro il ragionamento dietro ogni esercizio.
 
 ## Struttura del repository
 
-Ogni cartella corrisponde a un appello d'esame.
+La maggior parte delle cartelle corrisponde a un appello d'esame specifico:
 
 ```text
 YYYY-MM-DD/
@@ -40,13 +39,22 @@ YYYY-MM-DD/
 └── esercizio-2.md
 ```
 
-Ogni cartella contiene:
+È inoltre presente una cartella per le raccolte tematiche:
 
-- `README.md`: panoramica dell'appello;
-- `domanda-a.md`: soluzione della Domanda A;
-- `domanda-b.md`: soluzione della Domanda B;
-- `esercizio-1.md`: soluzione completa dell'Esercizio 1;
-- `esercizio-2.md`: soluzione completa dell'Esercizio 2.
+```text
+programmazione-dinamica/
+├── README.md
+├── esercizio_18.md
+└── ...
+```
+
+## Raccolte tematiche
+
+Per argomenti particolarmente ostici, ho isolato gli esercizi in collezioni specifiche per fare pratica mirata:
+
+| Argomento | Contenuto | Stato |
+|---|---|---|
+| Programmazione Dinamica (DP) | 15 Esercizi (dal n. 18 al n. 32) | [Da completare](programmazione-dinamica/) |
 
 ## Appelli presenti
 

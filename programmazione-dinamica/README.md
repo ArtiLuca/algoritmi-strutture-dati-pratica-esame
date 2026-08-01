@@ -42,8 +42,8 @@ Dare un algoritmo per individuare, all'interno di una stringa $a_1 \dots a_n$, u
 ---
 
 ### **Esercizio 19**
-Sia data un'espressione $\xi = x_1 \text{op}_1 x_2 \text{op}_2 \dots x_{n-1} \text{op}_{n-1} x_n$, con $n \ge 2$ dove ogni $x_i$ è un intero positivo e $\text{op}_i \in \{+, *\}$ di somma o di moltiplicazione (dati). Utilizzando la programmazione dinamica si determini una parentetizzazione dell'espressione che rende il valore dell'espressione minimo. Ad esempio, l'input `7+10*2` può essere parentetizzato come `((7+10)*2)=34` oppure come `(7+(10*2))=27`. In questo caso, la parentetizzazione desiderata è quindi la seconda. Più precisamente:
-- **i.** dare una caratterizzazione ricorsiva del valore minimo $v_{i,j}$ prodotto da una parentetizzazione della sottoespressione $x_i \text{op}_i \dots \text{op}_{j-1} x_j$;
+Sia data un'espressione $\xi = x_1 op_1 x_2 op_2 \dots x_{n-1} op_{n-1} x_n$, con $n \ge 2$ dove ogni $x_i$ è un intero positivo e $op_i \in \{+, *\}$ di somma o di moltiplicazione (dati). Utilizzando la programmazione dinamica si determini una parentetizzazione dell'espressione che rende il valore dell'espressione minimo. Ad esempio, l'input `7 + 10 * 2` può essere parentetizzato come `((7 + 10) * 2) = 34` oppure come `(7 + (10 * 2)) = 27`. In questo caso, la parentetizzazione desiderata è quindi la seconda. Più precisamente:
+- **i.** dare una caratterizzazione ricorsiva del valore minimo $v_{i,j}$ prodotto da una parentetizzazione della sottoespressione $x_i op_i \dots op_{j-1} x_j$;
 - **ii.** tradurre tale definizione in un algoritmo (bottom up o top down con memoization) che determina il valore minimo;
 - **iii.** trasformare l'algoritmo in modo che permetta anche di stampare l'espressione;
 - **iv.** valutare la complessità dell'algoritmo.
@@ -52,7 +52,7 @@ Sia data un'espressione $\xi = x_1 \text{op}_1 x_2 \text{op}_2 \dots x_{n-1} \te
 
 ### **Esercizio 20**
 Si ricordi che data una sequenza $X = x_1 \dots x_k$ si indica con $X_i$ il prefisso $x_1 \dots x_i$. Una sottosequenza di $X$ è $x_{i_1} \dots x_{i_h}$ con $1 \le i_1 < i_2 < \dots < i_h \le k$, ovvero è una sequenza ottenuta da $X$ eliminando alcuni elementi. Quando $Y$ è sottosequenza di $X$ si scrive $Y \sqsubseteq X$.
-Realizzare un algoritmo che, date due sequenze $X = x_1 \dots x_k$ e $Y = y_1 \dots y_h$ determina una *shortest common supersequence* (SCS) ovvero una sequenza $Z$, di lunghezza minima, tale che $Y \sqsubseteq Z$. Ad esempio per $X = $ "abf" e $Y = $ "afgj" una SCS è "abfgj".
+Realizzare un algoritmo che, date due sequenze $X = x_1 \dots x_k$ e $Y = y_1 \dots y_h$ determina una *shortest common supersequence* (SCS) ovvero una sequenza $Z$, di lunghezza minima, tale che $Y \sqsubseteq Z$. Ad esempio, per $X$ = "abf" e $Y$ = "afgj" una SCS è "abfgj".
 - **i.** dare una caratterizzazione ricorsiva della lunghezza $l_{i,j}$ di una SCS di $X_i$ e $Y_j$ e dedurne un algoritmo;
 - **ii.** trasformare l'algoritmo in modo che fornisca una SCS di $X$ e $Y$;
 - **iii.** valutare la complessità dell'algoritmo.

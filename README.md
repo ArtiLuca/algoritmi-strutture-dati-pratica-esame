@@ -80,6 +80,22 @@ Gli appelli raccolti includono esercizi su:
 - programmazione dinamica e memoizzazione;
 - correttezza e analisi della complessità.
 
+## Raccolta Programmazione Dinamica
+
+Per praticare un mio punto debole, ho isolato gli esercizi presi dalla raccolta del corso relativi alla Programmazione Dinamica  
+in una cartella dedicata:
+
+| Argomento | Contenuto | Stato |
+|---|---|---|
+| Programmazione Dinamica (DP) | 15 Esercizi (dal n. 18 al n. 32) | [Da completare](programmazione-dinamica/) |
+
+```text
+programmazione-dinamica/
+├── README.md
+├── esercizio_18.md
+└── ...
+```
+
 ## Stato del repository
 
 Repository in costruzione.  

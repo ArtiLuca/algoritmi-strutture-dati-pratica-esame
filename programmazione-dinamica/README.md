@@ -42,7 +42,7 @@ Dare un algoritmo per individuare, all'interno di una stringa $a_1 \dots a_n$, u
 ---
 
 ### **Esercizio 19**
-Sia data un'espressione $\xi = x_1 \text{op}_1 x_2 \text{op}_2 \dots x_{n-1} \text{op}_{n-1} x_n$, con $n \ge 2$ dove ogni $x_i$ è un intero positivo e $\text{op}_i \in \{+, *\}$ di somma o di moltiplicazione (dati). Utilizzando la programmazione dinamica si determini una parentetizzazione dell'espressione che rende il valore dell'espressione minimo. Ad esempio, l'input $7+10*2$ può essere parentetizzato come $((7+10)*2)=34$ oppure come $(7+(10*2))=27$. In questo caso, la parentetizzazione desiderata è quindi la seconda. Più precisamente:
+Sia data un'espressione $\xi = x_1 \text{op}_1 x_2 \text{op}_2 \dots x_{n-1} \text{op}_{n-1} x_n$, con $n \ge 2$ dove ogni $x_i$ è un intero positivo e $\text{op}_i \in \{+, *\}$ di somma o di moltiplicazione (dati). Utilizzando la programmazione dinamica si determini una parentetizzazione dell'espressione che rende il valore dell'espressione minimo. Ad esempio, l'input `7+10*2` può essere parentetizzato come `((7+10)*2)=34` oppure come `(7+(10*2))=27`. In questo caso, la parentetizzazione desiderata è quindi la seconda. Più precisamente:
 - **i.** dare una caratterizzazione ricorsiva del valore minimo $v_{i,j}$ prodotto da una parentetizzazione della sottoespressione $x_i \text{op}_i \dots \text{op}_{j-1} x_j$;
 - **ii.** tradurre tale definizione in un algoritmo (bottom up o top down con memoization) che determina il valore minimo;
 - **iii.** trasformare l'algoritmo in modo che permetta anche di stampare l'espressione;
@@ -52,7 +52,7 @@ Sia data un'espressione $\xi = x_1 \text{op}_1 x_2 \text{op}_2 \dots x_{n-1} \te
 
 ### **Esercizio 20**
 Si ricordi che data una sequenza $X = x_1 \dots x_k$ si indica con $X_i$ il prefisso $x_1 \dots x_i$. Una sottosequenza di $X$ è $x_{i_1} \dots x_{i_h}$ con $1 \le i_1 < i_2 < \dots < i_h \le k$, ovvero è una sequenza ottenuta da $X$ eliminando alcuni elementi. Quando $Y$ è sottosequenza di $X$ si scrive $Y \sqsubseteq X$.
-Realizzare un algoritmo che, date due sequenze $X = x_1 \dots x_k$ e $Y = y_1 \dots y_h$ determina una *shortest common supersequence* (SCS) ovvero una sequenza $Z$, di lunghezza minima, tale che $Y \sqsubseteq Z$. Ad esempio per $X = \text{abf}$ e $Y = \text{afgj}$ una SCS è $\text{abfgj}$.
+Realizzare un algoritmo che, date due sequenze $X = x_1 \dots x_k$ e $Y = y_1 \dots y_h$ determina una *shortest common supersequence* (SCS) ovvero una sequenza $Z$, di lunghezza minima, tale che $Y \sqsubseteq Z$. Ad esempio per $X = $ "abf" e $Y = $ "afgj" una SCS è "abfgj".
 - **i.** dare una caratterizzazione ricorsiva della lunghezza $l_{i,j}$ di una SCS di $X_i$ e $Y_j$ e dedurne un algoritmo;
 - **ii.** trasformare l'algoritmo in modo che fornisca una SCS di $X$ e $Y$;
 - **iii.** valutare la complessità dell'algoritmo.
@@ -69,7 +69,7 @@ Si supponga di dover pagare una certa somma $s$. Per farlo si hanno a disposizio
 ---
 
 ### **Esercizio 22**
-Si supponga di avere una scacchiera $n \times n$. Si vuole spostare un pezzo dall'angolo in basso a sinistra $(1,1)$ a quello in alto a destra $(n,n)$. Il pezzo può muoversi di una casella verso l'alto o verso destra. Un passo dalla casella $(i,j)$ ha un costo $u(i,j)$ se verso l'alto e $r(i,j)$ se verso destra. Realizzare un algorimo `MinPath(u,r,n)` che dati in input gli array `u[1...n, 1...n]` e `r[1...n, 1...n]` dei costi dei singoli passi fornisce il cammino minimo. Più in dettaglio:
+Si supponga di avere una scacchiera $n \times n$. Si vuole spostare un pezzo dall'angolo in basso a sinistra $(1,1)$ a quello in alto a destra $(n,n)$. Il pezzo può muoversi di una casella verso l'alto o verso destra. Un passo dalla casella $(i,j)$ ha un costo $u(i,j)$ se verso l'alto e $r(i,j)$ se verso destra. Realizzare un algoritmo `MinPath(u,r,n)` che dati in input gli array `u[1..n, 1..n]` e `r[1..n, 1..n]` dei costi dei singoli passi fornisce il cammino minimo. Più in dettaglio:
 - **i.** fornire una caratterizzazione ricorsiva del costo minimo di un cammino $c(i,j)$ per andare dalla casella $(i,j)$ alla casella $(n,n)$;
 - **ii.** tradurre tale definizione in un algoritmo `MinPath(u,r,n)` (bottom up o top down con memoization) che determina il costo di un cammino minimo da $(1,1)$ a $(n,n)$;
 - **iii.** trasformare l'algoritmo in modo che stampi la sequenza di passi di costo minimo;
@@ -87,18 +87,18 @@ Sia data una sequenza di città $c_1, c_2, \dots, c_n$ collegate da un percorso 
 ---
 
 ### **Esercizio 24**
-Si supponga che il mondo consista di $n$ stati $S_1, \dots, S_n$ e che spostarsi dallo stato $S_i$ allo stato $S_j$ imponga l'ottenimento di un visto di ingresso che ha un costo $v_{i,j}$, maggiore di $0$. Realizzare un algoritmo che determini una sequenza di stati che conviene percorrere per andare dallo stato $S_1$ allo stato $S_n$ minimizzando il costo complessivo dei visti. Più precisamente:
+Si supponga che il mondo consista di $n$ stati $S_1, \dots, S_n$ e che spostarsi dallo stato $S_i$ allo stato $S_j$ imponga l'ottenimento di un visto di ingresso che ha un costo $v_{i,j}$, maggiore di 0. Realizzare un algoritmo che determini una sequenza di stati che conviene percorrere per andare dallo stato $S_1$ allo stato $S_n$ minimizzando il costo complessivo dei visti. Più precisamente:
 - **i.** dare una caratterizzazione ricorsiva del costo complessivo minimo $v_i$ dei visti per andare dallo stato $S_i$ allo stato $S_n$;
-- **ii.** usare la caratterizzazione al punto precedente per ottenere un algoritmo `ESP(v,n)` che dato l'array dei costi dei visti `v[1...n, 1...n]` determina il costo minimo dei visti per andare da $S_1$ a $S_n$;
+- **ii.** usare la caratterizzazione al punto precedente per ottenere un algoritmo `ESP(v,n)` che dato l'array dei costi dei visti `v[1..n, 1..n]` determina il costo minimo dei visti per andare da $S_1$ a $S_n$;
 - **iii.** trasformare l'algoritmo in modo che determini oltre al costo minimo anche la sequenza degli stati da attraversare per ottenerlo;
 - **iv.** valutare la complessità dell'algoritmo.
 
 ---
 
 ### **Esercizio 25**
-Un marinaio ha $n$ pezzi di corda di lunghezze intere $l_1, \dots, l_n$ ($l_i \ge 2$) e deve annodarli per ottenere una corda di lunghezza esattamente $d$. Tenendo conto che fare un nodo richiede una lunghezza pari ad $1$ (ad es. se annodo due pezzi lunghi $5$ e $7$ la corda che ottengo è lunga $11$), individuare, se esiste, un insieme minimo di pezzi che annodati producano una corda della lunghezza $d$ desiderata. Più precisamente:
+Un marinaio ha $n$ pezzi di corda di lunghezze intere $l_1, \dots, l_n$ ($l_i \ge 2$) e deve annodarli per ottenere una corda di lunghezza esattamente $d$. Tenendo conto che fare un nodo richiede una lunghezza pari ad 1 (ad es. se annodo due pezzi lunghi 5 e 7 la corda che ottengo è lunga 11), individuare, se esiste, un insieme minimo di pezzi che annodati producano una corda della lunghezza $d$ desiderata. Più precisamente:
 - **i.** dare una caratterizzazione ricorsiva del numero minimo $m(i,d')$ di pezzi di corda scelti in $l_1, \dots, l_i$ che possono essere annodati per produrre la lunghezza $d'$ ($+\infty$ se non è possibile ottenere $d'$ con nessuna combinazione);
-- **ii.** usare la caratterizzazione al punto precedente per ottenere un algoritmo `Rope(l,n,d)` che dato l'array delle lunghezze `l[1...n]` determina il numero minimo di pezzi da annodare per ottenere $d$ (se esiste);
+- **ii.** usare la caratterizzazione al punto precedente per ottenere un algoritmo `Rope(l,n,d)` che dato l'array delle lunghezze `l[1..n]` determina il numero minimo di pezzi da annodare per ottenere $d$ (se esiste);
 - **iii.** trasformare l'algoritmo in modo che restituisca oltre al numero anche l'indicazione di quali pezzi usare;
 - **iv.** valutare la complessità dell'algoritmo.
 
@@ -108,7 +108,7 @@ Un marinaio ha $n$ pezzi di corda di lunghezze intere $l_1, \dots, l_n$ ($l_i \g
 Siano date $n$ attività $a_1, \dots, a_n$, che devono essere svolte in un'aula. Ogni attività ha tempo di inizio $s_i$ e tempo di fine $f_i$, con $s_i < f_i$. Si vuole trovare un sottoinsieme di attività che possano essere svolte nell'aula, quindi senza sovrapposizioni, e che massimizzi il tempo di utilizzo dell'aula.
 Più precisamente, assumendo che le attività siano ordinate in modo crescente per tempo di fine:
 - **i.** dare una caratterizzazione ricorsiva del tempo massimo $u(i,f)$ di utilizzo dell'aula, quando le attività da allocare siano $a_1, \dots, a_i$ e l'aula sia disponibile fino al tempo $f$ (ovvero nell'intervallo $[0, f)$);
-- **ii.** usare la caratterizzazione al punto precedente per ottenere un algoritmo `allocate(s,f,n)` che dati gli array dei tempi di inizio e fine delle attività `s[1...n]` e `f[1...n]` determini il tempo di utilizzo massimo.
+- **ii.** usare la caratterizzazione al punto precedente per ottenere un algoritmo `allocate(s,f,n)` che dati gli array dei tempi di inizio e fine delle attività `s[1..n]` e `f[1..n]` determini il tempo di utilizzo massimo.
 
 > **Suggerimento:** è utile osservare che nel calcolo di $u(i,f)$ i valori significativi di $f$ sono i tempi di inizio delle varie attività e quindi è possibile limitarsi a $u(i,j)$, ovvero tempo massimo di utilizzo dell'aula, con attività $a_1, \dots, a_i$, quando l'aula sia disponibile fino al tempo $s_j$.
 
@@ -128,7 +128,7 @@ Supponendo che la griglia abbia dimensione $m \times n$ e che per $i \in \{1, \d
 ---
 
 ### **Esercizio 28**
-Data una sequenza di numeri $X = x_1 x_2 \dots x_n$ si vuole determinare una sottosequenza $x_{i_1} x_{i_2} \dots x_{i_k}$ di $X$, crescente, ovvero tale che $x_{i_1} \le x_{i_2} \le \dots \le x_{i_k}$ di lunghezza massima. Ad esempio, se $X = \langle 77, 69, 70, 19, 71, 25, 52, 26, 28, 64 \rangle$, una sottosequenza crescente di lunghezza massima è $\langle 19, 25, 26, 28, 64 \rangle$.
+Data una sequenza di numeri $X = x_1 x_2 \dots x_n$ si vuole determinare una sottosequenza $x_{i_1} x_{i_2} \dots x_{i_k}$ di $X$, crescente, ovvero tale che $x_{i_1} \le x_{i_2} \le \dots \le x_{i_k}$ di lunghezza massima. Ad esempio, se $X = [77, 69, 70, 19, 71, 25, 52, 26, 28, 64]$, una sottosequenza crescente di lunghezza massima è $[19, 25, 26, 28, 64]$.
 - **i.** fornire una caratterizzazione ricorsiva della lunghezza $l_i$ di una sottosequenza crescente di lunghezza massima che abbia come primo carattere $x_i$;
 - **ii.** tradurre tale definizione in un algoritmo `LIS(X,n)` (bottom up o top down con memoization) che determina la lunghezza di una sottosequenza crescente di lunghezza massima della sequenza $X[1 \dots n]$;
 - **iii.** trasformare l'algoritmo in modo che individui anche la sottosequenza, non solo la sua lunghezza;
@@ -138,8 +138,8 @@ Data una sequenza di numeri $X = x_1 x_2 \dots x_n$ si vuole determinare una sot
 
 ### **Esercizio 29**
 Date due sequenze $X = x_1 \dots x_m$ e $Y = y_1 \dots y_n$ su di un alfabeto $\Sigma = \{a_1, \dots, a_l\}$ si definisce edit distance il costo minimo di un insieme di operazioni che trasforma la sequenza $X$ nella sequenza $Y$. Le operazioni possibili sono:
-- **insert**, ovvero l'inserimento di un simbolo in qualche posizione in $X$ (costo $1$);
-- **delete**, ovvero la cancellazione di un simbolo in qualche posizione in $X$ (costo $1$);
+- **insert**, ovvero l'inserimento di un simbolo in qualche posizione in $X$ (costo 1);
+- **delete**, ovvero la cancellazione di un simbolo in qualche posizione in $X$ (costo 1);
 - **replace**, ovvero la sostituzione di un simbolo in qualche posizione in $X$, con costo che dipende dai simboli coinvolti: sostituire il simbolo $a$ con il simbolo $b$, con $a \ne b$ ha un costo $c(a,b) > 0$. Ad esempio per trasformare "gesto" in "gelo" posso fare una replace $s \rightarrow l$ e una delete di $t$ con costo $c(s,l)+1$, oppure una delete di $s$ e una replace $t \rightarrow l$ con costo $1+c(t,l)$, ecc.
 
 Fornire un algoritmo di programmazione dinamica che dati $X$, $Y$ e la funzione $c$ dei costi di replace (per $a, b \in \Sigma$, $c(a,b)$ è il costo dell'operazione $a \rightarrow b$) calcola la edit distance tra $X$ e $Y$. In dettaglio:
@@ -170,7 +170,7 @@ Dare un algoritmo per individuare, all'interno di una stringa $a_1 \dots a_n$ un
 ---
 
 ### **Esercizio 32**
-Realizzare, con tecniche di programmazione dinamica, un algoritmo che dato un array $A[1 \dots n]$, non vuoto, trova un sottoarray non vuoto di somma massima, ovvero due indici $i$ e $j$ con $1 \le i \le j \le n$ tali che $A[i]+A[i+1]+\dots+A[j]$ sia massima. Ad esempio per $\langle -10, 4, 1, -1, 2, -1 \rangle$ il sottoarray di somma massima è $\langle 4, 1, -1, 2 \rangle$. Più precisamente:
+Realizzare, con tecniche di programmazione dinamica, un algoritmo che dato un array $A[1 \dots n]$, non vuoto, trova un sottoarray non vuoto di somma massima, ovvero due indici $i$ e $j$ con $1 \le i \le j \le n$ tali che $A[i]+A[i+1]+\dots+A[j]$ sia massima. Ad esempio per `[-10, 4, 1, -1, 2, -1]` il sottoarray di somma massima è `[4, 1, -1, 2]`. Più precisamente:
 - **i.** indicato con $l_j$ la somma massima di un sottoarray di $A[1 \dots n]$ che termini con $A[j]$ (quindi del tipo $A[i \dots j]$), darne una caratterizzazione ricorsiva;
 - **ii.** tradurre tale definizione in un algoritmo (bottom up o top down con memoization) che determina la somma massima;
 - **iii.** trasformare l'algoritmo in modo che fornisca anche la sottostringa, non solo la sua somma;

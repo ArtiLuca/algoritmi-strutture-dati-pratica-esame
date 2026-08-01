@@ -39,23 +39,6 @@ YYYY-MM-DD/
 └── esercizio-2.md
 ```
 
-È inoltre presente una cartella per le raccolte tematiche:
-
-```text
-programmazione-dinamica/
-├── README.md
-├── esercizio_18.md
-└── ...
-```
-
-## Raccolte tematiche
-
-Per argomenti particolarmente ostici, ho isolato gli esercizi in collezioni specifiche per fare pratica mirata:
-
-| Argomento | Contenuto | Stato |
-|---|---|---|
-| Programmazione Dinamica (DP) | 15 Esercizi (dal n. 18 al n. 32) | [Da completare](programmazione-dinamica/) |
-
 ## Appelli presenti
 
 | Data | Domanda A | Domanda B | Esercizio 1 | Esercizio 2 | Stato |
@@ -99,6 +82,8 @@ Gli appelli raccolti includono esercizi su:
 
 ## Stato del repository
 
-Repository in costruzione.
+Repository in costruzione.  
+Le cartelle relative ai singoli esempi completi di esami sono (per la maggior parte) considerate complete.  
+Invece, la cartella dedicata alla Programmazione Dinamica è ancora un _"work in progress"_.
 
-Le soluzioni verranno aggiunte e migliorate progressivamente.
+In ogni caso, le soluzioni verranno aggiunte e/o migliorate progressivamente.

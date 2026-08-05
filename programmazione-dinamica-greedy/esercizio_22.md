@@ -40,14 +40,20 @@ Possiamo dare una caratterizzazione ricorsiva in base alle seguenti osservazioni
 
 Quindi, definendo $c(i,j)$ come il costo minimo per arrivare alla casella $(n,n)$ partendo dalla casella $(i,j)$, una caratterizzazione ricorsiva può essere:
 
-```math
+```text
 c(i,j) =
-\begin{cases}
-0 & \text{se } i=n \text{ e } j=n \\[4pt]
-r[i,j] + c(i,j+1) & \text{se } i=n \text{ e } j<n \\[4pt]
-u[i,j] + c(i+1,j) & \text{se } i<n \text{ e } j=n \\[4pt]
-\min\{r[i,j] + c(i,j+1),\ u[i,j] + c(i+1,j)\} & \text{altrimenti}
-\end{cases}
+
+1. 0
+   se i = n e j = n
+
+2. r[i,j] + c(i,j+1)
+   se i = n e j < n
+
+3. u[i,j] + c(i+1,j)
+   se i < n e j = n
+
+4. min { r[i,j] + c(i,j+1), u[i,j] + c(i+1,j) }
+   altrimenti
 ```
 
 ## Algoritmo bottom-up

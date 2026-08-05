@@ -50,6 +50,7 @@ u[i,j] + c(i+1,j) & \text{if } i<n \text{ and } j=n \\
 $$
 
 
+
 ## Algoritmo bottom-up
 
 Per il punto **ii** possiamo usare una tabella `C[1..n, 1..n]` ed operare in maniera bottom-up, riempiendo la tabella dall'alto verso il basso e da destra verso sinistra rispetto alla rappresentazione della griglia.

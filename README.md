@@ -53,6 +53,7 @@ raccolta del corso o da altri materiali di preparazione.
 | 2025-06-18 | ✅ | ✅ | ✅ | ✅ | [Completato](2025-06-18/) |
 | 2025-07-04 | ✅ | ✅ | ✅ | ✅ | [Completato](2025-07-04/) |
 | 2025-09-10 | ✅ | ✅ | ✅ | ✅ | [Completato](2025-09-10/) |
+| 2026-07-14 | ✅ | ✅ | ✅ | ✅ | [Completato](2026-07-14/) |
 
 ## Formato delle soluzioni
 

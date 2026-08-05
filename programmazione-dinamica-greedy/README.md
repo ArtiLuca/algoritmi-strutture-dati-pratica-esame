@@ -1,14 +1,32 @@
-# Esercizi Tematici — Programmazione Dinamica (DP)
+# Esercizi Tematici — Programmazione Dinamica e Greedy
 
 [← Torna alla raccolta principale](../README.md)
 
-Questa cartella raccoglie esclusivamente esercizi basati sulla **Programmazione Dinamica**, uno degli argomenti più complessi e ricorrenti. L'obiettivo è isolare questi problemi per fare pratica mirata su:
-1. Sottostruttura ottima e caratterizzazione ricorsiva;
-2. Algoritmo bottom-up o top-down (memoization);
-3. Ricostruzione della soluzione ottima;
-4. Valutazione della complessità.
+Questa cartella raccoglie esercizi tematici su **Programmazione Dinamica** e
+**Algoritmi Greedy**, due argomenti ricorrenti negli esercizi d'esame.
+
+L'obiettivo è fare pratica mirata su problemi che richiedono di riconoscere una
+struttura ottima e tradurla in una soluzione algoritmica completa, in stile
+esame.
+
+Per la **Programmazione Dinamica**, mi concentro soprattutto su:
+
+1. sottostruttura ottima e caratterizzazione ricorsiva;
+2. algoritmo bottom-up o top-down con memoization;
+3. ricostruzione della soluzione ottima;
+4. valutazione della complessità.
+
+Per gli **Algoritmi Greedy**, mi concentro soprattutto su:
+
+1. formalizzazione della soluzione e del costo;
+2. proprietà della sottostruttura ottima;
+3. individuazione di una scelta greedy sicura;
+4. dimostrazione della proprietà di scelta greedy;
+5. pseudocodice e complessità.
 
 ## Stato delle soluzioni
+
+### Programmazione Dinamica
 
 | Esercizio | Argomento principale | Stato |
 |---|---|---|
@@ -23,10 +41,17 @@ Questa cartella raccoglie esclusivamente esercizi basati sulla **Programmazione 
 | Esercizio 26 | Allocazione massima di un'aula (attività) | [Da completare](esercizio_26.md) |
 | Esercizio 27 | Attraversamento griglia con guadagno massimo | [Da completare](esercizio_27.md) |
 | Esercizio 28 | Longest Increasing Subsequence (LIS) | [Da completare](esercizio_28.md) |
-| Esercizio 29 | Edit Distance (con costo variabile) | [Da completare](esercizio_29.md) |
-| Esercizio 30 | Knapsack bilanciato (coalizione di governo) | [Da completare](esercizio_30.md) |
+| Esercizio 29 | Edit Distance con costo variabile | [Da completare](esercizio_29.md) |
+| Esercizio 30 | Knapsack bilanciato / coalizione di governo | [Da completare](esercizio_30.md) |
 | Esercizio 31 | Sottosequenza palindroma di lunghezza massima | [Da completare](esercizio_31.md) |
 | Esercizio 32 | Sottoarray contiguo di somma massima | [Da completare](esercizio_32.md) |
+
+### Greedy
+
+| Esercizio | Argomento principale | Stato |
+|---|---|---|
+| Esercizio 33 | Soste minime ai distributori | [Da completare](esercizio_33.md) |
+| Esercizio 34 | Turni minimi per coprire richieste | [Da completare](esercizio_34.md) |
 
 ---
 
@@ -175,3 +200,79 @@ Realizzare, con tecniche di programmazione dinamica, un algoritmo che dato un ar
 - **ii.** tradurre tale definizione in un algoritmo (bottom up o top down con memoization) che determina la somma massima;
 - **iii.** trasformare l'algoritmo in modo che fornisca anche la sottostringa, non solo la sua somma;
 - **iv.** valutare la complessità dell'algoritmo.
+
+---
+
+## Esercizi Greedy
+
+### **Esercizio 33**
+
+Si supponga di voler viaggiare dalla città `A` alla città `B` con un'auto che ha
+un'autonomia pari a `d` km.
+
+Lungo il percorso si trovano `n - 1` distributori:
+
+```math
+D_1, \dots, D_{n-1},
+```
+
+a distanze:
+
+```math
+d_1, \dots, d_n
+```
+
+con `d_i <= d`, come indicato in figura:
+
+```text
+D_0 = A ... D_1 ... D_2 ... D_{n-1} ... D_n = B
+```
+
+L'auto ha inizialmente il serbatoio pieno e l'obiettivo è quello di percorrere
+il viaggio da `A` a `B`, minimizzando il numero di soste ai distributori per il
+rifornimento.
+
+- **i.** Introdurre la nozione di soluzione per il problema e di costo della
+  soluzione. Mostrare che vale la proprietà della sottostruttura ottima e
+  individuare una scelta che gode della proprietà della scelta greedy.
+- **ii.** Sulla base della scelta greedy individuata al passo precedente,
+  fornire un algoritmo greedy `stop(d,n)` che dato in input l'array delle
+  distanze `d[1..n]` restituisce una soluzione ottima.
+- **iii.** Valutare la complessità dell'algoritmo.
+
+---
+
+### **Esercizio 34**
+
+L'ufficio postale offre un servizio di ritiro pacchi in sede su prenotazione.
+
+Il destinatario, avvisato della presenza del pacco, deve comunicare l'orario
+preciso al quale si recherà allo sportello.
+
+Sapendo che gli impiegati dedicano a questa mansione turni di un'ora, con inizio
+in un momento qualsiasi, si chiede di scrivere un algoritmo che individui
+l'insieme minimo di turni di un'ora sufficienti a soddisfare tutte le richieste.
+
+Più in dettaglio, data una sequenza di richieste:
+
+```math
+\vec r = r_1, \dots, r_n,
+```
+
+dove `r_i` è l'orario della `i`-ma prenotazione, si vuole determinare una
+sequenza di turni:
+
+```math
+\vec t = t_1, \dots, t_k,
+```
+
+con `t_j` orario di inizio del `j`-mo turno, che abbia dimensione minima e tale
+che i turni coprano tutte le richieste.
+
+- **i.** Formalizzare la nozione di soluzione per il problema e il relativo
+  costo. Mostrare che vale la proprietà della sottostruttura ottima e
+  individuare una scelta che gode della proprietà della scelta greedy.
+- **ii.** Sulla base della scelta greedy individuata al passo precedente,
+  fornire un algoritmo greedy `time(R,n)` che dato in input l'array delle
+  richieste `r[1..n]` restituisce una soluzione ottima.
+- **iii.** Valutare la complessità dell'algoritmo.

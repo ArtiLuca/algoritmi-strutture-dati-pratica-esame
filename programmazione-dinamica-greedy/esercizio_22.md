@@ -44,10 +44,10 @@ Quindi, definendo $c(i,j)$ come il costo minimo per arrivare alla casella $(n,n)
 $$
 c(i,j) =
 \begin{cases}
-0 & \text{se } i=n \text{ e } j=n \\
-r[i,j] + c(i,j+1) & \text{se } i=n \text{ e } j<n \\
-u[i,j] + c(i+1,j) & \text{se } i<n \text{ e } j=n \\
-\min\{r[i,j] + c(i,j+1),\ u[i,j] + c(i+1,j)\} & \text{altrimenti}
+0 & \text{se } i=n \text{ e } j=n, \\
+r[i,j] + c(i,j+1) & \text{se } i=n \text{ e } j \lt n, \\
+u[i,j] + c(i+1,j) & \text{se } i \lt n \text{ e } j=n, \\
+\min\{r[i,j] + c(i,j+1),\ u[i,j] + c(i+1,j)\} & \text{altrimenti.}
 \end{cases}
 $$
 

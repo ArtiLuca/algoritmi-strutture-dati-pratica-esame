@@ -16,7 +16,9 @@ preparazione dell'esame.
 
 ## Fonte degli appelli
 
-Gli appelli sono presi dalla pagina ufficiale del corso. I PDF originali non sono inclusi nel repository.
+Gli appelli sono presi dalla pagina ufficiale del corso.
+
+I PDF originali non sono inclusi nel repository.
 
 ## Nota
 
@@ -33,11 +35,14 @@ La maggior parte delle cartelle corrisponde a un appello d'esame specifico:
 ```text
 YYYY-MM-DD/
 ├── README.md
-├── domanda-a.md
-├── domanda-b.md
-├── esercizio-1.md
-└── esercizio-2.md
+├── domanda_a.md
+├── domanda_b.md
+├── esercizio_1.md
+└── esercizio_2.md
 ```
+
+Sono presenti anche alcune cartelle tematiche dedicate a esercizi presi dalla
+raccolta del corso o da altri materiali di preparazione.
 
 ## Appelli presenti
 
@@ -77,29 +82,41 @@ Gli appelli raccolti includono esercizi su:
 - alberi arricchiti;
 - greedy;
 - Huffman;
-- programmazione dinamica e memoizzazione;
+- programmazione dinamica e memoization;
 - correttezza e analisi della complessità.
 
-## Raccolta Programmazione Dinamica
+## Raccolta Programmazione Dinamica e Greedy
 
-Per praticare un mio punto debole, ho isolato gli esercizi presi dalla raccolta del corso relativi alla Programmazione Dinamica  
-in una cartella dedicata:
+Per praticare alcuni argomenti su cui voglio fare più esercizio, ho isolato
+alcuni esercizi presi dalla raccolta del corso in una cartella dedicata.
+
+Questa sezione contiene soprattutto esercizi su **Programmazione Dinamica** e
+**Algoritmi Greedy**, con attenzione a sottostruttura ottima, caratterizzazioni
+ricorsive, scelte greedy, dimostrazioni di correttezza e analisi della
+complessità.
 
 | Argomento | Contenuto | Stato |
 |---|---|---|
-| Programmazione Dinamica (DP) | 15 Esercizi (dal n. 18 al n. 32) | [Da completare](programmazione-dinamica/) |
+| [Programmazione Dinamica e Greedy](programmazione-dinamica-greedy/) | Esercizi tematici su DP, sottostruttura ottima, ricorrenze, scelte greedy e dimostrazioni di correttezza | In corso |
 
 ```text
-programmazione-dinamica/
+programmazione-dinamica-greedy/
 ├── README.md
 ├── esercizio_18.md
-└── ...
+├── ...
+├── esercizio_32.md
+├── esercizio_33.md
+└── esercizio_34.md
 ```
 
 ## Stato del repository
 
-Repository in costruzione.  
-Le cartelle relative ai singoli esempi completi di esami sono (per la maggior parte) considerate complete.  
-Invece, la cartella dedicata alla Programmazione Dinamica è ancora un _"work in progress"_.
+Repository in costruzione.
+
+Le cartelle relative ai singoli appelli d'esame sono, per la maggior parte,
+considerate complete.
+
+La cartella dedicata alla Programmazione Dinamica e agli Algoritmi Greedy è
+ancora un _work in progress_.
 
 In ogni caso, le soluzioni verranno aggiunte e/o migliorate progressivamente.

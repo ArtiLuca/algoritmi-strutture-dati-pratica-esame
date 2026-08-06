@@ -1,7 +1,7 @@
 # Algoritmi e Strutture Dati — Pratica d'Esame
 
-Questo repository contiene le mie soluzioni personali ad alcuni appelli passati
-del corso di **Algoritmi e Strutture Dati**.
+Questo repository contiene le mie soluzioni personali ad alcuni appelli passati 
+ed esercizi vari del corso di **Algoritmi e Strutture Dati**.
 
 Le soluzioni sono scritte principalmente in stile esame, quindi con attenzione a:
 

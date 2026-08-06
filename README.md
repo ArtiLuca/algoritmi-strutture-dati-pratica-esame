@@ -16,9 +16,10 @@ preparazione dell'esame.
 
 ## Fonte degli appelli
 
-Gli appelli sono presi dalla pagina ufficiale del corso.
+Gli appelli sono presi dalla pagina ufficiale del corso mentre gli esercizi sono presi
+dal libro di testo e varie raccolte esercizi dati durante il corso.  
 
-I PDF originali non sono inclusi nel repository.
+I PDF originali degli appelli non sono inclusi nel repository.
 
 ## Nota
 

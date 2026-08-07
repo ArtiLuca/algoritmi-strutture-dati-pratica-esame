@@ -47,7 +47,7 @@ Possiamo dare una caratterizzazione ricorsiva in base alle seguenti osservazioni
 
 ## Caratterizzazione ricorsiva
 
-Quindi, per ogni coppia `(i,j)` con `1 <= i <= m` e `1 <= j <= n`, possiamo definire la ricorrenza per il guadagno massimo `G[i,j]` come segue:
+Quindi, per ogni coppia `(i,j)` con $1 <= i <= m$ e $1 <= j <= n$, possiamo definire la ricorrenza per il guadagno massimo `G[i,j]` come segue:
 
 $$
 G[i,j] =

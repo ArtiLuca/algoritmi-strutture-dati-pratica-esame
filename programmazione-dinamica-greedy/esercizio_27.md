@@ -34,16 +34,16 @@ Ad ogni passo Mario scende di una riga e può spostarsi contestualmente verso de
 
 Possiamo quindi vedere il problema in questo modo:
 
-- nella casella `(i,j)` possiamo decidere di raccogliere la moneta `V[i,j]` e poi continuare dalla riga successiva, sempre dalla colonna `j`;
-- oppure possiamo decidere di non raccogliere la moneta in `(i,j)` e provare a scegliere una casella più a destra nella stessa riga.
+- nella casella $(i,j)$ possiamo decidere di raccogliere la moneta $V[i,j]$ e poi continuare dalla riga successiva, sempre dalla colonna `j`;
+- oppure possiamo decidere di non raccogliere la moneta in $(i,j)$ e provare a scegliere una casella più a destra nella stessa riga.
 
 Questa seconda possibilità non rappresenta un vero "passo" di Mario, ma è un modo comodo per far scorrere la DP verso destra e valutare tutte le possibili colonne in cui Mario potrebbe decidere di scendere.
 
 Possiamo dare una caratterizzazione ricorsiva in base alle seguenti osservazioni:
 
-- Se ci troviamo oltre l'ultima riga, ovvero in `i = m + 1`, allora l'attraversamento è finito e non possiamo più ottenere alcun guadagno. Quindi il guadagno residuo è `0`.
-- Se invece ci troviamo oltre l'ultima colonna, ovvero in `j = n + 1`, siamo in una posizione impossibile, perché non abbiamo scelto nessuna casella valida nella riga corrente. In questo caso usiamo il valore sentinella `-∞`.
-- Altrimenti, se ci troviamo in una casella valida `(i,j)`, dobbiamo scegliere il massimo tra raccogliere la moneta in `(i,j)` oppure spostarci logicamente verso destra e provare dalla casella `(i,j+1)`.
+- Se ci troviamo oltre l'ultima riga, ovvero in $i = m + 1$, allora l'attraversamento è finito e non possiamo più ottenere alcun guadagno. Quindi il guadagno residuo è `0`.
+- Se invece ci troviamo oltre l'ultima colonna, ovvero in $j = n + 1$, siamo in una posizione impossibile, perché non abbiamo scelto nessuna casella valida nella riga corrente. In questo caso usiamo il valore sentinella $-\infty$.
+- Altrimenti, se ci troviamo in una casella valida $(i,j)$, dobbiamo scegliere il massimo tra raccogliere la moneta in $(i,j)$ oppure spostarci logicamente verso destra e provare dalla casella $(i,j+1)$.
 
 ## Caratterizzazione ricorsiva
 
@@ -60,7 +60,7 @@ $$
 
 ## Algoritmo bottom-up
 
-Per il punto **ii** utilizziamo una tabella `G[1..m+1, 1..n+1]`, dove `G[i,j]` rappresenta il guadagno massimo di un attraversamento della griglia partendo dalla posizione `(i,j)`.
+Per il punto **ii** utilizziamo una tabella $G[1..m+1, 1..n+1]$, dove $G[i,j]$ rappresenta il guadagno massimo di un attraversamento della griglia partendo dalla posizione $(i,j)$.
 
 Si gestiscono prima i casi base:
 

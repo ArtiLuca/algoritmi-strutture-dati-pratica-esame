@@ -152,7 +152,7 @@ printMario(S, m, n)
 
 ## Complessità
 
-Per il punto **iv**, la complessità temporale deriva dal riempimento della tabella `G[1..m+1, 1..n+1]`.
+Per il punto **iv**, la complessità temporale deriva dal riempimento della tabella $G[1..m+1, 1..n+1]$.
 
 Ogni cella viene calcolata una sola volta e ogni calcolo richiede tempo costante, quindi la complessità temporale dell'algoritmo è:
 
@@ -172,11 +172,11 @@ $$
 \Theta(m \times n)
 $$
 
-Per la complessità spaziale, usiamo la tabella `G[1..m+1, 1..n+1]`.
+Per la complessità spaziale, usiamo la tabella $G[1..m+1, 1..n+1]$.
 
-Se vogliamo anche ricostruire il percorso, usiamo anche la tabella `S[1..m, 1..n]`.
+Se vogliamo anche ricostruire il percorso, usiamo anche la tabella $S[1..m, 1..n]$.
 
-Entrambe le tabelle occupano spazio proporzionale a `m × n`, quindi la complessità spaziale totale è:
+Entrambe le tabelle occupano spazio proporzionale a $m × n$, quindi la complessità spaziale totale è:
 
 $$
 \Theta(m \times n)

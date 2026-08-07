@@ -64,8 +64,8 @@ Per il punto **ii** utilizziamo una tabella `G[1..m+1, 1..n+1]`, dove `G[i,j]` r
 
 Si gestiscono prima i casi base:
 
-- `G[m+1,j] = 0`, perché oltre l'ultima riga non c'è più alcun guadagno da ottenere;
-- `G[i,n+1] = -∞`, perché oltre l'ultima colonna la posizione è impossibile.
+- $G[m+1,j] = 0$, perché oltre l'ultima riga non c'è più alcun guadagno da ottenere;
+- $G[i,n+1] = -\infty$, perché oltre l'ultima colonna la posizione è impossibile.
 
 Dopodiché, la tabella viene riempita dal basso verso l'alto e da destra verso sinistra.
 
@@ -99,12 +99,12 @@ mario(V, m, n)
 
 Per il punto **iii**, se volessimo modificare l'algoritmo sopra per ottenere anche il percorso di guadagno massimo, ci basta tenere traccia della colonna scelta in ogni riga.
 
-L'informazione rilevante è quando decidiamo di raccogliere una moneta in una certa casella `(i,j)`. Infatti, raccogliere la moneta in `(i,j)` significa che nella riga `i` scegliamo la colonna `j` e poi continuiamo dalla riga successiva, sempre a partire dalla colonna `j`.
+L'informazione rilevante è quando decidiamo di raccogliere una moneta in una certa casella $(i,j)$. Infatti, raccogliere la moneta in $(i,j)$ significa che nella riga `i` scegliamo la colonna `j` e poi continuiamo dalla riga successiva, sempre a partire dalla colonna `j`.
 
-Quindi usiamo una tabella `S[1..m, 1..n]`, dove `S[i,j]` indica la colonna scelta nella riga `i` quando il sottoproblema parte da `(i,j)`.
+Quindi usiamo una tabella $S[1..m, 1..n]$, dove $S[i,j]$ indica la colonna scelta nella riga `i` quando il sottoproblema parte da $(i,j)$.
 
-- Se scegliamo di raccogliere la moneta in `(i,j)`, allora salviamo `S[i,j] = j`.
-- Se invece scegliamo di ignorare `(i,j)` e provare da `(i,j+1)`, allora copiamo la scelta migliore già calcolata per `(i,j+1)`, cioè `S[i,j] = S[i,j+1]`.
+- Se scegliamo di raccogliere la moneta in $(i,j)$, allora salviamo $S[i,j] = j$.
+- Se invece scegliamo di ignorare $(i,j)$ e provare da $(i,j+1)$, allora copiamo la scelta migliore già calcolata per $(i,j+1)$, cioè $S[i,j] = S[i,j+1]$.
 
 Alla fine, la procedura ausiliaria `printMario(S,m,n)` stampa una sequenza di coppie `(riga, colonna)` che rappresentano le caselle attraversate da Mario.
 

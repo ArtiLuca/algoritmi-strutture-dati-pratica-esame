@@ -2,7 +2,7 @@
 
 ## Traccia
 
-Si ricordi che data $s'$ una sequenza $X = x_1 \dots x_k$ si indica con $X_i$ il prefisso $x_1 \dots x_i$.
+Si ricordi che data una sequenza $X = x_1 \dots x_k$ si indica con $X_i$ il prefisso $x_1 \dots x_i$.
 
 Una sottosequenza di $X$ è $x_{i_1} \dots x_{i_h}$ con $1 \le i_1 < i_2 < \dots < i_h \le k$, ovvero è una sequenza ottenuta da $X$ eliminando alcuni elementi.
 

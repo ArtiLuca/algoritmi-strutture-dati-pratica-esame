@@ -56,7 +56,7 @@ $$
 \end{cases}
 $$
 
-Come visto a lezione, possiamo usare una tabella bidimensionale `L[i,j]` per memorizzare i vari stati della ricorrenza $\ell(i,j)$ e anche una struttura dati ausiliaria `B[i,j]` per ricostruire la sottosequenza massima trovata.
+Come visto a lezione, possiamo usare una tabella bidimensionale $L[i,j]$ per memorizzare i vari stati della ricorrenza $\ell(i,j)$ e anche una struttura dati ausiliaria $B[i,j]$ per ricostruire la sottosequenza massima trovata.
 
 In particolare, la tabella `B` memorizza i seguenti casi:
 
@@ -138,7 +138,7 @@ $$
 O(m+n)
 $$
 
-poiché ad ogni chiamata ricorsiva la somma dei due indici `i + j` diminuisce di almeno 1.
+poiché ad ogni chiamata ricorsiva la somma dei due indici $i + j$ diminuisce di almeno 1.
 
 ### Versione memoizzata
 
@@ -194,13 +194,13 @@ $$
 O(m \times n)
 $$
 
-perché ogni sottoproblema `L[i,j]` viene calcolato al massimo una volta.
+perché ogni sottoproblema $L[i,j]$ viene calcolato al massimo una volta.
 
 ### Esempio: `spanking` e `amputation`
 
 Un esempio concreto preso dal corso è la seguente domanda:
 
-> Calcola la LCS tra `spanking` e `amputation`, calcolando solo la tabella `L[i,j]` delle lunghezze.
+> Calcola la LCS tra `spanking` e `amputation`, calcolando solo la tabella $L[i,j]$ delle lunghezze.
 
 Seguendo gli algoritmi mostrati sopra, si ottiene la tabella che segue:
 
@@ -250,10 +250,10 @@ con $0 \le i \le k$ e $0 \le j \le h$.
 
 Possiamo dare una caratterizzazione ricorsiva in base alle seguenti osservazioni:
 
-- Se `i = 0`, allora abbiamo esaurito i caratteri di `X`. Quindi l'unica cosa da fare è prendere tutti i `j` caratteri rimanenti di `Y`, e si ha $\ell(i,j) = j$.
-- In modo analogo, se `j = 0`, allora abbiamo esaurito i caratteri di `Y`. Quindi l'unica cosa da fare è prendere tutti gli `i` caratteri rimanenti di `X`, e si ha $\ell(i,j) = i$.
-- Se invece `i,j > 0` e abbiamo che `X[i] == Y[j]`, allora possiamo usare quel carattere una sola volta nella SCS e consumare entrambi i caratteri. Quindi si ha $\ell(i,j) = 1 + \ell(i-1,j-1)$.
-- Altrimenti, se `i,j > 0` e `X[i] != Y[j]`, allora bisogna consumare un carattere da una delle due sequenze. In questo caso vogliamo minimizzare la scelta tra prendere il prossimo carattere da `X` oppure da `Y`.
+- Se $i = 0$, allora abbiamo esaurito i caratteri di $X$. Quindi l'unica cosa da fare è prendere tutti i `j` caratteri rimanenti di $Y$, e si ha $\ell(i,j) = j$.
+- In modo analogo, se $j = 0$, allora abbiamo esaurito i caratteri di $Y$. Quindi l'unica cosa da fare è prendere tutti gli `i` caratteri rimanenti di $X$, e si ha $\ell(i,j) = i$.
+- Se invece $i,j > 0$ e abbiamo che $X[i] == Y[j]$, allora possiamo usare quel carattere una sola volta nella SCS e consumare entrambi i caratteri. Quindi si ha $\ell(i,j) = 1 + \ell(i-1,j-1)$.
+- Altrimenti, se $i,j > 0$ e $X[i] != Y[j]$, allora bisogna consumare un carattere da una delle due sequenze. In questo caso vogliamo minimizzare la scelta tra prendere il prossimo carattere da $X$ oppure da $Y$.
 
 ## Caratterizzazione ricorsiva
 
@@ -271,7 +271,7 @@ $$
 
 ## Algoritmo bottom-up
 
-Per il punto **i** e il punto **ii** possiamo usare un algoritmo bottom-up che usa la tabella `L[0..k, 0..h]`, dove `L[i,j]` indica la lunghezza minima di una SCS per i prefissi `X_i` e `Y_j`.
+Per il punto **i** e il punto **ii** possiamo usare un algoritmo bottom-up che usa la tabella $L[0..k, 0..h]$, dove $L[i,j]$ indica la lunghezza minima di una SCS per i prefissi $X_i$ e $Y_j$.
 
 ```text
 computeSCS(X, Y)
@@ -303,15 +303,15 @@ computeSCS(X, Y)
 
 ## Ricostruzione di una SCS
 
-Per quanto riguarda il punto **ii**, se volessimo anche ricostruire la supersequenza trovata, possiamo modificare lo pseudocodice precedente in modo che usi anche una tabella `B[1..k, 1..h]` che memorizza le scelte effettuate durante la ricerca.
+Per quanto riguarda il punto **ii**, se volessimo anche ricostruire la supersequenza trovata, possiamo modificare lo pseudocodice precedente in modo che usi anche una tabella $B[1..k, 1..h]$ che memorizza le scelte effettuate durante la ricerca.
 
 Ovvero:
 
-- salviamo in `B[i,j]` il valore `"xy"` quando troviamo due caratteri uguali;
-- salviamo in `B[i,j]` il valore `"x"` quando scegliamo di consumare un carattere del prefisso `X_i`;
-- salviamo in `B[i,j]` il valore `"y"` quando scegliamo di consumare un carattere del prefisso `Y_j`.
+- salviamo in $B[i,j]$ il valore $"xy"$ quando troviamo due caratteri uguali;
+- salviamo in $B[i,j]$ il valore $"x"$ quando scegliamo di consumare un carattere del prefisso $X_i$;
+- salviamo in $B[i,j]$ il valore $"y"$ quando scegliamo di consumare un carattere del prefisso $Y_j$.
 
-Dopodiché, possiamo passare `B` come parametro in una procedura di stampa `printSCS(X,Y,i,j,B)`, che stampa le nostre scelte seguendo la definizione della ricorrenza.
+Dopodiché, possiamo passare $B$ come parametro in una procedura di stampa `printSCS(X,Y,i,j,B)`, che stampa le nostre scelte seguendo la definizione della ricorrenza.
 
 ```text
 computeSCS(X, Y)
@@ -388,7 +388,7 @@ printSCS(X, Y, i, j, B)
 
 ## Complessità
 
-Per il punto **iii**, la complessità temporale è data dal riempimento della tabella `L[0..k, 0..h]`.
+Per il punto **iii**, la complessità temporale è data dal riempimento della tabella $L[0..k, 0..h]$.
 
 Ogni cella viene calcolata una sola volta e ogni calcolo richiede tempo costante, quindi la complessità temporale è:
 
@@ -410,11 +410,11 @@ $$
 \Theta(k \times h)
 $$
 
-Per quanto riguarda la complessità spaziale, usiamo la tabella `L[0..k, 0..h]`.
+Per quanto riguarda la complessità spaziale, usiamo la tabella $L[0..k, 0..h]$.
 
-Se vogliamo anche ricostruire una SCS, usiamo anche la tabella `B[1..k, 1..h]`.
+Se vogliamo anche ricostruire una SCS, usiamo anche la tabella $B[1..k, 1..h]$.
 
-Entrambe le tabelle hanno dimensione proporzionale a `k × h`, quindi la complessità spaziale complessiva è:
+Entrambe le tabelle hanno dimensione proporzionale a $k × h$, quindi la complessità spaziale complessiva è:
 
 $$
 \Theta(k \times h)

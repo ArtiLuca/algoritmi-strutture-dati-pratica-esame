@@ -271,7 +271,7 @@ $$
 
 ## Algoritmo bottom-up
 
-Per il punto **i** e il punto **ii** possiamo usare un algoritmo bottom-up che usa la tabella $L[0..k, 0..h]$, dove $L[i,j]$ indica la lunghezza minima di una SCS per i prefissi $X_i$ e $Y_j$.
+Per il punto **i** e il punto **ii** possiamo usare un algoritmo bottom-up che usa la tabella $L[0\dots k, 0\dots h]$, dove $L[i,j]$ indica la lunghezza minima di una SCS per i prefissi $X_i$ e $Y_j$.
 
 ```text
 computeSCS(X, Y)
@@ -303,7 +303,7 @@ computeSCS(X, Y)
 
 ## Ricostruzione di una SCS
 
-Per quanto riguarda il punto **ii**, se volessimo anche ricostruire la supersequenza trovata, possiamo modificare lo pseudocodice precedente in modo che usi anche una tabella $B[1..k, 1..h]$ che memorizza le scelte effettuate durante la ricerca.
+Per quanto riguarda il punto **ii**, se volessimo anche ricostruire la supersequenza trovata, possiamo modificare lo pseudocodice precedente in modo che usi anche una tabella $B[1\dots k, 1\dots h]$ che memorizza le scelte effettuate durante la ricerca.
 
 Ovvero:
 
@@ -388,7 +388,7 @@ printSCS(X, Y, i, j, B)
 
 ## Complessità
 
-Per il punto **iii**, la complessità temporale è data dal riempimento della tabella $L[0..k, 0..h]$.
+Per il punto **iii**, la complessità temporale è data dal riempimento della tabella $L[0\dots k, 0\dots h]$.
 
 Ogni cella viene calcolata una sola volta e ogni calcolo richiede tempo costante, quindi la complessità temporale è:
 
@@ -410,9 +410,9 @@ $$
 \Theta(k \times h)
 $$
 
-Per quanto riguarda la complessità spaziale, usiamo la tabella $L[0..k, 0..h]$.
+Per quanto riguarda la complessità spaziale, usiamo la tabella $L[0\dots k, 0\dots h]$.
 
-Se vogliamo anche ricostruire una SCS, usiamo anche la tabella $B[1..k, 1..h]$.
+Se vogliamo anche ricostruire una SCS, usiamo anche la tabella $B[1\dots k, 1\dots h]$.
 
 Entrambe le tabelle hanno dimensione proporzionale a $k × h$, quindi la complessità spaziale complessiva è:
 

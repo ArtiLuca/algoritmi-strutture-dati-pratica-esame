@@ -51,7 +51,7 @@ $$
 
 ## Algoritmo bottom-up
 
-Per il punto **ii** uso un array `L[1..n]`, dove `L[j]` indica la somma massima del sottoarray che termina esattamente all'indice `j`.
+Per il punto **ii** uso un array $L[1..n]$, dove $L[j]$ indica la somma massima del sottoarray che termina esattamente all'indice `j`.
 
 Prima si riempie l'array seguendo la ricorrenza e dopodiché si usa una variabile locale `best` per tenere traccia del massimo trovato. In questo modo, alla fine, si restituisce il massimo globale.
 
@@ -85,14 +85,14 @@ maxSubarray(A, n)
 
 ## Ricostruzione del sottoarray
 
-Per il punto **iii**, se vogliamo anche ottenere il sottoarray di somma massima trovato, possiamo aggiornare il codice sopra in modo da utilizzare un array `S[1..n]`.
+Per il punto **iii**, se vogliamo anche ottenere il sottoarray di somma massima trovato, possiamo aggiornare il codice sopra in modo da utilizzare un array $S[1..n]$.
 
-L'array `S` tiene traccia dell'indice di partenza del sottoarray ottimo che termina in una certa posizione.
+L'array $S$ tiene traccia dell'indice di partenza del sottoarray ottimo che termina in una certa posizione.
 
-In particolare, `S[j]` indica l'indice dal quale parte il sottoarray di somma massima che termina esattamente all'indice `j`.
+In particolare, $S[j]$ indica l'indice dal quale parte il sottoarray di somma massima che termina esattamente all'indice `j`.
 
-- Se conviene estendere il sottoarray precedente, allora il punto di partenza rimane lo stesso, quindi `S[j] = S[j-1]`.
-- Se invece conviene ricominciare da `A[j]`, allora il sottoarray parte proprio da `j`, quindi `S[j] = j`.
+- Se conviene estendere il sottoarray precedente, allora il punto di partenza rimane lo stesso, quindi $S[j] = S[j-1]$.
+- Se invece conviene ricominciare da $A[j]$, allora il sottoarray parte proprio da `j`, quindi $S[j] = j$.
 
 Questo array viene poi passato alla procedura `printMaxSubarray(A,S,bestEnd)`, che stampa il sottoarray trovato.
 
@@ -159,6 +159,6 @@ $$
 \Theta(n)
 $$
 
-Infatti, usiamo gli array `L[1..n]` e `S[1..n]`, entrambi di dimensione lineare.
+Infatti, usiamo gli array $L[1..n]$ e $S[1..n]$, entrambi di dimensione lineare.
 
 Se volessimo calcolare soltanto la somma massima, senza ricostruire il sottoarray, si potrebbe anche ottimizzare lo spazio a $\Theta(1)$ mantenendo solo il valore precedente e il massimo globale.

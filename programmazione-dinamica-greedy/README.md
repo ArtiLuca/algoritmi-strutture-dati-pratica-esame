@@ -44,7 +44,7 @@ Per gli **Algoritmi Greedy**, mi concentro soprattutto su:
 | Esercizio 29 | Edit Distance con costo variabile | [Da completare](esercizio_29.md) |
 | Esercizio 30 | Knapsack bilanciato / coalizione di governo | [Da completare](esercizio_30.md) |
 | Esercizio 31 | Sottosequenza palindroma di lunghezza massima | [Da completare](esercizio_31.md) |
-| Esercizio 32 | Sottoarray contiguo di somma massima | [Da completare](esercizio_32.md) |
+| Esercizio 32 | Sottoarray contiguo di somma massima | [Completato](esercizio_32.md) |
 
 ### Greedy
 

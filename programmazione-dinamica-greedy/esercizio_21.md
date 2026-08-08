@@ -64,15 +64,15 @@ $$
 
 ## Algoritmo con memoization
 
-Per il punto **ii** possiamo usare una tabella `C[0..s, 0..n]`, dove `C[sPrime,j]` indica il numero minimo di banconote necessario per totalizzare esattamente la somma `sPrime` usando solo le prime `j` banconote.
+Per il punto **ii** possiamo usare una tabella $C[0..s, 0..n]$, dove $C[sPrime,j]$ indica il numero minimo di banconote necessario per totalizzare esattamente la somma `sPrime` usando solo le prime `j` banconote.
 
 Uso un approccio memoizzato costituito da un algoritmo di inizializzazione `initBanconote(s,v,n)`, che si occupa del riempimento iniziale della tabella usando come valore di default `-1` per indicare sottoproblemi ancora non risolti.
 
-Si assume che venga passato come parametro un array `v[1..n]` contenente il valore delle banconote a disposizione.
+Si assume che venga passato come parametro un array $v[1..n]$ contenente il valore delle banconote a disposizione.
 
 Infine, l'algoritmo chiama la procedura ricorsiva `banconoteRec(sPrime,v,j,C)` per risolvere il problema.
 
-In particolare, il valore di ritorno `C[s,n]` si interpreta così:
+In particolare, il valore di ritorno $C[s,n]$ si interpreta così:
 
 - se vale $+\infty$, allora non esiste una soluzione;
 - altrimenti, indica il numero minimo di banconote necessarie.
@@ -122,17 +122,17 @@ banconoteRec(sPrime, v, j, C)
 
 ## Ricostruzione della soluzione
 
-Per quanto riguarda il punto **iii**, se volessimo anche tenere traccia di quali banconote vengono utilizzate nella soluzione ottima trovata, inizialmente volevo usare un solo array `B[0..n]` per indicare tramite un valore booleano se una data banconota viene utilizzata oppure no.
+Per quanto riguarda il punto **iii**, se volessimo anche tenere traccia di quali banconote vengono utilizzate nella soluzione ottima trovata, inizialmente volevo usare un solo array $B[0..n]$ per indicare tramite un valore booleano se una data banconota viene utilizzata oppure no.
 
 Però poi mi sono reso conto che questo non funzionerebbe, perché se usiamo una banconota per la risoluzione di un sottoproblema, questo non significa necessariamente che quella banconota sarà anche utilizzata nella soluzione ottima finale.
 
-Dopo aver perso un po' di tempo, anche perché la soluzione ufficiale usa un array del tipo `B[0..n]`, ho scelto di optare per una scelta più sicura secondo me.
+Dopo aver perso un po' di tempo, anche perché la soluzione ufficiale usa un array del tipo $B[0..n]$, ho scelto di optare per una scelta più sicura secondo me.
 
-Ovvero, uso una tabella `B[0..s, 0..n]`, dove `B[sPrime,j]` indica tramite un valore booleano se la banconota `b_j` viene usata nella soluzione ottima del sottoproblema di somma `sPrime` con le prime `j` banconote.
+Ovvero, uso una tabella $B[0..s, 0..n]$, dove $B[sPrime,j]$ indica tramite un valore booleano se la banconota `b_j` viene usata nella soluzione ottima del sottoproblema di somma `sPrime` con le prime `j` banconote.
 
 Dopodiché, possiamo passare questa tabella a una procedura ricorsiva per la stampa della soluzione ottima trovata.
 
-La procedura `printBanconote(sPrime,j,v,B)` stampa la soluzione ottima trovata solo nel caso in cui questa sia effettivamente possibile, ovvero solo nel caso in cui la soluzione ottima finale trovata sia tale che `C[s,n] != +∞`.
+La procedura `printBanconote(sPrime,j,v,B)` stampa la soluzione ottima trovata solo nel caso in cui questa sia effettivamente possibile, ovvero solo nel caso in cui la soluzione ottima finale trovata sia tale che $C[s,n] \ne +\infty$.
 
 La stampa della soluzione si ferma al caso base in cui la somma è pari a `0`, oppure procede in modo ricorsivo seguendo le scelte salvate nella tabella `B`.
 
@@ -212,7 +212,7 @@ printBanconote(sPrime, j, v, B)
 
 ## Complessità
 
-Per quanto riguarda il punto **iv**, la complessità temporale è data dal numero di stati della tabella `C[0..s, 0..n]`.
+Per quanto riguarda il punto **iv**, la complessità temporale è data dal numero di stati della tabella $C[0..s, 0..n]$.
 
 Ogni stato viene calcolato al massimo una volta e ogni calcolo richiede tempo costante, quindi la complessità temporale complessiva è:
 
@@ -228,7 +228,7 @@ $$
 O(s \times n)
 $$
 
-per l'uso delle tabelle `C[0..s, 0..n]` e `B[0..s, 0..n]`.
+per l'uso delle tabelle $C[0..s, 0..n]$ e $B[0..s, 0..n]$.
 
 Inoltre, viene allocata memoria ulteriore sullo stack per la chiamata di stampa ricorsiva, ma questa si può assorbire nel costo dato dalle due tabelle.
 

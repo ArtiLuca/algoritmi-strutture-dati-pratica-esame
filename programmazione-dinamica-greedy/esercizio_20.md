@@ -253,7 +253,7 @@ Possiamo dare una caratterizzazione ricorsiva in base alle seguenti osservazioni
 - Se $i = 0$, allora abbiamo esaurito i caratteri di $X$. Quindi l'unica cosa da fare è prendere tutti i `j` caratteri rimanenti di $Y$, e si ha $\ell(i,j) = j$.
 - In modo analogo, se $j = 0$, allora abbiamo esaurito i caratteri di $Y$. Quindi l'unica cosa da fare è prendere tutti gli `i` caratteri rimanenti di $X$, e si ha $\ell(i,j) = i$.
 - Se invece $i,j > 0$ e abbiamo che $X[i] == Y[j]$, allora possiamo usare quel carattere una sola volta nella SCS e consumare entrambi i caratteri. Quindi si ha $\ell(i,j) = 1 + \ell(i-1,j-1)$.
-- Altrimenti, se $i,j > 0$ e $X[i] != Y[j]$, allora bisogna consumare un carattere da una delle due sequenze. In questo caso vogliamo minimizzare la scelta tra prendere il prossimo carattere da $X$ oppure da $Y$.
+- Altrimenti, se $i,j > 0$ e $X[i] \ne Y[j]$, allora bisogna consumare un carattere da una delle due sequenze. In questo caso vogliamo minimizzare la scelta tra prendere il prossimo carattere da $X$ oppure da $Y$.
 
 ## Caratterizzazione ricorsiva
 

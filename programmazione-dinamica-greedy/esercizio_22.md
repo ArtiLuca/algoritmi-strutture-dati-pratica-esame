@@ -27,7 +27,7 @@ Come detto nel testo dell'esercizio, iniziamo dal punto $(1,1)$ e vogliamo arriv
 
 Definiamo $c(i,j)$ come il costo minimo di un cammino per arrivare alla casella $(n,n)$ partendo dalla casella $(i,j)$, con $i \le n$ e $j \le n$.
 
-Inoltre, vengono definite le due matrici `u[1..n, 1..n]` e `r[1..n, 1..n]`, che rappresentano rispettivamente i costi degli spostamenti verso l'alto e verso destra.
+Inoltre, vengono definite le due matrici $u[1..n, 1..n]$ e $r[1..n, 1..n]$, che rappresentano rispettivamente i costi degli spostamenti verso l'alto e verso destra.
 
 Possiamo dare una caratterizzazione ricorsiva in base alle seguenti osservazioni:
 
@@ -56,7 +56,7 @@ $$
 
 ## Algoritmo bottom-up
 
-Per il punto **ii** possiamo usare una tabella `C[1..n, 1..n]` ed operare in maniera bottom-up, riempiendo la tabella dall'alto verso il basso e da destra verso sinistra rispetto alla rappresentazione della griglia.
+Per il punto **ii** possiamo usare una tabella $C[1..n, 1..n]$ ed operare in maniera bottom-up, riempiendo la tabella dall'alto verso il basso e da destra verso sinistra rispetto alla rappresentazione della griglia.
 
 Lo pseudocodice per il punto **ii** può essere:
 
@@ -89,7 +89,7 @@ MinPath(u, r, n)
 
 ## Stampa del percorso
 
-Se volessimo anche stampare il percorso di costo minimo ottenuto, potremmo modificare l'algoritmo sopra usando una tabella `T[1..n, 1..n]` con valori `'R'` e `'U'`.
+Se volessimo anche stampare il percorso di costo minimo ottenuto, potremmo modificare l'algoritmo sopra usando una tabella $T[1..n, 1..n]$ con valori `'R'` e `'U'`.
 
 Il valore `'R'` indica che dalla casella corrente si è scelto di spostarsi a destra, mentre il valore `'U'` indica che si è scelto di spostarsi verso l'alto.
 
@@ -148,7 +148,7 @@ printMinPath(T, n)
 
 ## Complessità
 
-Per il punto **iv**, la complessità temporale è data dal riempimento della tabella `C[1..n, 1..n]`.
+Per il punto **iv**, la complessità temporale è data dal riempimento della tabella $C[1..n, 1..n]$.
 
 Ogni cella viene calcolata una sola volta e ogni calcolo richiede tempo costante, quindi la complessità temporale è:
 
@@ -162,8 +162,8 @@ Anche la complessità spaziale risulta:
 \Theta(n^2)
 ```
 
-Infatti, per calcolare il solo costo minimo usiamo la tabella `C[1..n, 1..n]`.
+Infatti, per calcolare il solo costo minimo usiamo la tabella $C[1..n, 1..n]$.
 
-Se vogliamo anche ricostruire e stampare il percorso, usiamo anche la tabella `T[1..n, 1..n]`.
+Se vogliamo anche ricostruire e stampare il percorso, usiamo anche la tabella $T[1..n, 1..n]$.
 
 Entrambe le tabelle hanno dimensione $\Theta(n^2)$, quindi la complessità spaziale totale rimane $\Theta(n^2)$.

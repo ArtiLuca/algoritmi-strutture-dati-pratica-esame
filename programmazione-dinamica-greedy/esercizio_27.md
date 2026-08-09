@@ -17,7 +17,7 @@ Più precisamente:
 
 ## Idea
 
-Abbiamo la seguente griglia `V[1..m, 1..n]`:
+Abbiamo la seguente griglia $V[1..m, 1..n]$:
 
 ![Schema della griglia dell'esercizio 27](immagini/esercizio_27_griglia.png)
 

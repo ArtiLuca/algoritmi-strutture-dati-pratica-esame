@@ -128,7 +128,7 @@ Però poi mi sono reso conto che questo non funzionerebbe, perché se usiamo una
 
 Dopo aver perso un po' di tempo, anche perché la soluzione ufficiale usa un array del tipo $B[0..n]$, ho scelto di optare per una scelta più sicura secondo me.
 
-Ovvero, uso una tabella $B[0..s, 0..n]$, dove $B[sPrime,j]$ indica tramite un valore booleano se la banconota `b_j` viene usata nella soluzione ottima del sottoproblema di somma `sPrime` con le prime `j` banconote.
+Ovvero, uso una tabella $B[0..s, 0..n]$, dove $B[sPrime,j]$ indica tramite un valore booleano se la banconota $b_j$ viene usata nella soluzione ottima del sottoproblema di somma `sPrime` con le prime `j` banconote.
 
 Dopodiché, possiamo passare questa tabella a una procedura ricorsiva per la stampa della soluzione ottima trovata.
 

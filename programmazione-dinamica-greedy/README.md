@@ -40,7 +40,7 @@ Per gli **Algoritmi Greedy**, mi concentro soprattutto su:
 | Esercizio 25 | Lunghezza esatta annodando pezzi di corda | [Da completare](esercizio_25.md) |
 | Esercizio 26 | Allocazione massima di un'aula (attività) | [Da completare](esercizio_26.md) |
 | Esercizio 27 | Attraversamento griglia con guadagno massimo | [Completato](esercizio_27.md) |
-| Esercizio 28 | Longest Increasing Subsequence (LIS) | [Da completare](esercizio_28.md) |
+| Esercizio 28 | Longest Increasing Subsequence (LIS) | [Completato](esercizio_28.md) |
 | Esercizio 29 | Edit Distance con costo variabile | [Da completare](esercizio_29.md) |
 | Esercizio 30 | Knapsack bilanciato / coalizione di governo | [Da completare](esercizio_30.md) |
 | Esercizio 31 | Sottosequenza palindroma di lunghezza massima | [Da completare](esercizio_31.md) |

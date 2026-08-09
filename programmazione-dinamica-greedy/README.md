@@ -33,7 +33,7 @@ Per gli **Algoritmi Greedy**, mi concentro soprattutto su:
 | Esercizio 18 | Sottostringa palindroma di lunghezza massima | [Da completare](esercizio_18.md) |
 | Esercizio 19 | Parentetizzazione ottima di un'espressione | [Da completare](esercizio_19.md) |
 | Esercizio 20 | Shortest Common Supersequence (SCS) | [Completato](esercizio_20.md) |
-| Esercizio 21 | Resto con numero minimo di banconote | [Da completare](esercizio_21.md) |
+| Esercizio 21 | Resto con numero minimo di banconote | [Completato](esercizio_21.md) |
 | Esercizio 22 | Cammino di costo minimo in una griglia | [Completato](esercizio_22.md) |
 | Esercizio 23 | Tragitto in treno di costo minimo (con cambi) | [Da completare](esercizio_23.md) |
 | Esercizio 24 | Percorso tra stati con costo minimo dei visti | [Da completare](esercizio_24.md) |

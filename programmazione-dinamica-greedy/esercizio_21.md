@@ -57,7 +57,7 @@ c(s',j) =
 \begin{cases}
 0 & \text{se } s'=0, \\
 +\infty & \text{se } j=0 \text{ e } s' \gt 0, \\
-\min\{1+c(s'-v_j,j-1),\ c(s',j-1)\} & \text{se } j,s' \gt 0 \text{ e } v_j \le s', \\
+\min(\{1+c(s'-v_j,j-1),\ c(s',j-1)\}) & \text{se } j,s' \gt 0 \text{ e } v_j \le s', \\
 c(s',j-1) & \text{se } j,s' \gt 0 \text{ e } v_j \gt s'.
 \end{cases}
 $$

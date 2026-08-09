@@ -217,13 +217,9 @@ $$
 
 Questo si può vedere dal fatto che, per ogni indice `i`, il ciclo `for` esamina tutti gli indici successivi $j > i$.
 
-Nel caso peggiore, il numero totale di confronti è:
-
-$$
-\sum_{i=0}^{n} (n-i)
-=
-\frac{n(n+1)}{2}
-$$
+Nel caso peggiore, il numero totale di confronti è  
+  
+  $\sum_{i=1}^{n} (n-i) = \frac{n(n+1)}{2}$
 
 e quindi il costo complessivo è:
 

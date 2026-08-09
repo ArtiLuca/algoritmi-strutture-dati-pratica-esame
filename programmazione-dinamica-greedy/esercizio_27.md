@@ -23,10 +23,7 @@ Abbiamo la seguente griglia $V[1..m, 1..n]$:
 
 Per il punto **i** possiamo definire:
 
-```text
-G[i,j] = guadagno massimo di un attraversamento della sottogriglia [i..m, j..n],
-         partendo dalla casella (i,j)
-```
+$G[i,j]$ = guadagno massimo di un attraversamento della sottogriglia $[i..m, j..n]$, partendo dalla casella $(i,j)$.
 
 L'attraversamento della griglia parte sempre dalla prima riga, ovvero da `i = 1`.
 

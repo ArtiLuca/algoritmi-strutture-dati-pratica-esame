@@ -40,7 +40,7 @@ m(i-1,d') & \text{se } l_i \gt d'.
 \end{cases}
 $$
 
-Per motivi puramente estetici, utilizzo nelle parti relative allo pseudocodice `d*` anziché $d'$.
+Per motivi puramente estetici, utilizzo nelle parti relative allo pseudocodice $d^{*}$ anziché $d'$.
 
 ## Algoritmo bottom-up
 

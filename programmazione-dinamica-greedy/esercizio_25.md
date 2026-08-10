@@ -46,7 +46,7 @@ Per motivi puramente estetici, utilizzo nelle parti relative allo pseudocodice $
 
 Per il punto **ii** utilizzo un algoritmo bottom-up per implementare `Rope(l,n,d)` e uso una tabella $M[0..n, 1..d]$.
 
-In particolare, $M[i,d*]$ corrisponde al numero minimo di pezzi di corda utilizzati tra $l_1, \dots, l_i$ che si possono annodare in modo da ottenere una corda di lunghezza esattamente $d*$.
+In particolare, $M[i,d*]$ corrisponde al numero minimo di pezzi di corda utilizzati tra $l_1, \dots, l_i$ che si possono annodare in modo da ottenere una corda di lunghezza esattamente $d^{*}$.
 
 Il valore di ritorno $M[n,d]$ si interpreta in due modi:
 
@@ -100,7 +100,7 @@ La procedura di stampa `printRope(l,i,d,P)` opera in maniera ricorsiva, stampand
 
 La stampa si ferma quando non ci sono più pezzi da considerare, oppure quando la lunghezza rimanente è stata completamente ottenuta.
 
-Come prima, utilizzo nello pseudocodice `d*` anziché $d'$ solamente per motivi estetici.
+Come prima, utilizzo nello pseudocodice $d^{*}$ anziché $d'$ solamente per motivi estetici.
 
 ```text
 // commento solo le parti nuove rispetto a prima

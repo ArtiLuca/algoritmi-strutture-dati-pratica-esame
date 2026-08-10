@@ -37,7 +37,7 @@ Per gli **Algoritmi Greedy**, mi concentro soprattutto su:
 | Esercizio 22 | Cammino di costo minimo in una griglia | [Completato](esercizio_22.md) |
 | Esercizio 23 | Tragitto in treno di costo minimo (con cambi) | [Da completare](esercizio_23.md) |
 | Esercizio 24 | Percorso tra stati con costo minimo dei visti | [Da completare](esercizio_24.md) |
-| Esercizio 25 | Lunghezza esatta annodando pezzi di corda | [Da completare](esercizio_25.md) |
+| Esercizio 25 | Lunghezza esatta annodando pezzi di corda | [Completato](esercizio_25.md) |
 | Esercizio 26 | Allocazione massima di un'aula (attività) | [Da completare](esercizio_26.md) |
 | Esercizio 27 | Attraversamento griglia con guadagno massimo | [Completato](esercizio_27.md) |
 | Esercizio 28 | Longest Increasing Subsequence (LIS) | [Completato](esercizio_28.md) |

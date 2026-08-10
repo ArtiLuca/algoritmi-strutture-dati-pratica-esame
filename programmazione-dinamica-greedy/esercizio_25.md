@@ -46,7 +46,7 @@ Per motivi puramente estetici, utilizzo nelle parti relative allo pseudocodice $
 
 Per il punto **ii** utilizzo un algoritmo bottom-up per implementare `Rope(l,n,d)` e uso una tabella $M[0..n, 1..d]$.
 
-In particolare, $M[i,d^{*}]$ corrisponde al numero minimo di pezzi di corda utilizzati tra $l_1, \dots, l_i$ che si possono annodare in modo da ottenere una corda di lunghezza esattamente $d^{*}$.
+In particolare, $M[i,d^*]$ corrisponde al numero minimo di pezzi di corda utilizzati tra $l_1, \dots, l_i$ che si possono annodare in modo da ottenere una corda di lunghezza esattamente $d^{*}$.
 
 Il valore di ritorno $M[n,d]$ si interpreta in due modi:
 

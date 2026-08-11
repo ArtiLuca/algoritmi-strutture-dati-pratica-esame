@@ -38,8 +38,10 @@ $$T(n) = \Theta(n^{\log_b a} \cdot \log n) = \Theta(\sqrt{n} \log n)$$
 
 ### (3) $T(n) = 2T(n/4) + \sqrt{n}\log^2n$
 
-Qui abbiamo $f(n) = \sqrt{n}\log^2 n$. La *watershed function* cresce più lentamente, ovvero $n^{\log_b a} \ll f(n)$.
-Potremmo essere nel Caso 3. Verifichiamo la prima condizione, ovvero se $\exists \varepsilon > 0$ tale che $f(n) = \Omega(n^{\log_b a + \varepsilon})$.  
+Qui abbiamo $f(n) = \sqrt{n}\log^2 n$. 
+La *watershed function* cresce più lentamente, ovvero $n^{\log_b a} \ll f(n)$.
+Potremmo essere nel Caso 3. 
+Verifichiamo la prima condizione, ovvero se $\exists \varepsilon > 0$ tale che $f(n) = \Omega(n^{\log_b a + \varepsilon})$.  
 
 Valutiamo il limite:
 $$\lim_{n\to \infty} \frac{\sqrt{n}\log^2 n}{n^{1/2+\varepsilon}} = \lim_{n\to \infty} \frac{\sqrt{n}\log^2 n}{\sqrt{n} \cdot n^\varepsilon} = \lim_{n\to \infty} \frac{\log^2 n}{n^\varepsilon}$$  

@@ -21,9 +21,15 @@ $$T(n) = \Theta(n^{\log_b a}) = \Theta(\sqrt{n})$$
 
 ### (2) $T(n) = 2T(n/4) + \sqrt{n}$
 
-Qui abbiamo $f(n) = \sqrt{n}$. Si nota subito che $f(n)$ e la *watershed function* crescono in modo asintoticamente equivalente $f(n) = \Theta(n^{\log_b a})$).
-Siamo nel **CASO 2** del Master Theorem. Si conclude direttamente che:
-$$T(n) = \Theta(n^{\log_b a} \cdot \log n) = \Theta(\sqrt{n}\log n)$$
+Qui abbiamo $f(n) = \sqrt{n}$. 
+
+Si nota subito che $f(n)$ e la watershed function crescono in modo asintoticamente equivalente:
+$$f(n) = \Theta(n^{\log_b a})$$
+
+Siamo nel **CASO 2** del Master Theorem. 
+
+Si conclude direttamente che:
+$$T(n) = \Theta(n^{\log_b a} \cdot \log n) = \Theta(\sqrt{n} \log n)$$
 
 ---
 

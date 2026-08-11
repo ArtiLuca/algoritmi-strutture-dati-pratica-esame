@@ -68,10 +68,10 @@ Segue direttamente dalla definizione della classe $\Theta$ utilizzando $c=d=1$ c
 
 ---
 
-### (4) $f(n)=\Theta(g(n))$ sse $\Theta(f(n))=\Theta(g(n))$ sse $g(n)=\Theta(f(n))$
+### (4) $f(n)=\Theta(g(n))$ sse $\Theta(f(n))=\Theta(g(n))$ sse $g(n)=\Theta(f(n))$ - (**DA FINIRE**)
 
 Questo è bello lungo quindi lo lascio per dopo, però l’idea sarebbe di usare i punti (1) e (2) precedenti per dimostrare la bi-implicazione $f(n)=\Theta(g(n)) \iff \Theta(f(n))=\Theta(g(n))$ e poi resta solo da dimostrare la bi-implicazione $f(n)=\Theta(g(n)) \iff g(n)=\Theta(f(n))$.
-Essendo a corto di tempo (priorità ad altri concetti per esame) lo lascio per magari un’altra volta.
+Essendo a corto di tempo (priorità ad altri concetti per esame) lo lascio per magari un’altra volta.  
 
 ---
 

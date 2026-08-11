@@ -174,13 +174,13 @@ Utilizzando una bilancia a due piatti e avendo a disposizione come operazione so
 
 Realizzare una funzione `Select(A, k)` che restituisce l'elemento che occuperebbe la $k$-esima posizione nell'array $A$ ordinato.
 
-Trovare soluzioni con complessità:
+Detta $n$ la dimensione dell'array, trovare soluzioni con complessità:
 
 - $O(n\log n)$
 - $O(n+k\log n)$
 - $O(n\log k)$
 
-Per gli ultimi due casi utilizzare rispettivamente un MinHeap e un MaxHeap.
+Per gli ultimi due casi il suggerimento è quello di usare rispettivamente un MinHeap e un MaxHeap.
 
 ---
 
@@ -190,9 +190,11 @@ Fornire una implementazione dei Max-Heap come alberi realizzati mediante struttu
 
 Ogni nodo $x$ avrà almeno i campi:
 
-- `x.key`
-- `x.left`
-- `x.right`
+- `x.key`, che contiene la chiave;
+- `x.left`, che riferisce il figlio sinistro;
+- `x.right`, che riferisce il figlio destro.
+
+Lo heap sarà poi una struttura che contiene un riferimento alla radice e possibilmente altre informazioni.
 
 Realizzare le varie operazioni studiate sugli Heap e valutarne la complessità.
 
@@ -214,17 +216,19 @@ dove $n$ è il numero totale di elementi.
 
 ### Conteggio delle inversioni
 
-Realizzare con approccio Divide et Impera una funzione `Inv(A, p, r)` che ritorna il numero di inversioni in $A[p\dots r]$.
-
-Una inversione è una coppia di indici $i,j$ tale che:
+Realizzare con approccio Divide et Impera una funzione `Inv(A, p, r)` che ritorna il numero di inversioni in $A[p \dots r]$, ovvero il numero di coppie di indici $i,j$ tali che:
 
 $$
-i<j
-\qquad\text{e}\qquad
-A[i]>A[j]
+i < j
 $$
 
-*Suggerimento: modificare MergeSort.*
+e
+
+$$
+A[i] > A[j]
+$$
+
+*Suggerimento: modificare il MergeSort.*
 
 ---
 
@@ -310,13 +314,23 @@ Realizzare una versione ricorsiva della procedura `Insert(T, x)` per gli Alberi 
 
 ### Pairing delle carte
 
-È dato un mazzo che contiene una coppia di carte per ogni valore $1,\dots,n$.
+È dato un mazzo di carte numerate che contiene una coppia di carte per ogni valore $1,\dots,n$.
 
-Le carte sono suddivise in due sequenze disordinate.
+Le carte sono divise in due sequenze disordinate:
 
-È possibile spostare una carta in una posizione diversa della stessa sequenza oppure nell'altra sequenza.
+$$
+a_1\ a_2\ \dots\ a_k
+$$
 
-Determinare la carta di valore massimo che deve necessariamente essere spostata per riavvicinare tutte le coppie.
+$$
+b_1\ b_2\ \dots\ b_{2n-k}
+$$
+
+Voglio riavvicinare tutte le coppie.
+
+A tal fine posso spostare ogni carta inserendola in una posizione diversa nella stessa o nell'altra sequenza.
+
+Determinare la carta di valore massimo che devo necessariamente spostare.
 
 ---
 
@@ -363,46 +377,74 @@ calcolando soltanto la tabella $L[i,j]$ delle lunghezze.
 
 ### Sottostringa palindroma massima
 
-Dare un algoritmo per individuare, all'interno di una stringa, una sottostringa di caratteri consecutivi palindroma di lunghezza massima.
+Dare un algoritmo per individuare, all'interno di una stringa $a_1 \dots a_n$, una sottostringa di caratteri consecutivi palindroma di lunghezza massima.
+
+Ad esempio, nella stringa **"colonna"** la sottostringa palindroma di lunghezza massima è **"olo"**.
 
 Più precisamente:
 
-1. dare una caratterizzazione ricorsiva;
-2. ottenere un algoritmo bottom-up o top-down con memoization;
-3. permettere anche la ricostruzione della sottostringa;
-4. valutare la complessità.
+1. dare una caratterizzazione ricorsiva della lunghezza massima $l_{i,j}$ di una sottostringa palindroma di $a_i \dots a_j$;
+2. tradurre tale definizione in un algoritmo bottom-up o top-down con memoization che determina la lunghezza massima;
+3. trasformare l'algoritmo in modo che permetta anche di individuare la stringa, non solo la sua lunghezza;
+4. valutare la complessità dell'algoritmo.
 
 ---
 
 ### Shortest Common Supersequence
 
-Realizzare un algoritmo che, date due sequenze $X$ e $Y$, determina una Shortest Common Supersequence $Z$ di lunghezza minima tale che:
+Data una sequenza $X=x_1\dots x_k$, si indica con $X_i$ il prefisso $x_1\dots x_i$.
+
+Una sottosequenza di $X$ è $x_{i_1}\dots x_{i_h}$ con:
 
 $$
-X\sqsubseteq Z
-\qquad\text{e}\qquad
-Y\sqsubseteq Z
+1 \le i_1 < i_2 < \dots < i_h \le k
 $$
 
-Determinare la caratterizzazione ricorsiva, l'algoritmo, la ricostruzione della soluzione e la complessità.
+Quando $Y$ è sottosequenza di $X$ si scrive $Y \sqsubseteq X$.
+
+Realizzare un algoritmo che, date due sequenze $X=x_1\dots x_k$ e $Y=y_1\dots y_h$, determina una Shortest Common Supersequence (SCS), ovvero una sequenza $Z$ di lunghezza minima tale che:
+
+$$
+X \sqsubseteq Z
+$$
+
+e
+
+$$
+Y \sqsubseteq Z
+$$
+
+Ad esempio, per $X=$ **"abf"** e $Y=$ **"afgj"**, una SCS è **"abfgj"**.
+
+Più precisamente:
+
+1. dare una caratterizzazione ricorsiva della lunghezza $l_{i,j}$ di una SCS di $X_i$ e $Y_j$ e dedurne un algoritmo;
+2. trasformare l'algoritmo in modo che fornisca una SCS di $X$ e $Y$;
+3. valutare la complessità dell'algoritmo.
 
 ---
 
 ### Ricorrenza memoizzata $M(i,j)$
 
-Sia $n>0$ e sia:
+Sia $n>0$.
+
+Si consideri la seguente ricorrenza $M(i,j)$, definita su tutte le coppie $(i,j)$ con:
+
+$$
+1 \le i \le j \le n
+$$
 
 $$
 M(i,j)=
 \begin{cases}
-1 & i=j\\
-2 & j=i+1\\
-M(i+1,j-1)M(i+1,j)M(i,j-1) & j>i+1
+1 & \text{se } i=j,\\
+2 & \text{se } j=i+1,\\
+M(i+1,j-1)\cdot M(i+1,j)\cdot M(i,j-1) & \text{se } j>i+1.
 \end{cases}
 $$
 
-1. Scrivere `INIT_M(n)` e `REC_M(i,j)` per il calcolo memoizzato di $M(1,n)$.
-2. Calcolare il numero esatto di moltiplicazioni eseguite.
+1. Scrivere una coppia di algoritmi `INIT_M(n)` e `REC_M(i,j)` per il calcolo memoizzato di $M(1,n)$.
+2. Calcolare il numero esatto $T(n)$ di moltiplicazioni tra interi eseguite per il calcolo di $M(1,n)$.
 
 ---
 
@@ -414,11 +456,26 @@ Dimostrare la proprietà di sottostruttura ottima della Longest Increasing Subse
 
 ### Shortest Palindrome Completion
 
-Data una stringa $X$, determinare un completamento palindromo di lunghezza minima che contenga $X$ come sottosequenza.
+Una stringa $Z=\langle z_1,z_2,\dots,z_m\rangle$ è palindroma se:
 
-- Dimostrare la proprietà di sottostruttura ottima.
-- Calcolare l'informazione addizionale necessaria alla ricostruzione.
-- Scrivere `PRINT-PC(i, j, B, X)` per stampare la soluzione.
+$$
+z_{1+h}=z_{m-h}
+\qquad
+\forall\, 0\le h\le m-1
+$$
+
+Esempi: **"abba"**, **"aba"**.
+
+Data una stringa $X=\langle x_1,x_2,\dots,x_n\rangle$, un completamento a palindromo (CP) di $X$ è una stringa $Z=\langle z_1,z_2,\dots,z_m\rangle$, con $m\ge n$, tale che:
+
+- $Z$ è palindroma;
+- $X$ è sottosequenza di $Z$.
+
+Ad esempio, $Z=$ **"abccba"** è un CP di $X=$ **"acb"**.
+
+- Determinare il CP di $X$ di lunghezza minima.
+- Dimostrare la proprietà di sottostruttura ottima utilizzata per il problema.
+- Introdurre nel codice il calcolo dell'informazione addizionale $B$ e scrivere un algoritmo ricorsivo `PRINT-PC(i, j, B, X)` che stampi $PC(X_{i \dots j})$.
 
 ---
 
@@ -440,11 +497,35 @@ Determinare l'insieme di attività compatibili selezionato dall'algoritmo `GREED
 
 ### Soste minime ai distributori
 
-Un'auto deve viaggiare da $A$ a $B$ con autonomia limitata.
+Si supponga di voler viaggiare dalla città $A$ alla città $B$ con un'auto che ha un'autonomia pari a $d$ km.
 
-Lungo il percorso sono presenti distributori a distanze note.
+Lungo il percorso si trovano $n-1$ distributori $D_1,\dots,D_{n-1}$, a distanze di $d_1,\dots,d_n$ km, con:
 
-Determinare un algoritmo greedy che minimizzi il numero di soste necessarie, dimostrandone la correttezza e valutandone la complessità.
+$$
+d_i \le d
+$$
+
+Il percorso è:
+
+$$
+D_0=A
+\xrightarrow{d_1}
+D_1
+\xrightarrow{d_2}
+D_2
+\rightarrow \dots \rightarrow
+D_{n-1}
+\xrightarrow{d_n}
+D_n=B
+$$
+
+L'auto ha inizialmente il serbatoio pieno e l'obiettivo è percorrere il viaggio da $A$ a $B$ minimizzando il numero di soste ai distributori per il rifornimento.
+
+Più precisamente:
+
+1. introdurre la nozione di soluzione per il problema e di costo della soluzione; mostrare che vale la proprietà della sottostruttura ottima e individuare una scelta che gode della proprietà della scelta greedy;
+2. sulla base della scelta greedy individuata, fornire un algoritmo greedy `stop(d, n)` che, dato in input l'array delle distanze $d[1 \dots n]$, restituisce una soluzione ottima;
+3. valutare la complessità dell'algoritmo.
 
 ---
 

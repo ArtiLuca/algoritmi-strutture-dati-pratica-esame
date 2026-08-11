@@ -17,7 +17,8 @@ Ogni esercizio completato contiene una soluzione completa in stile esame, con ps
 | Insertion Sort ricorsivo | Da completare |
 | Duplicati con Divide et Impera | Da completare |
 | Somma di due elementi | Da completare |
-| Proprietà della notazione asintotica | Da completare |
+| Proprietà della notazione asintotica | [Parziale](proprieta_notazione_asintotica.md) |
+| Ricorrenze con Master Theorem | [Completato](ricorrenze_master_theorem.md) |
 | Ricorrenza con metodo di sostituzione | Da completare |
 | Ricorrenze asintotiche | Da completare |
 | MergeSort con allocazione singola | Da completare |
@@ -135,6 +136,18 @@ $$
 $$
 T(n)=2T(n/2)+n\log n
 $$
+
+---
+
+### Ricorrenze con Master Theorem
+
+Usare il Master Theorem per determinare un limite asintotico stretto per le seguenti ricorrenze:
+
+1. $T(n)=2T(n/4)+1$
+2. $T(n)=2T(n/4)+\sqrt{n}$
+3. $T(n)=2T(n/4)+\sqrt{n}\log^2 n$
+4. $T(n)=2T(n/4)+n$
+5. $T(n)=2T(n/4)+n^2$
 
 ---
 

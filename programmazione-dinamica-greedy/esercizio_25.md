@@ -35,7 +35,7 @@ m(i,d') =
 \begin{cases}
 +\infty & \text{se } i=0, \\
 1 & \text{se } l_i = d', \\
-\min\{1 + m(i-1,d'-l_i+1),\ m(i-1,d')\} & \text{se } l_i \lt d', \\
+\min(\{1 + m(i-1,d'-l_i+1),\ m(i-1,d')\}) & \text{se } l_i \lt d', \\
 m(i-1,d') & \text{se } l_i \gt d'.
 \end{cases}
 $$

@@ -80,7 +80,8 @@ notiamo che è verificato per un valore $0 < \varepsilon < 1/2$  (oppure con lim
 
 $$2 \cdot \left(\frac{n}{4}\right) \le k \cdot n \implies \frac{1}{2}n \le k \cdot n$$  
 
-La condizione è soddisfatta scegliendo una costante $k$ tale che $1/2 \le k < 1$.
+La condizione è soddisfatta scegliendo una costante $k$ tale che $1/2 \le k < 1$.  
+
 Entrambe le condizioni sono verificate. Si conclude che:  
    
 $$T(n) = \Theta(f(n)) = \Theta(n)$$

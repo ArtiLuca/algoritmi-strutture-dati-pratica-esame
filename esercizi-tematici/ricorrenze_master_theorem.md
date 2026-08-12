@@ -1,4 +1,4 @@
-# Esercizio 4.5.1: Master Theorem
+# Ricorrenze Master Theorem
 
 Il Master Theorem si applica per ricorrenze del tipo $T(n) = aT(n/b) + f(n)$ con $a \ge 1, b > 1$.  
 Si basa sul confronto asintotico tra la *driving function* $f(n)$ e la *watershed function* $n^{\log_b a}$.

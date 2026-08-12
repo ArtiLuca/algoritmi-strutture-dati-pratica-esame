@@ -30,7 +30,7 @@ Per gli **Algoritmi Greedy**, mi concentro soprattutto su:
 
 | Esercizio | Argomento principale | Stato |
 |---|---|---|
-| Esercizio 18 | Sottostringa palindroma di lunghezza massima | [Da completare](esercizio_18.md) |
+| Esercizio 18 | Sottostringa palindroma di lunghezza massima | [Completato](esercizio_18.md) |
 | Esercizio 19 | Parentetizzazione ottima di un'espressione | [Da completare](esercizio_19.md) |
 | Esercizio 20 | Shortest Common Supersequence (SCS) | [Completato](esercizio_20.md) |
 | Esercizio 21 | Resto con numero minimo di banconote | [Completato](esercizio_21.md) |

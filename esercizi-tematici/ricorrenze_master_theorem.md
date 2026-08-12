@@ -10,12 +10,14 @@ $$n^{\log_b a} = n^{\log_4 2} = n^{1/2} = \sqrt{n}$$
 
 ### (1) $T(n) = 2T(n/4) + 1$
 
-Qui abbiamo $f(n) = 1$. Si nota che $n^{\log_b a} \gg f(n)$, quindi cerchiamo un $\varepsilon > 0$ tale per cui $f(n) = \mathcal{O}(n^{\log_b a - \varepsilon})$.  
+Qui abbiamo $f(n) = 1$.  
+Si nota che $n^{\log_b a} \gg f(n)$, quindi cerchiamo un $\varepsilon > 0$ tale per cui $f(n) = \mathcal{O}(n^{\log_b a - \varepsilon})$.  
 
 Valutiamo il limite:  
 $$\lim_{n\to \infty} \frac{f(n)}{n^{\log_b a - \varepsilon}} = \lim_{n\to \infty} \frac{1}{n^{1/2 - \varepsilon}} = 0$$
 Questo è vero per qualsiasi $0 < \varepsilon < 1/2$.
-Siamo nel **CASO 1** del Master Theorem. Si conclude che:  
+Siamo nel **CASO 1** del Master Theorem.  
+Si conclude che:  
 
 $$T(n) = \Theta(n^{\log_b a}) = \Theta(\sqrt{n})$$
 
@@ -63,14 +65,15 @@ $$T(n) = \Theta(n^{\log_b a} \cdot \log^{k+1} n) = \Theta(\sqrt{n}\log^3 n)$$
 Qui abbiamo $f(n) = n$. Poiché $n^{\log_b a} \ll f(n)$, verifichiamo le condizioni del **CASO 3**.  
 
 **Prima condizione:** $\exists \varepsilon > 0$ tale che $f(n) = \Omega(n^{\log_b a + \varepsilon})$.
-Valutando il limite $\lim_{n\to \infty} \frac{n}{n^{1/2+\varepsilon}} = +\infty$, notiamo che è verificato per un valore $0 < \varepsilon < 1/2$  
-(oppure con limite finito per $\varepsilon = 1/2$).
+Valutando il limite $\lim_{n\to \infty} \frac{n}{n^{1/2+\varepsilon}} = +\infty$,  
+notiamo che è verificato per un valore $0 < \varepsilon < 1/2$  (oppure con limite finito per $\varepsilon = 1/2$).
   
 **Seconda condizione (Regolarità):** $\exists k < 1$ tale che $a \cdot f(n/b) \le k \cdot f(n)$.  
 
 $$2 \cdot \left(\frac{n}{4}\right) \le k \cdot n \implies \frac{1}{2}n \le k \cdot n$$
 La condizione è soddisfatta scegliendo una costante $k$ tale che $1/2 \le k < 1$.
-Entrambe le condizioni sono verificate. Si conclude che:  
+Entrambe le condizioni sono verificate.   
+Si conclude che:  
    
 $$T(n) = \Theta(f(n)) = \Theta(n)$$
 

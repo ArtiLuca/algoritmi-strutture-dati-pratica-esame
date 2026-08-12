@@ -14,7 +14,9 @@ Qui abbiamo $f(n) = 1$.
 Si nota che $n^{\log_b a} \gg f(n)$, quindi cerchiamo un $\varepsilon > 0$ tale per cui $f(n) = \mathcal{O}(n^{\log_b a - \varepsilon})$.  
 
 Valutiamo il limite:  
+
 $$\lim_{n\to \infty} \frac{f(n)}{n^{\log_b a - \varepsilon}} = \lim_{n\to \infty} \frac{1}{n^{1/2 - \varepsilon}} = 0$$  
+  
 Questo è vero per qualsiasi $0 < \varepsilon < 1/2$.  
 Siamo nel **CASO 1** del Master Theorem. Si conclude che:  
 

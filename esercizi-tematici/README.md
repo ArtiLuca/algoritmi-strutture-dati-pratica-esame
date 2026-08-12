@@ -21,6 +21,9 @@ Ogni esercizio completato contiene una soluzione completa in stile esame, con ps
 | Ricorrenze con Master Theorem | [Completato](ricorrenze_master_theorem.md) |
 | Ricorrenza con metodo di sostituzione | Da completare |
 | Ricorrenze asintotiche | Da completare |
+| Esercizi Albero delle Ricorrenze | [Parziale](esercizio_albero_ricorrenze.md) |
+| Esercizi Ricorrenze Sostituzione | [Parziale](esercizio_ricorrenze_sostituzione.md) |
+| Esercizi Ricorrenze Extra | Da Completare |
 | MergeSort con allocazione singola | Da completare |
 | Ricerca binaria ricorsiva | Da completare |
 | Moneta falsa | Da completare |
@@ -148,6 +151,56 @@ Usare il Master Theorem per determinare un limite asintotico stretto per le segu
 3. $T(n)=2T(n/4)+\sqrt{n}\log^2 n$
 4. $T(n)=2T(n/4)+n$
 5. $T(n)=2T(n/4)+n^2$
+
+---
+
+### Metodo di Sostituzione  
+
+Usare il metodo di sostituzione per dimostrare le ricorrenze:  
+
+- $T(n) = T(n-1) + n$ ha soluzione $O(n^2)$
+- $T(n) = T(n/2) + \Theta(1)$ ha soluzione $O(\log n)$
+- $T(n) = 2T(n/2) + n$ ha soluzione $\Theta(n \log n)$
+- $T(n) = 2T(n/2 + 17) + n$ ha soluzione $O(n \log n)$
+- $T(n) = 2T(n/3) + \Theta(n)$ ha soluzione $\Theta(n)$
+- $T(n) = 4T(n/2) + \Theta(n)$ ha soluzione $\Theta(n^2)$
+
+
+---
+
+
+### Albero delle Ricorrenze
+
+
+Usare l'albero delle ricorrenze e il metodo di sostituzione per:  
+
+- $T(n) = T(n/2) + n^3$
+- $T(n) = 4T(n/3) + n$
+- $T(n) = 4T(n/2) + n$
+- $T(n) = 3T(n-1) + 1$  
+
+---
+
+### Esercizi Extra Ricorrenze  
+
+Risolvere le ricorrenze miste:  
+
+- $T(n) = 2T(n/2) + n^3$
+- $T(n) = T(8n/11) + n$
+- $T(n) = 16T(n/4) + n^2$
+- $T(n) = 8T(n/3) + n^2$
+- $T(n) = 2T(n/4) + \sqrt{n}$
+- $T(n) = T(n-2) + n^2$
+- $T(n) = 5T(n/3) + n\log n$
+- $T(n) = 3T(n/3) + \frac{n}{\log n}$
+- $T(n) = 8T(n/2) + n^3\sqrt{n}$
+- $T(n) = 2T(n/2-2) + \frac{n}{2}$
+- $T(n) = 2T(n/2) + \frac{n}{\log n}$
+- $T(n) = T(n/2) + T(n/4) + T(n/8) + n$
+- $T(n) = T(n-1) + \frac{1}{n}$
+- $T(n) = T(n-2) + \frac{1}{\log n}$
+- $T(n) = \sqrt{n}T(\sqrt{n}) + n$
+
 
 ---
 

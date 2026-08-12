@@ -71,8 +71,9 @@ Qui abbiamo $f(n) = n$. Poiché $n^{\log_b a} \ll f(n)$, verifichiamo le condizi
 
 **Prima condizione:** $\exists \varepsilon > 0$ tale che $f(n) = \Omega(n^{\log_b a + \varepsilon})$.  
 Valutando il limite  
-$\lim_{n\to \infty} \frac{n}{n^{1/2+\varepsilon}} = +\infty$,  
 
+$\lim_{n\to \infty} \frac{n}{n^{1/2+\varepsilon}} = +\infty$  
+  
 notiamo che è verificato per un valore $0 < \varepsilon < 1/2$  (oppure con limite finito per $\varepsilon = 1/2$).
   
 **Seconda condizione (Regolarità):** $\exists k < 1$ tale che $a \cdot f(n/b) \le k \cdot f(n)$.  

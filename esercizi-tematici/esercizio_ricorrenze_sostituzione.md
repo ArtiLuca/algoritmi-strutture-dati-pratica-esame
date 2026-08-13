@@ -132,8 +132,46 @@ Avendo dimostrato sia il limite superiore che inferiore, possiamo concludere che
 
 ---
 
-### (5) $T(n) = 2T(n/3) + \Theta(n)$ ammette soluzione $\Theta(n)$
-*(Da completare)*
+**(5)** $T(n) = 2T(n/3) + \Theta(n)$ ha soluzione $\Theta(n)$
+
+Per dimostrare che vale $T(n) = \Theta(n)$ devo provare separatamente che valgono sia $T(n) = \mathcal{O}(n)$ che $T(n) = \Omega(n)$.
+
+---
+
+### Limite Superiore $\mathcal{O}(n)$
+Vale $T(n) = \mathcal{O}(n)$ se $\exists c>0, \exists n_0 \in \mathbb{N}$ tale che $T(n) \le c \cdot n$ per ogni $n \ge n_0$.
+Per assorbire il costo di $\Theta(n)$ usiamo una costante $k$ positiva e riscriviamo la ricorrenza come: 
+$$T(n) = 2T\left(\frac{n}{3}\right) + \Theta(n) \le 2T\left(\frac{n}{3}\right) + kn$$
+
+Assumo come ipotesi induttiva che vale per valori $m < n$, ovvero $T(m) \le cm$.
+Applicando la nostra ipotesi induttiva alla ricorrenza (va bene perché $\frac{n}{3} < n$) abbiamo:
+$$T(n) = 2T\left(\frac{n}{3}\right) + kn \le 2c\left(\frac{n}{3}\right) + kn = \frac{2}{3}nc + kn = \left(\frac{2}{3}c + k\right)n$$
+
+Vogliamo che $\left(\frac{2}{3}c+k\right)n \le cn$ quindi dividendo per $n$ (assumendo $n > 0$) otteniamo la disuguaglianza:
+$$\frac{2}{3}c + k \le c$$
+da cui segue $k \le \frac{1}{3}c$ e quindi $c \ge 3k$.
+
+Quindi scegliendo opportune costanti $c \ge 3k$ e $n_0$ sufficientemente grande si dimostra che vale $T(n) = \mathcal{O}(n)$.
+
+---
+
+### Limite Inferiore $\Omega(n)$
+Vale $T(n) = \Omega(n)$ se $\exists d>0, \exists n_0 \in \mathbb{N}$ tale che $T(n) \ge d \cdot n$ per ogni $n \ge n_0$.
+Per assorbire il costo di $\Theta(n)$ usiamo una costante $h$ positiva e riscriviamo la ricorrenza come:
+$$T(n) = 2T\left(\frac{n}{3}\right) + \Theta(n) \ge 2T\left(\frac{n}{3}\right) + hn$$
+
+Assumo come ipotesi induttiva che vale per valori $m < n$, ovvero $T(m) \ge dm$.
+Applicando la nostra ipotesi induttiva alla ricorrenza (va bene perché $\frac{n}{3} < n$) abbiamo:
+$$T(n) = 2T\left(\frac{n}{3}\right) + hn \ge 2d\left(\frac{n}{3}\right) + hn = \frac{2}{3}dn + hn = \left(\frac{2}{3}d + h\right)n$$
+
+Vogliamo che $\left(\frac{2}{3}d + h\right)n \ge dn$ e quindi dividendo per $n$ (assumendo $n > 0$) otteniamo la disuguaglianza:
+$$\frac{2}{3}d + h \ge d$$
+da cui segue $d \le 3h$.
+
+Quindi scegliendo opportune costanti $d \le 3h$ e $n_0$ sufficientemente grande si dimostra che vale $T(n) = \Omega(n)$.
+
+**Conclusione:**
+Dunque si dimostra che vale $T(n) = \Theta(n)$.
 
 ---
 

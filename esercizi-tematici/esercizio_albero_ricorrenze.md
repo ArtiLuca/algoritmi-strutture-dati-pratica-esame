@@ -75,8 +75,32 @@ Avendo dimostrato sia il limite superiore che inferiore, possiamo concludere che
 
 ---
 
-### (3) $T(n) = 4T(n/2) + n$
-*(Da completare)*
+### (3) $T(n) = 4T(n/2) + n$  
+
+Per ipotizzare una soluzione uso un albero delle ricorrenze con livelli indicati con $i=0\dots h$ dove $h$ è l’altezza dell’albero:
+I calcoli di espansione e i limiti iniziali sono validati. Ad un livello $i$ generico si ha un costo complessivo che equivale a $2^i \cdot n$. 
+L'altezza dell'albero si fissa a $h = \log_2 n$.
+
+Il costo totale è la somma dei nodi interni (valutata tramite serie geometrica) e del costo delle foglie:
+$$ \sum_{i=0}^{h-1}n\cdot 2^i = n \cdot \sum_{i=0}^{\log_2 n - 1} 2^i \approx n^2 $$
+Il costo complessivo dell’ultimo livello è $a^h = 4^{\log_2 n} = n^2$. 
+Essendo entrambi i costi limitati dal termine quadratico, l'ipotesi di soluzione è $\Theta(n^2)$.
+
+### Metodo di Sostituzione
+
+**Dimostrazione Limite Superiore $\mathcal{O}(n^2)$:**
+L'impostazione logica per contrastare il termine di ordine inferiore è validata: assumiamo l'ipotesi induttiva $T(n) \le cn^2 - kn$.
+Sostituendo l'ipotesi nella ricorrenza ed applicando il salto logico per la semplificazione, otteniamo direttamente il vincolo sulla costante:
+$$ cn^2 + (1 - 2k)n \le cn^2 - kn $$
+Risolvendo, il vincolo impone $k \ge 1$. Una scelta di $k=1$ (con $c \ge 1$) garantisce la validità del limite superiore per $n_0$ opportuno.
+
+**Dimostrazione Limite Inferiore $\Omega(n^2)$:**
+La struttura iniziale è validata assumendo $T(n) \ge dn^2$.
+Sostituendo la variabile nella transizione, il sistema restituisce immediatamente:
+$$ dn^2 + n \ge dn^2 $$
+La disuguaglianza risulta identicamente soddisfatta per qualsiasi scelta di $d > 0$.
+
+Entrambi i limiti sono stati verificati, si conclude per sostituzione che $T(n) = \Theta(n^2)$.
 
 ---
 

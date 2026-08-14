@@ -67,7 +67,10 @@ Per il punto (2) possiamo notare che le operazioni di moltiplicazione per ogni $
 Grazie alla memoizzazione, la ricorrenza viene calcolata esattamente una volta per ogni sottoproblema non base. Quindi basta contare quante sono le celle vuote, ovvero quante iterazioni si effettuano nei due cicli for annidati di inizializzazione, che vanno da $i=1\dots n-2$ e $j=i+2 \dots n$.
 
 Quindi abbiamo:
-$$ T(n) = \sum_{i=1}^{n-2} \sum_{j=i+2}^{n} 2 = 2 \cdot \sum_{i=1}^{n-2} (n - i - 1) $$
+
+$$
+T(n) = \sum_{i=1}^{n-2} \sum_{j=i+2}^{n} 2 = 2 \cdot \sum_{i=1}^{n-2} (n - i - 1)
+$$
 
 Avendo già fatto sommatorie simili in altri problemi, so che possiamo imporre un cambio di variabile $k = n - i - 1$.
 Infatti:
@@ -75,9 +78,15 @@ Infatti:
 - se $i = n-2 \implies k = n - (n-2) - 1 = 1$
 
 Quindi la sommatoria diventa:
-$$ 2 \cdot \sum_{k=1}^{n-2} k $$
+
+$$
+2 \cdot \sum_{k=1}^{n-2} k
+$$
 
 Usando la somma di Gauss otteniamo quindi:
-$$ 2 \cdot \frac{(n-1)(n-2)}{2} = (n-1)(n-2) $$
+
+$$
+2 \cdot \frac{(n-1)(n-2)}{2} = (n-1)(n-2)
+$$
 
 Quindi il numero esatto di moltiplicazioni effettuate è $T(n) = (n-1)(n-2)$.

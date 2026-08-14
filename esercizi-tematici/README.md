@@ -119,14 +119,17 @@ $$
 
 In questo caso l'indice $k$ viene detto il **centro** dell'array.
 
-Ad esempio l'array che segue è semi-ordinato con centro $k=4$:     
+Ad esempio l'array che segue è semi-ordinato con centro $k=4$:
 
-     1  2  3   4   5  6  7
-A[4, 9, 12, 18, -1, 1, 2] 
+| Indice | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| A | 4 | 9 | 12 | 18 | -1 | 1 | 2 |
 
 Scrivere una funzione `centre(A)` che dato un array $A$ semi-ordinato ne restituisce il centro.
 
 Giustificare la correttezza dell'algoritmo e valutarne la complessità.
+
+---
 
 ### Proprietà della notazione asintotica
 

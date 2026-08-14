@@ -1,11 +1,11 @@
 # Centro di array semi-ordinato
 
 Diciamo che un array senza ripetizioni $A[1 \dots n]$ è semi-ordinato se esiste un indice $k$, con:
-$$ 1 \leq k < n $$
+$1 \le k < n$
 tale che:
-$$ A[k+1 \dots n] \quad \text{e} \quad A[1 \dots k] $$
+$[k+1 \dots n] \quad \text{e} \quad A[1 \dots k]$
 siano ordinati, ovvero i sottoarray $A[k+1 \dots n]$ e $A[1 \dots k]$ sono ordinati e:
-$$ A[n] < A[1] $$
+$A[n] < A[1]$
 
 In questo caso l'indice $k$ viene detto il **centro** dell'array.
 Ad esempio l'array che segue è semi-ordinato con centro $k=4$:

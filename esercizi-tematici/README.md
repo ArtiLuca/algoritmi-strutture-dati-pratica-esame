@@ -17,6 +17,7 @@ Ogni esercizio completato contiene una soluzione completa in stile esame, con ps
 | Insertion Sort ricorsivo | Da completare |
 | Duplicati con Divide et Impera | Da completare |
 | Somma di due elementi | Da completare |
+| Centro di array semi-ordinato | [Completato](esercizio_centre.md) |
 | Proprietà della notazione asintotica | [Parziale](proprieta_notazione_asintotica.md) |
 | Ricorrenze con Master Theorem | [Completato](ricorrenze_master_theorem.md) |
 | Ricorrenza con metodo di sostituzione | Da completare |
@@ -30,7 +31,7 @@ Ogni esercizio completato contiene una soluzione completa in stile esame, con ps
 | Select con Heap | Da completare |
 | Linked Heaps | Da completare |
 | Fusione di Heap | Da completare |
-| Conteggio delle inversioni | Da completare |
+| Conteggio delle inversioni | [Completato](inversioni.md) |
 | QuickSort con Tripartition | Da completare |
 | Hash invariato per anagrammi | Da completare |
 | MSD RadixSort | Da completare |
@@ -95,6 +96,37 @@ key=A[i]+A[j]
 $$
 
 ---
+
+### Centro di array semi-ordinato
+
+Diciamo che un array senza ripetizioni $A[1,n]$ è **semi-ordinato** se esiste un indice $k$, con
+
+$$
+1\leq k<n,
+$$
+
+tale che
+
+$$
+A[k+1..n]A[1..k]
+$$
+
+sia ordinato, ovvero i sottoarray $A[k+1..n]$ e $A[1..k]$ sono ordinati e
+
+$$
+A[n]<A[1].
+$$
+
+In questo caso l'indice $k$ viene detto il **centro** dell'array.
+
+Ad esempio l'array che segue è semi-ordinato con centro $k=4$:     
+
+     1  2  3   4   5  6  7
+A[4, 9, 12, 18, -1, 1, 2] 
+
+Scrivere una funzione `centre(A)` che dato un array $A$ semi-ordinato ne restituisce il centro.
+
+Giustificare la correttezza dell'algoritmo e valutarne la complessità.
 
 ### Proprietà della notazione asintotica
 

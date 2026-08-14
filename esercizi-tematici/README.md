@@ -31,7 +31,7 @@ Ogni esercizio completato contiene una soluzione completa in stile esame, con ps
 | Select con Heap | Da completare |
 | Linked Heaps | Da completare |
 | Fusione di Heap | Da completare |
-| Conteggio delle inversioni | [Completato](inversioni.md) |
+| Conteggio delle inversioni | [Completato](esercizio_inversioni.md) |
 | QuickSort con Tripartition | Da completare |
 | Hash invariato per anagrammi | Da completare |
 | MSD RadixSort | Da completare |
@@ -46,7 +46,7 @@ Ogni esercizio completato contiene una soluzione completa in stile esame, con ps
 | LCS — Spanking e Amputation | Da completare |
 | Sottostringa palindroma massima | Da completare |
 | Shortest Common Supersequence | [Completato](../programmazione-dinamica-greedy/esercizio_20.md) |
-| Ricorrenza memoizzata $M(i,j)$ | Da completare |
+| Ricorrenza memoizzata $M(i,j)$ | [Completato](esercizio_memoizzazione.md) |
 | Longest Increasing Subsequence | [Completato](../programmazione-dinamica-greedy/esercizio_28.md) |
 | Shortest Palindrome Completion | Da completare |
 | Selezione di attività compatibili | Da completare |

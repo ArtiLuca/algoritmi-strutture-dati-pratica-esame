@@ -23,7 +23,7 @@ Ogni esercizio completato contiene una soluzione completa in stile esame, con ps
 | Ricorrenza con metodo di sostituzione | Da completare |
 | Ricorrenze asintotiche | Da completare |
 | Esercizi Albero delle Ricorrenze | [Parziale](esercizio_albero_ricorrenze.md) |
-| Esercizi Ricorrenze Sostituzione | [Parziale](esercizio_ricorrenze_sostituzione.md) |
+| Esercizi Ricorrenze Sostituzione | [Completato](esercizio_ricorrenze_sostituzione.md) |
 | Esercizi Ricorrenze Extra | Da Completare |
 | MergeSort con allocazione singola | Da completare |
 | Ricerca binaria ricorsiva | Da completare |

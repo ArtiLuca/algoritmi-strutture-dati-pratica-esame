@@ -245,4 +245,156 @@ Avendo dimostrato sia il limite superiore che inferiore, possiamo concludere che
 ---
 
 ### (6) $T(n) = 4T(n/2) + \Theta(n)$ ammette soluzione $\Theta(n^2)$
+
+Per dimostrare che vale $T(n)=\Theta(n^2)$ provo separatamente il limite superiore ed inferiore.
+
+Dato che il termine non ricorsivo è $\Theta(n)$, esistono due costanti positive $a,b>0$ tali che, per $n$ sufficientemente grande, vale:
+
+$$
+bn \le \Theta(n) \le an.
+$$
+
+Quindi, per il limite superiore userò la disuguaglianza:
+
+$$
+T(n) \le 4T\left(\frac{n}{2}\right) + an
+$$
+
+mentre per il limite inferiore userò la disuguaglianza:
+
+$$
+T(n) \ge 4T\left(\frac{n}{2}\right) + bn.
+$$
+
+---
+
+**Limite Superiore: $T(n)=\mathcal{O}(n^2)$**
+
+Per dimostrare il limite superiore, la semplice ipotesi $T(n) \le cn^2$ non basta, perché il termine $+an$ non verrebbe assorbito.
+
+Quindi proviamo a dimostrare una forma leggermente più forte, ovvero che esistono $c,k>0$ e $n_0 \in \mathbb{N}$ tali che:
+
+$$
+T(n) \le cn^2 - kn
+$$
+
+per ogni $n \ge n_0$.
+
+Assumiamo per ipotesi induttiva che questo valga per valori $m<n$, ovvero:
+
+$$
+T(m) \le cm^2 - km.
+$$
+
+Dato che $\frac{n}{2}<n$, possiamo applicare l'ipotesi induttiva a $T(n/2)$:
+
+$$
+\begin{aligned}
+T(n)
+&\le 4T\left(\frac{n}{2}\right) + an \\
+&\le 4\left(c\left(\frac{n}{2}\right)^2 - k\frac{n}{2}\right) + an \\
+&= 4\left(c\frac{n^2}{4} - k\frac{n}{2}\right) + an \\
+&= cn^2 - 2kn + an.
+\end{aligned}
+$$
+
+Vogliamo che:
+
+$$
+cn^2 - 2kn + an \le cn^2 - kn.
+$$
+
+Semplificando otteniamo:
+
+$$
+-2kn + an \le -kn.
+$$
+
+Dividendo per $n>0$:
+
+$$
+-2k + a \le -k.
+$$
+
+Quindi serve:
+
+$$
+a \le k.
+$$
+
+Dato che $a$ è una costante fissata dalla ricorrenza, basta scegliere $k \ge a$.
+
+Scegliendo poi $c$ sufficientemente grande da soddisfare il caso base, la disuguaglianza vale per ogni $n \ge n_0$.
+
+Quindi:
+
+$$
+T(n)=\mathcal{O}(n^2).
+$$
+
+---
+
+**Limite Inferiore: $T(n)=\Omega(n^2)$**
+
+Per dimostrare il limite inferiore, vogliamo verificare che esistono $d>0$ e $n_0 \in \mathbb{N}$ tali che:
+
+$$
+T(n) \ge dn^2
+$$
+
+per ogni $n \ge n_0$.
+
+Assumiamo per ipotesi induttiva che valga per valori $m<n$, ovvero:
+
+$$
+T(m) \ge dm^2.
+$$
+
+Dato che $\frac{n}{2}<n$, possiamo applicare l'ipotesi induttiva a $T(n/2)$:
+
+$$
+\begin{aligned}
+T(n)
+&\ge 4T\left(\frac{n}{2}\right) + bn \\
+&\ge 4d\left(\frac{n}{2}\right)^2 + bn \\
+&= 4d\frac{n^2}{4} + bn \\
+&= dn^2 + bn.
+\end{aligned}
+$$
+
+Dato che $b>0$, segue direttamente che:
+
+$$
+dn^2 + bn \ge dn^2.
+$$
+
+Scegliendo $d>0$ sufficientemente piccolo da soddisfare il caso base, otteniamo quindi:
+
+$$
+T(n)=\Omega(n^2).
+$$
+
+---
+
+**Conclusione**
+
+Avendo dimostrato sia:
+
+$$
+T(n)=\mathcal{O}(n^2)
+$$
+
+sia:
+
+$$
+T(n)=\Omega(n^2),
+$$
+
+possiamo concludere che:
+
+$$
+T(n)=\Theta(n^2).
+$$
+
+### (6) $T(n) = 4T(n/2) + \Theta(n)$ ammette soluzione $\Theta(n^2)$
 *(Da completare)*

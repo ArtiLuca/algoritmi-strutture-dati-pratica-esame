@@ -266,8 +266,6 @@ $$
 T(n) \ge 4T\left(\frac{n}{2}\right) + bn.
 $$
 
----
-
 **Limite Superiore: $T(n)=\mathcal{O}(n^2)$**
 
 Per dimostrare il limite superiore, la semplice ipotesi $T(n) \le cn^2$ non basta, perché il termine $+an$ non verrebbe assorbito.
@@ -332,8 +330,6 @@ $$
 T(n)=\mathcal{O}(n^2).
 $$
 
----
-
 **Limite Inferiore: $T(n)=\Omega(n^2)$**
 
 Per dimostrare il limite inferiore, vogliamo verificare che esistono $d>0$ e $n_0 \in \mathbb{N}$ tali che:
@@ -374,8 +370,6 @@ $$
 T(n)=\Omega(n^2).
 $$
 
----
-
 **Conclusione**
 
 Avendo dimostrato sia:
@@ -396,5 +390,3 @@ $$
 T(n)=\Theta(n^2).
 $$
 
-### (6) $T(n) = 4T(n/2) + \Theta(n)$ ammette soluzione $\Theta(n^2)$
-*(Da completare)*

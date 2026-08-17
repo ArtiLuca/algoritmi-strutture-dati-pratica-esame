@@ -17,7 +17,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Esercizio 1 — Gap in un array | Da completare |
 | Esercizio 2 — Primo elemento strettamente maggiore di `x` | [Completato](over.md) |
 | Esercizio 3 — Massimo con divide et impera | [Completato](massimo.md) |
-| Esercizio 4 — Indice fisso in array ordinato [Completato](fix.md) |
+| Esercizio 4 — Indice fisso in array ordinato | [Completato](fix.md) |
 | Domanda 19 — Sottosequenza ricorsiva | Da completare |
 | Esercizio 5 — Array alternante | Da completare |
 

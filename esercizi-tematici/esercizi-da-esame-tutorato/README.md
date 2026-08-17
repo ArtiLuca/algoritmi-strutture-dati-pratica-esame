@@ -19,7 +19,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Domanda A — Ricorrenza `T(n)=4T(n/2)+n^3+1` | Da completare |
 | Domanda A — Ricorrenza `T(n)=T(n-1)+2n-1` | Da completare |
 | Domanda A — Proprietà di `Θ(g(n))` | Da completare |
-| Esercizio Ricorrenze (Sostituzione & Master Theorem) | Da completare |
+| Esercizio Ricorrenze (Sostituzione & Master Theorem) [Completato](esercizio_ricorrenze_sostituzione_master.md) |
 | Esercizio 1 — Centro di array semi-ordinato | Da completare |
 | Esercizio 1 — `triplet(A)` | Da completare |
 | Domanda B — `toTree(A)` | Da completare |

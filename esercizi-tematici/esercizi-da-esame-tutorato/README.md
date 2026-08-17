@@ -64,15 +64,15 @@ Dimostrare le seguenti affermazioni o fornire un controesempio:
 
 1. se $f(n),f'(n)\in\Theta(g(n))$ allora
 
-   $$
-   f(n)+f'(n)\in\Theta(g(n));
-   $$
+$$
+f(n)+f'(n)\in\Theta(g(n));
+$$
 
 2. $f(n),f'(n)\in\Theta(g(n))$ allora
 
-   $$
-   f(n)\cdot f'(n)\in\Theta(g(n)).
-   $$
+$$
+f(n)\cdot f'(n)\in\Theta(g(n)).
+$$
 
 ---
 

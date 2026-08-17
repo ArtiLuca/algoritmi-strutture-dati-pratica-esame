@@ -20,8 +20,8 @@ Ogni esercizio completato contiene una soluzione in stile esame, con pseudocodic
 | Domanda 21 — Coppia con `A[j] = 2 * A[i]` | [Completato](double.md) |
 | Esercizio 8 — Massimo in array bi-ordinato | Da completare |
 | Esercizio 9 — Permutazione delle cifre | Da completare |
-| Domanda 22 — Successore della radice in min-heap | Da completare |
-| Domanda 23 — `IsMaxHeap(A)` | Da completare |
+| Domanda 22 — Successore della radice in min-heap | [Completato](sndmin.md) |
+| Domanda 23 — `IsMaxHeap(A)` | [Completato](is_max_heap.md) |
 | Domanda 24 — `HeapExtractMin(A)` | Da completare |
 | Domanda 25 — `BuildMaxHeap` su array dato | Da completare |
 

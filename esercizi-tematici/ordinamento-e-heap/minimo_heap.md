@@ -41,7 +41,7 @@ Tuttavia, in un max-heap, gli elementi più piccoli vengono spinti verso il bass
 
 Pertanto, bisogna trovare il minimo elemento ispezionando tutte e sole le foglie di $B$. In un heap di dimensione $n$, i nodi foglia sono esattamente quelli i cui indici vanno da $\lfloor\frac{n}{2}\rfloor + 1$ fino a $n$.
 
-```text
+```algorithmic
 min_CasoB(A, B)
     n = B.heapsize
     firstLeaf = floor(n/2) + 1

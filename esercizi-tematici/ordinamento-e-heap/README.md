@@ -22,8 +22,9 @@ Ogni esercizio completato contiene una soluzione in stile esame, con pseudocodic
 | Esercizio 9 — Permutazione delle cifre | Da completare |
 | Domanda 22 — Successore della radice in min-heap | [Completato](sndmin.md) |
 | Domanda 23 — `IsMaxHeap(A)` | [Completato](is_max_heap.md) |
-| Domanda 24 — `HeapExtractMin(A)` | Da completare |
+| Domanda 24 — `HeapExtractMin(A)` | [Completato](heap_extract_min.md) |
 | Domanda 25 — `BuildMaxHeap` su array dato | Da completare |
+| Minimo tra Min-Heap e Max-Heap — `min(A,B)` | [Completato](minimo_heap.md) |
 
 ---
 
@@ -91,3 +92,14 @@ Fornire lo pseudocodice della procedura `HeapExtractMin(A)` per estrarre il mini
 ### **Domanda 25**
 
 Dare la definizione di max-heap. Dato un array `A[1..12]` con sequenza di elementi `[60, 6, 45, 95, 30, 24, 15, 80, 19, 38, 21, 70]` si indichi il risultato della procedura `BuildMaxHeap` applicata ad `A`. Si descriva sinteticamente come si procede per arrivare al risultato.
+
+---
+
+### **Domanda A (7 punti)**
+Dare la definizione di max-heap.
+Dato un insieme $S$ di elementi, memorizzato in parte in un min-heap $A$ e in parte in un max-heap $B$, entrambi non vuoti, dare un algoritmo $\min(A, B)$ per trovare il minimo di $S$ nelle due situazioni seguenti:  
+
+(a) ogni elemento di $A$ è minore o uguale a ogni elemento di $B$;
+(b) ogni elemento di $B$ è minore o uguale a ogni elemento di $A$.  
+
+In entrambi i casi scrivere lo pseudocodice e valutare la complessità.

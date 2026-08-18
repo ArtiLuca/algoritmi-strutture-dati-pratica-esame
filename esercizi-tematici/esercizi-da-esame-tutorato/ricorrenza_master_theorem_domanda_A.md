@@ -2,7 +2,10 @@
 
 **Domanda A (6 punti)**
 Dare una soluzione asintotica per la ricorrenza
-$$ T(n) = 4T(n/2) + n^3 + 1 $$
+
+$$ 
+T(n) = 4T(n/2) + n^3 + 1 
+$$
 
 ---
 

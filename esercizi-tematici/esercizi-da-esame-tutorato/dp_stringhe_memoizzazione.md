@@ -22,7 +22,7 @@ $$
 Di seguito la procedura di inizializzazione e la routine ricorsiva top-down.
 Si assume che la matrice $L$ sia accessibile globalmente (o passata per riferimento).
 
-```text
+```algorithmic
 // Procedura di inizializzazione
 INIT_L(X)
     n = length(X)

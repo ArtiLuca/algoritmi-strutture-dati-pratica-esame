@@ -11,7 +11,7 @@ Una possibile soluzione al problema richiede prima che l’array $A[1\dots n]$ v
 
 Dopo l’ordinamento possiamo cercare la tripla $(i,j,k)$ tale che $A[i] + A[j] = A[k]$ usando la tecnica nota come "two pointers" (due puntatori). Si effettua una ricerca per ogni valore di $k \in 1\dots n$, usando gli indici $i, j$ per verificare se abbiamo trovato la tripla oppure quale delle due estremità possiamo essere sicuri di "scartare".
 
-```text
+```algorithmic
 // restituisce true se trova tripla (i,j,k) t.c. A[i] + A[j] = A[k]
 // altrimenti, restituisce false se questa non esiste
 triplet(A)

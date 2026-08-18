@@ -39,7 +39,7 @@ $$ A[j] < i - (i - j) \implies A[j] < j $$
 
 Possiamo utilizzare quanto appena dimostrato per implementare un algoritmo che opera in stile Divide et Impera (ricerca binaria), dimezzando lo spazio di ricerca nell’array per trovare il primo indice $q$ tale che $A[q] == q$, scartando le metà in cui siamo sicuri che tale indice non può trovarsi.
 
-```text
+```algorithmic
 // funzione principale, restituisce l'indice i tale che A[i] == i se esiste
 // altrimenti, restituisce 0
 Fix(A)

@@ -16,17 +16,18 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 
 | Esercizio | Stato |
 |---|---|
-| Domanda A — Ricorrenza `T(n)=4T(n/2)+n^3+1` | Da completare |
+| Domanda A — Ricorrenza `T(n)=4T(n/2)+n^3+1` | [Completato](ricorrenza_master_theorem_domanda_A.md) |
 | Domanda A — Ricorrenza `T(n)=T(n-1)+2n-1` | Da completare |
 | Domanda A — Proprietà di `Θ(g(n))` | Da completare |
 | Esercizio Ricorrenze (Sostituzione & Master Theorem) | [Completato](esercizio_ricorrenze_sostituzione_master.md) |
 | Esercizio 1 — Centro di array semi-ordinato | Da completare |
-| Esercizio 1 — `triplet(A)` | Da completare |
+| Esercizio 1 — `triplet(A)` | [Completato](triplet.md) |
 | Domanda B — `toTree(A)` | Da completare |
 | Domanda B — Albero Binario di Ricerca | Da completare |
 | Domanda C — `diff(T)` | Da completare |
 | Esercizio 1 — Albero `k-bounded` | Da completare |
 | Esercizio 1 — `union(A1,A2,n)` con max-heap | Da completare |
+| DP su stringhe con Memoization | [Completato](dp_stringhe_memoizzazione.md) |
 
 ---
 
@@ -222,3 +223,22 @@ possibilmente non in questo ordine, ovvero l'elemento $2$ non è duplicato.
 Valutare la complessità della funzione definita.
 
 Qualora il risultato $A$ potesse contenere duplicati ci sarebbero soluzioni più efficienti?
+
+---
+
+### Esercizio 2 - DP su stringhe con Memoization
+
+Data una stringa $X = x_1, x_2, \dots, x_n$, si consideri la seguente quantità $\ell(i, j)$, definita per $1 \le i \le j \le n$:
+
+$$
+\ell(i, j) =
+\begin{cases}
+1 & \text{se } i = j \\
+2 & \text{se } i = j - 1 \\
+2 + \ell(i + 1, j - 1) & \text{se } i < j - 1 \text{ e } x_i = x_j \\
+\sum_{k=i}^{j-1}(\ell(i,k) + \ell(k+1,j)) & \text{se } i < j - 1 \text{ e } x_i \ne x_j
+\end{cases}
+$$
+
+- **(1)** Scrivere una coppia di algoritmi `INIT_L(X)` e `REC_L(i, j)` per il calcolo memoizzato di $\ell(1, n)$.
+- **(2)** Si determini la complessità al caso migliore $T_{\text{best}}(n)$ supponendo che le uniche operazioni di costo unitario e non nullo siano i confronti tra caratteri.

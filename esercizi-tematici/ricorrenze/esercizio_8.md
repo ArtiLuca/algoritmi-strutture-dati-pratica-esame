@@ -1,7 +1,9 @@
 # Esercizio 8 - Dimostrazione O(n log n)
 
 Sia data la seguente equazione di ricorrenza:
-$$ T(n) = T(n - 1) + \log n $$
+$$ 
+T(n) = T(n - 1) + \log n 
+$$
 
 Si dimostri che $T(n) = \mathcal{O}(n \log n)$.
 

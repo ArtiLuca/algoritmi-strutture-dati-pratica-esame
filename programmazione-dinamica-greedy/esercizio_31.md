@@ -47,7 +47,7 @@ Utilizziamo una tabella $L[0\dots n,0\dots n]$, dove $L[i,j]$ rappresenta il val
 
 Gestiamo prima i casi base $L[i,i-1]$ e $L[i,i]$, e poi riempiamo il resto della tabella seguendo la ricorrenza.
 
-```text
+```algorithmic
 Palindrome(A)
     n = length(A)
 
@@ -94,7 +94,7 @@ In particolare:
 - `l` indica che usiamo $L[i,j-1]$, quindi scartiamo l'estremo destro;
 - `r` indica che usiamo $L[i+1,j]$, quindi scartiamo l'estremo sinistro.
 
-```text
+```algorithmic
 Palindrome_Opt1(A)
     n = length(A)
 
@@ -147,7 +147,7 @@ In questa seconda opzione non usiamo la tabella $P$.
 
 Dopo aver calcolato la tabella $L$, ricostruiamo una soluzione confrontando i valori già presenti in $L$.
 
-```text
+```algorithmic
 // La procedura Palindrome(A) rimane identica a quella del punto (ii)
 
 getPal(A, i, j, L)

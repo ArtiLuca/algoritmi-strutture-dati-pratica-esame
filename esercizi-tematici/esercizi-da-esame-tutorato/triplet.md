@@ -11,7 +11,7 @@ Una possibile soluzione al problema richiede prima che l’array $A[1\dots n]$ v
 
 Dopo l’ordinamento possiamo cercare la tripla $(i,j,k)$ tale che $A[i] + A[j] = A[k]$ usando la tecnica nota come "two pointers" (due puntatori). Si effettua una ricerca per ogni valore di $k \in 1\dots n$, usando gli indici $i, j$ per verificare se abbiamo trovato la tripla oppure quale delle due estremità possiamo essere sicuri di "scartare".
 
-```text
+```algorithmic
 // restituisce true se trova tripla (i,j,k) t.c. A[i] + A[j] = A[k]
 // altrimenti, restituisce false se questa non esiste
 triplet(A)
@@ -48,9 +48,9 @@ La correttezza si basa sull’ordinamento iniziale dell’array $A[1\dots n]$, c
 
 Per ogni $k$ fissato, si entra in un ciclo `while` da cui si può uscire negativamente solamente quando $i > j$, ovvero quando abbiamo provato (o escluso con certezza) ogni possibile combinazione per quel $k$, includendo il caso $i=j$. Ad ogni iterazione si valuta la somma corrente $A[i] + A[j]$:
 
-- Se $A[i] + A[j] = A[k]$, abbiamo trovato la tripla $(i,j,k)$ e si restituisce correttamente `true`.
-- Se $A[i] + A[j] < A[k]$, la somma è troppo piccola. Poiché l'array è ordinato in senso crescente, sappiamo che $\forall j^{*} \le j$ varrà la disuguaglianza $A[i] + A[j^{*}] \le A[i] + A[j] < A[k]$. Quindi l’elemento $A[i]$, accoppiato con qualsiasi elemento nell’intervallo corrente $A[i\dots j]$, produrrà sempre una somma troppo piccola e può essere definitivamente scartato. Perciò, si incrementa $i = i + 1$.
-- In modo speculare, se $A[i] + A[j] > A[k]$, la somma è troppo grande. Sappiamo che $\forall i^{*} \ge i$ varrà $A[i^{*}] + A[j] \ge A[i] + A[j] > A[k]$. Quindi l’elemento $A[j]$, accoppiato con qualsiasi elemento nell’intervallo corrente $A[i\dots j]$, produrrà sempre una somma troppo grande e può essere scartato. Perciò, si decrementa $j = j - 1$.
+*   Se $A[i] + A[j] = A[k]$, abbiamo trovato la tripla $(i,j,k)$ e si restituisce correttamente `true`.
+*   Se $A[i] + A[j] < A[k]$, la somma è troppo piccola. Poiché l'array è ordinato in senso crescente, sappiamo che $\forall j^{*} \le j$ varrà la disuguaglianza $A[i] + A[j^{*}] \le A[i] + A[j] < A[k]$. Quindi l’elemento $A[i]$, accoppiato con qualsiasi elemento nell’intervallo corrente $A[i\dots j]$, produrrà sempre una somma troppo piccola e può essere definitivamente scartato. Perciò, si incrementa $i = i + 1$.
+*   In modo speculare, se $A[i] + A[j] > A[k]$, la somma è troppo grande. Sappiamo che $\forall i^{*} \ge i$ varrà $A[i^{*}] + A[j] \ge A[i] + A[j] > A[k]$. Quindi l’elemento $A[j]$, accoppiato con qualsiasi elemento nell’intervallo corrente $A[i\dots j]$, produrrà sempre una somma troppo grande e può essere scartato. Perciò, si decrementa $j = j - 1$.
 
 L’algoritmo prova in modo esaustivo ma efficiente ogni possibile indice $k = 1\dots n$, scartando gli elementi che violano il limite grazie all'ordinamento. Se la tripla esiste, l’algoritmo la trova; altrimenti, restituisce `false` in totale sicurezza.
 
@@ -63,8 +63,6 @@ Il ciclo esterno `for` viene eseguito $n$ volte. Al suo interno, il ciclo `while
 
 Complessivamente, nel caso peggiore:
 
-$$
-T(n) = \Theta(n \log n) + \Theta(n^2) = \Theta(n^2).
-$$
+$$T(n) = \Theta(n \log n) + \Theta(n^2) = \Theta(n^2)$$
 
 La complessità spaziale dipenderà unicamente dall'algoritmo di ordinamento scelto (es. $\mathcal{O}(n)$ per il MergeSort standard, o $\mathcal{O}(1)$ se si usasse un Heapsort).

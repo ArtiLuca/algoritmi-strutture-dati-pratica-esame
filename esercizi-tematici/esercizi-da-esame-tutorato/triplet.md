@@ -44,15 +44,30 @@ triplet(A)
 
 ### ii. Correttezza
 
-La correttezza si basa sull’ordinamento iniziale dell’array $A[1\dots n]$, che ci permette di esplorare in modo mirato e logico le combinazioni di indici $i$ e $j$ per ogni $k=1\dots n$.
+La correttezza si basa sull’ordinamento iniziale dell’array $A[1\dots n]$. Questo ci permette di esplorare in modo mirato e logico le combinazioni di indici $i$ e $j$ per ogni $k=1\dots n$.
 
-Per ogni $k$ fissato, si entra in un ciclo `while` da cui si può uscire negativamente solamente quando $i > j$, ovvero quando abbiamo provato (o escluso con certezza) ogni possibile combinazione per quel $k$, includendo il caso $i=j$. Ad ogni iterazione si valuta la somma corrente $A[i] + A[j]$:
+Per ogni $k$ fissato, si entra in un ciclo `while` da cui si può uscire negativamente solamente quando $i > j$. Ovvero, quando abbiamo provato (o escluso con certezza) ogni possibile combinazione per quel $k$, includendo il caso $i=j$. 
 
-- Se $A[i] + A[j] = A[k]$, abbiamo trovato la tripla $(i,j,k)$ e si restituisce correttamente `true`.
-- Se $A[i] + A[j] < A[k]$, la somma è troppo piccola. Poiché l'array è ordinato in senso crescente, sappiamo che $\forall j^{*} \le j$ varrà la disuguaglianza $A[i] + A[j^{*}] \le A[i] + A[j] < A[k]$. L’elemento $A[i]$ accoppiato a qualsiasi elemento disponibile produrrà sempre una somma troppo piccola e può essere definitivamente scartato. Perciò, si incrementa $i = i + 1$.
-- In modo speculare, se $A[i] + A[j] > A[k]$, la somma è troppo grande. Sappiamo che $\forall i^{*} \ge i$ varrà $A[i^{*}] + A[j] \ge A[i] + A[j] > A[k]$. L’elemento $A[j]$ è troppo grande per produrre la somma desiderata e può essere scartato. Perciò, si decrementa $j = j - 1$.
+Ad ogni iterazione si valuta la somma corrente $A[i] + A[j]$:
 
-L’algoritmo prova in modo esaustivo ma efficiente ogni possibile indice $k = 1\dots n$, scartando gli elementi che violano il limite grazie all'ordinamento. Se la tripla esiste, l’algoritmo la trova; altrimenti, restituisce `false` in totale sicurezza.
+**Caso 1: Somma Esatta**
+Se $A[i] + A[j] = A[k]$, abbiamo trovato la tripla $(i,j,k)$ e si restituisce correttamente `true`.
+
+**Caso 2: Somma troppo piccola**
+Se $A[i] + A[j] < A[k]$, la somma non è sufficiente. Poiché l'array è ordinato in senso crescente, sappiamo che $\forall j^{*} \le j$ varrà la seguente disuguaglianza:
+
+$$ A[i] + A[j^{*}] \le A[i] + A[j] < A[k] $$
+
+L’elemento $A[i]$ accoppiato a qualsiasi elemento disponibile produrrà sempre una somma troppo piccola e può essere definitivamente scartato. Perciò, si incrementa $i = i + 1$.
+
+**Caso 3: Somma troppo grande**
+In modo speculare, se $A[i] + A[j] > A[k]$, la somma supera il target. Sappiamo che $\forall i^{*} \ge i$ varrà:
+
+$$ A[i^{*}] + A[j] \ge A[i] + A[j] > A[k] $$
+
+L’elemento $A[j]$ è troppo grande per produrre la somma desiderata e può essere scartato. Perciò, si decrementa $j = j - 1$.
+
+L’algoritmo prova quindi in modo esaustivo ma efficiente ogni possibile indice $k = 1\dots n$, scartando gli elementi che violano il limite grazie all'ordinamento. Se la tripla esiste, l’algoritmo la trova; altrimenti, restituisce `false` in totale sicurezza.
 
 ---
 

@@ -16,7 +16,7 @@ La procedura `MinHeapify(A, i)` aggiusta una possibile violazione al nodo $i$ as
 
 ### ii. Pseudocodice
 
-```text
+```algorithmic
 // aggiusta una possibile violazione in A[i]
 // pre: i figli di i sono radici di sottoalberi che sono già min-heap validi
 MinHeapify(A, i)
@@ -38,7 +38,7 @@ MinHeapify(A, i)
 
 La procedura per l’estrazione del minimo elemento può quindi essere implementata come segue:
 
-```text
+```algorithmic
 // estrae e restituisce il minimo elemento
 HeapExtractMin(A)
     // controllo underflow

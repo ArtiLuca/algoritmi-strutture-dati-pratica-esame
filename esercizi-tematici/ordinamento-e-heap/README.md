@@ -95,11 +95,14 @@ Dare la definizione di max-heap. Dato un array `A[1..12]` con sequenza di elemen
 
 ---
 
-### **Domanda A (7 punti)**
-Dare la definizione di max-heap.
-Dato un insieme $S$ di elementi, memorizzato in parte in un min-heap $A$ e in parte in un max-heap $B$, entrambi non vuoti, dare un algoritmo $\min(A, B)$ per trovare il minimo di $S$ nelle due situazioni seguenti:  
+### **Domanda A (7 punti)**  
 
-(a) ogni elemento di $A$ è minore o uguale a ogni elemento di $B$;
+Dare la definizione di max-heap.  
+
+Dato un insieme $S$ di elementi, memorizzato in parte in un min-heap $A$ e in parte in un max-heap $B$, entrambi non vuoti, dare un algoritmo $\min(A, B)$ per trovare il minimo di $S$ nelle due situazioni seguenti:  
+  
+(a) ogni elemento di $A$ è minore o uguale a ogni elemento di $B$;  
+
 (b) ogni elemento di $B$ è minore o uguale a ogni elemento di $A$.  
 
 In entrambi i casi scrivere lo pseudocodice e valutare la complessità.

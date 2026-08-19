@@ -58,7 +58,7 @@ $$
 \lim_{n \to \infty} \frac{\frac{10}{9}n^2}{2n^2} = \frac{10}{18} = \frac{5}{9} 
 $$
 
-Quindi, una scelta qualsiasi di $k$ tale che $\frac{5}{9} \le k < 1$ soddisfa pienamente la disuguaglianza. La condizione di regolarità è verificata.
+Quindi, una scelta qualsiasi di $k$ tale che $\frac{5}{9} < k < 1$ soddisfa pienamente la disuguaglianza. La condizione di regolarità è verificata.
 
 ---
 

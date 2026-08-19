@@ -15,13 +15,16 @@ Se invece $x.len = y.len$, bisogna verificare se hanno le stesse frequenze. Sfru
 Indicando con $c1_x, c1_y$ il numero di caratteri $1$ e con $c0_x, c0_y$ il numero di caratteri $0$ di ciascuna stringa, se vale $c1_x = c1_y$ (ovvero le due stringhe hanno lo stesso numero di $1$), avranno necessariamente anche lo stesso numero di $0$.
 
 Matematicamente:
-$$ c1_x = c1_y \implies c0_x = x.len - c1_x = y.len - c1_y = c0_y $$
+
+$$ 
+c1_x = c1_y \implies c0_x = x.len - c1_x = y.len - c1_y = c0_y 
+$$
 
 ---
 
 ### ii. Pseudocodice
 
-```text
+```algorithmic
 // restituisce true se x è anagramma di y, false altrimenti
 Anagramma(x, y)
     // se le lunghezze sono diverse, non possono essere anagrammi

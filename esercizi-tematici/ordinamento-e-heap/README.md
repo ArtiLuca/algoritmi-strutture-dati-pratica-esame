@@ -15,8 +15,8 @@ Ogni esercizio completato contiene una soluzione in stile esame, con pseudocodic
 | Esercizio | Stato |
 |---|---|
 | Esercizio 6 — Minimo tra due array permutati | Da completare |
-| Domanda 20 — `RevCountingSort(A, B, n, k)` | Da completare |
-| Esercizio 7 — Anagramma su alfabeto `{0, 1}` | Da completare |
+| Domanda 20 — `RevCountingSort(A, B, n, k)` | [Completato](rev_counting_sort.md) |
+| Esercizio 7 — Anagramma su alfabeto `{0, 1}` | [Completato](anagramma.md) |
 | Domanda 21 — Coppia con `A[j] = 2 * A[i]` | [Completato](double.md) |
 | Esercizio 8 — Massimo in array bi-ordinato | Da completare |
 | Esercizio 9 — Permutazione delle cifre | Da completare |

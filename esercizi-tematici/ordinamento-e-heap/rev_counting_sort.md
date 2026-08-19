@@ -17,7 +17,7 @@ Per farlo, modifichiamo la fase di accumulo: scorriamo $C[0\dots k]$ da $k-1$ fi
 
 ### ii. Pseudocodice
 
-```text
+```algorithmic
 RevCountingSort(A, B, n, k)
     // inizializzazione
     initialize C[0...k] all to 0

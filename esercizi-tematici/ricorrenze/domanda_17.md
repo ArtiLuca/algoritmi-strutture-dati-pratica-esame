@@ -13,7 +13,8 @@ $$
 \Omega(f(n)) = \{g(n) \mid \exists c > 0, \exists n_0 \in \mathbb{N} \text{ t.c. } \forall n \ge n_0 : 0 \le c \cdot f(n) \le g(n) \} 
 $$
 
-*(Nota: questo definisce l'insieme delle funzioni $g(n)$ limitate inferiormente da $f(n)$. Specularmente, scrivere $f(n) = \Omega(g(n))$ significa che $\exists c > 0, \exists n_0 \text{ t.c. } f(n) \ge c \cdot g(n) \ge 0$).*
+Nota: questo definisce l'insieme delle funzioni $g(n)$ limitate inferiormente da $f(n)$. 
+Specularmente, scrivere $f(n) = \Omega(g(n))$ significa che $\exists c > 0, \exists n_0 \text{ t.c. } f(n) \ge c \cdot g(n) \ge 0$).
 
 ---
 

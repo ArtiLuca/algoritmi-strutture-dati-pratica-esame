@@ -20,7 +20,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con passaggi al
 | Domanda 4 — `T(n) = T(n - 2) + 2n` | Da completare |
 | Domanda 5 — Ricorrenza esatta con `T(n - 1) + 2` | Da completare |
 | Domanda 6 — `3T(n/5) + T(n/6) + n` | Da completare |
-| Domanda 7 — `5T(⌊n/3⌋) + 2n²` | Da completare |
+| Domanda 7 — `5T(⌊n/3⌋) + 2n²` | [Completato](domanda_7.md) |
 | Domanda 8 — `T(n) = T(n - 1) + log n` | [Completato](esercizio_8.md) |
 | Domanda 9 — `T(n/2) + T(√n/2) + 2n` | Da completare |
 | Domanda 10 — `T(4n/5) + n/2 + log n` | Da completare |
@@ -30,7 +30,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con passaggi al
 | Domanda 14 — `3T(n/2) + n(n + 1)` | Da completare |
 | Domanda 15 — `T(n/2) + T(n/3) + √n + 2` | Da completare |
 | Domanda 16 — `5T(n/3) + (n - 2)²` | Da completare |
-| Domanda 17 — Transitività di Ω | Da completare |
+| Domanda 17 — Transitività di Ω | [Completato](domanda_17.md) |
 | Domanda 18 — Relazione tra Θ, O e Ω | Da completare |
 
 ---

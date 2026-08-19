@@ -61,7 +61,8 @@ perm(m, n)
 
 ### iii. Complessità
 
-Sia $N = \max(m.length, n.length)$ il numero massimo di cifre tra i due numeri interi in input. (Nota: matematicamente, $N \approx \log_{10}(\max(m, n))$).
+Sia $N = \max(m.length, n.length)$ il numero massimo di cifre tra i due numeri interi in input. 
+Nota: matematicamente, $N\approx \log_{10}(\max(m, n))$
 
 *   **Complessità Temporale:** Il ciclo `while` compie esattamente $N$ iterazioni. L'inizializzazione e il controllo finale dell'array $C$ richiedono sempre $10$ operazioni costanti. La complessità temporale è proporzionale al numero di cifre, quindi $\Theta(N)$. Rispetto al *valore* dei numeri, la complessità è $\Theta(\log(\max(m, n)))$.
 *   **Complessità Spaziale:** Viene utilizzato un array $C$ di dimensione fissa $k = 10$, che non dipende dall'input. Pertanto, la complessità spaziale è $\Theta(1)$.

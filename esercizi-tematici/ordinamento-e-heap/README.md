@@ -19,7 +19,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con pseudocodic
 | Esercizio 7 — Anagramma su alfabeto `{0, 1}` | [Completato](anagramma.md) |
 | Domanda 21 — Coppia con `A[j] = 2 * A[i]` | [Completato](double.md) |
 | Esercizio 8 — Massimo in array bi-ordinato | Da completare |
-| Esercizio 9 — Permutazione delle cifre | Da completare |
+| Esercizio 9 — Permutazione delle cifre | [Completato](permutazione.md) |
 | Domanda 22 — Successore della radice in min-heap | [Completato](sndmin.md) |
 | Domanda 23 — `IsMaxHeap(A)` | [Completato](is_max_heap.md) |
 | Domanda 24 — `HeapExtractMin(A)` | [Completato](heap_extract_min.md) |

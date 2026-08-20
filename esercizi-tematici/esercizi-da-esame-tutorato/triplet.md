@@ -15,6 +15,7 @@ Dopo l’ordinamento possiamo cercare la tripla $(i,j,k)$ tale che $A[i] + A[j] 
 // restituisce true se trova tripla (i,j,k) t.c. A[i] + A[j] = A[k]
 // altrimenti, restituisce false se questa non esiste
 triplet(A)
+
     // ordinamento usando comparison-sort (es: MergeSort)
     Sort(A)
 		

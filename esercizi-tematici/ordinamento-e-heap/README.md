@@ -18,13 +18,14 @@ Ogni esercizio completato contiene una soluzione in stile esame, con pseudocodic
 | Domanda 20 — `RevCountingSort(A, B, n, k)` | [Completato](rev_counting_sort.md) |
 | Esercizio 7 — Anagramma su alfabeto `{0, 1}` | [Completato](anagramma.md) |
 | Domanda 21 — Coppia con `A[j] = 2 * A[i]` | [Completato](double.md) |
-| Esercizio 8 — Massimo in array bi-ordinato | Da completare |
+| Esercizio 8 — Massimo in array bi-ordinato | [Completato](top.md) |
 | Esercizio 9 — Permutazione delle cifre | [Completato](permutazione.md) |
 | Domanda 22 — Successore della radice in min-heap | [Completato](sndmin.md) |
 | Domanda 23 — `IsMaxHeap(A)` | [Completato](is_max_heap.md) |
 | Domanda 24 — `HeapExtractMin(A)` | [Completato](heap_extract_min.md) |
 | Domanda 25 — `BuildMaxHeap` su array dato | Da completare |
 | Minimo tra Min-Heap e Max-Heap — `min(A,B)` | [Completato](minimo_heap.md) |
+| Esercizio SortJoin | [Completato](sort_join.md) |
 
 ---
 
@@ -106,3 +107,21 @@ Dato un insieme $S$ di elementi, memorizzato in parte in un min-heap $A$ e in pa
 (b) ogni elemento di $B$ è minore o uguale a ogni elemento di $A$.  
 
 In entrambi i casi scrivere lo pseudocodice e valutare la complessità.
+
+---
+
+## SortJoin
+
+Siano dati due array $A[1 \dots 2n]$ e $B[1 \dots n]$ organizzati a max-heap, entrambi
+contenenti $n$ elementi (`heapsize=n`).
+
+Realizzare una procedura `SortJoin(A, B, n)` che dati in input array $A$ e $B$
+con le proprietà sopra descritte, ritorna in $A$ un array ordinato contenente
+tutti i $2n$ elementi originariamente presenti in $A$ e $B$.
+
+L'array $B$ può essere modificato durante l'esecuzione della procedura, se
+necessario, ma l'algoritmo dovrà operare in *spazio costante*.
+
+Dare lo pseudocodice della procedura, motivarne la correttezza e valutarne la
+complessità. Se si utilizzano operazioni sui max-heap andranno definite
+esplicitamente.

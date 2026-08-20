@@ -8,7 +8,8 @@ Realizzare una funzione `RevCountingSort(A, B, n, k)` che, dato un array $A[1\do
 
 L’algoritmo `CountingSort(A, B, k)` standard prende in input un array $A[1\dots n]$ tale che $\forall j \in \{1\dots n\}$ si ha $A[j] \in \{0, 1, \dots, k\}$. Il parametro $k$ rappresenta il limite superiore dei valori presenti. Utilizza un array ausiliario $C[0\dots k]$ inizialmente inizializzato a $0$.
 
-Per ordinare in senso **crescente**, l'algoritmo conta le frequenze in $C[x]$ e poi calcola le frequenze cumulative da sinistra a destra ($C[i] = C[i] + C[i-1]$). In questo modo, $C[x]$ indica il numero di elementi $\le x$, ovvero la posizione limite destra in cui inserire $x$ nell'array finale.
+Per ordinare in senso **crescente**, l'algoritmo conta le frequenze in $C[x]$ e poi calcola le frequenze cumulative da sinistra a destra  
+($C[i] = C[i] + C[i-1]$). In questo modo, $C[x]$ indica il numero di elementi $\le x$, ovvero la posizione limite destra in cui inserire $x$ nell'array finale.
 
 Se vogliamo che $B[1\dots n]$ sia ordinato in senso **decrescente**, ci basta notare che, anziché memorizzare il numero di elementi $\le x$, possiamo salvare in $C[x]$ il numero di elementi che sono $\ge x$ nell'array $A$.
 Per farlo, modifichiamo la fase di accumulo: scorriamo $C[0\dots k]$ da $k-1$ fino a $0$ (anziché da $1$ a $k$) e salviamo il risultato di $C[i] = C[i] + C[i+1]$. Il resto dello pseudocodice rimane invariato, preservando anche l'importante proprietà di **stabilità** dell'algoritmo.

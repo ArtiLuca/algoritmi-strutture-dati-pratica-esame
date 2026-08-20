@@ -82,7 +82,7 @@ SortJoin(A, B, n)
 
 Per dimostrare la correttezza di `SortJoin(A, B, n)` utilizzo la seguente invariante di ciclo:
 
-*All’inizio di ciascuna iterazione del ciclo con indice $i$, $A[1\dots A.heapsize]$ e $B[1\dots B.heapsize]$ sono dei max-heap validi e contengono tutti gli elementi non ancora inseriti nella parte ordinata finale. $A[i+1\dots 2n]$ contiene i $2n - i$ elementi più grandi tra quelli originari in $A$ e $B$, ordinati in senso crescente.*
+*All’inizio di ciascuna iterazione del ciclo con indice* $i$, $A[1\dots A.heapsize]$ *e* $B[1\dots B.heapsize]$ *sono dei max-heap validi e contengono tutti gli elementi non ancora inseriti nella parte ordinata finale.* $A[i+1\dots 2n]$ *contiene i* $2n - i$ *elementi più grandi tra quelli originari in* $A$ *e* $B$, *ordinati in senso crescente.*
 
 **Inizio ($i = 2n$):** Si ha $A[1\dots A.heapsize]$ e $B[1\dots B.heapsize]$ max-heap validi e la parte finale ordinata $A[i+1\dots 2n]$ è vuota, quindi contiene zero elementi ordinati e l’invariante è vacuamente vera.
 

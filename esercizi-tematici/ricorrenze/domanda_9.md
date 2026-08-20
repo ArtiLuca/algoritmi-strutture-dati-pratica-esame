@@ -85,7 +85,7 @@ Una scelta di costante $d \le 4$ (con $d > 0$) e $n_0 = 1$ soddisfa la disuguagl
 
 ### iii. Conclusione
 
-Avendo dimostrato separatamente sia il limite superiore ($\mathcal{O}(n)$) che il limite inferiore ($\Omega(n)$), per il teorema della doppia implicazione asintotica possiamo concludere formalmente che la ricorrenza ammette come soluzione asintotica stretta:
+Avendo dimostrato separatamente sia il limite superiore $\mathcal{O}(n)$ che il limite inferiore ($\Omega(n)$), per il teorema della doppia implicazione asintotica possiamo concludere formalmente che la ricorrenza ammette come soluzione asintotica stretta:
 
 $$
 T(n) = \Theta(n)

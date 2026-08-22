@@ -43,7 +43,7 @@ In particolare possiamo definire per ogni coppia di distributori $D_i, D_j$ con 
 
 $$d_{i,j} = \sum_{h=i+1}^{j} d_h$$
 
-Deve valere che per ogni $j \in \{0 \dots k-1\}$ si ha $d_{i_j, i_{j+1}} \le d$, cioè non possiamo superare l’autonomia $d$ dell'auto a disposizione tra due distributori. Quindi, il costo può essere espresso semplicemente come il numero di soste che effettuiamo ai vari distributori, 
+Deve valere che per ogni $j \in (\{0 \dots k-1\})$ si ha $d_{i_j, i_{j+1}} \le d$, cioè non possiamo superare l’autonomia $d$ dell'auto a disposizione tra due distributori. Quindi, il costo può essere espresso semplicemente come il numero di soste che effettuiamo ai vari distributori, 
 ovvero definiamo il costo come $c(S) = k - 1$.
 
 La scelta greedy è di riuscire ad arrivare al distributore più lontano con l’autonomia che abbiamo a disposizione.

@@ -1,5 +1,40 @@
 # Esercizio Soste Auto (Greedy)
 
+Si supponga di voler viaggiare dalla città `A` alla città `B` con un'auto che ha
+un'autonomia pari a `d` km.
+
+Lungo il percorso si trovano `n - 1` distributori:
+
+```math
+D_1, \dots, D_{n-1},
+```
+
+a distanze:
+
+```math
+d_1, \dots, d_n
+```
+
+con `d_i <= d`, come indicato in figura:
+
+```text
+D_0 = A ... D_1 ... D_2 ... D_{n-1} ... D_n = B
+```
+
+L'auto ha inizialmente il serbatoio pieno e l'obiettivo è quello di percorrere
+il viaggio da `A` a `B`, minimizzando il numero di soste ai distributori per il
+rifornimento.
+
+- **i.** Introdurre la nozione di soluzione per il problema e di costo della
+  soluzione. Mostrare che vale la proprietà della sottostruttura ottima e
+  individuare una scelta che gode della proprietà della scelta greedy.
+- **ii.** Sulla base della scelta greedy individuata al passo precedente,
+  fornire un algoritmo greedy `stop(d,n)` che dato in input l'array delle
+  distanze `d[1..n]` restituisce una soluzione ottima.
+- **iii.** Valutare la complessità dell'algoritmo.
+
+---  
+
 In generale una soluzione per il problema è $S = D_0, D_1, \dots, D_n$, ovvero i distributori a cui decidiamo di fermarci per fare il pieno. Più specificamente, possiamo definire una soluzione per il problema come l’insieme dei distributori $S = D_{i_0} \dots D_{i_k}$ dove $D_{i_0} = A$ e $D_{i_k} = B$.
 
 In particolare possiamo definire per ogni coppia di distributori $D_i, D_j$ con $i \le j$ la distanza fra questi usando la notazione:

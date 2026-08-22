@@ -40,7 +40,7 @@ Ovvero, si tratta di quelle attività che iniziano dopo (o nel momento esatto in
 L’algoritmo `GREEDY-SEL` visto a lezione implementa la scelta greedy di selezionare l’attività che finisce per prima tra tutte quelle disponibili.
 Sia $A_{ij}^{\ast}$ una soluzione ottima per il problema; la scelta greedy seleziona come prima attività $a_m$, ovvero l’attività tale che  
 
-$f_m = \min\{{f_l : a_l \in A_{ij}^{\ast}\}}$.
+$f_m = \min\{(f_l : a_l \in A_{ij}^{\ast}\})$.
 
 Visto che assumiamo le attività già ordinate per tempo di fine crescente, all’inizio si ha semplicemente la scelta di $A = \{a_1\}$.
 Dopodiché, l'algoritmo scorre tutte le attività $a_m$ con $m = 2 \dots n$, tenendo traccia dell’indice dell’ultima attività scelta 

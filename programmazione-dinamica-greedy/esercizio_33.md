@@ -48,7 +48,7 @@ ovvero definiamo il costo come $c(S) = k - 1$.
 
 La scelta greedy è di riuscire ad arrivare al distributore più lontano con l’autonomia che abbiamo a disposizione.
 Ovvero, se ci troviamo al distributore $D_i$ allora vogliamo arrivare al distributore $D_k$ più lontano, 
-ovvero vogliamo trovare $k = \max\{j \mid d_{i,j} \le d\}$, che è la distanza massima che possiamo percorrere senza finire l’autonomia dell’auto.
+ovvero vogliamo trovare $k = \max(\{j \mid d_{i,j} \le d\})$, che è la distanza massima che possiamo percorrere senza finire l’autonomia dell’auto.
 
 ---
 
@@ -61,7 +61,7 @@ Sia $D_k$ il distributore che contiene la nostra scelta greedy, ovvero il distri
 - Altrimenti, se $x < k$, costruiamo una nuova soluzione $S^{\prime}$ che non contiene il distributore $D_x$ ma anzi contiene la nostra scelta greedy, ovvero:
 
 $$
-S^{\prime} = (S^{\ast} \setminus \{D_x\}) \cup \{D_k\}
+S^{\prime} = (S^{\ast} \setminus \{(D_x)\}) \cup \{(D_k)\}
 $$
 
 La soluzione è ancora ammissibile poiché per definizione si ha che $d_{0,k} \le d$. Inoltre, ripartire da $D_k$ verso la sosta successiva è più vantaggioso rispetto a ripartire da $D_x$, essendoci spostati in avanti.
@@ -75,7 +75,7 @@ Quindi abbiamo dimostrato così la proprietà della scelta greedy.
 ### ii. Dimostrazione della proprietà di sottostruttura ottima
 
 Supponiamo che $S^{\ast}$ sia una soluzione ottima per il problema $A \dots B$, e che la prima sosta effettuata sia al distributore $D_k$.
-Quindi $S^* = \{D_k\} \cup S_{k,B}$ dove $S_{k,B}$ è soluzione per il problema $D_k \dots B$.
+Quindi $S^* = \{(D_k)\} \cup S_{k,B}$ dove $S_{k,B}$ è soluzione per il problema $D_k \dots B$.
 
 Supponiamo per assurdo che la tratta rimanente per arrivare da $D_k$ a $B$ non sia ottimale, ovvero che esista un sottoinsieme di soste 
 $S_{k,B}^{\prime}$ che risolve il problema di arrivare da $D_k$ a $B$ usando un numero minore di soste.
@@ -83,7 +83,7 @@ $S_{k,B}^{\prime}$ che risolve il problema di arrivare da $D_k$ a $B$ usando un 
 Questo vorrebbe dire che se unissimo questa ipotetica soluzione con la prima sosta $D_k$ otterremmo una soluzione $S^{\prime}$ tale che:
 
 $$
-S^{\prime} = S_{k,B}^{\prime} \cup \{D_k\}
+S^{\prime} = S_{k,B}^{\prime} \cup \{(D_k)\}
 $$
 
 con un numero minore di soste.

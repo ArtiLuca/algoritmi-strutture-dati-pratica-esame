@@ -38,6 +38,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Domanda B — Longest Common Subsequence (LCS) | [Da Completare]|
 | Esercizio 1 — Ordinamento in loco (TriSort) | [Da Completare] |
 | Esercizio 2 — Algoritmo greedy per il resto delle monete | [Da Completare] |
+| Domanda A — Ricorrenza con metodo di sostituzione | [Da Completare](domanda_ricorrenza_sostituzione.md) |
 
 ---
 
@@ -449,3 +450,13 @@ soluzione ottima.
 Supponiamo ora che i valori delle monete siano $\{10, 5, 1\}$. In questo caso
 l'algoritmo greedy restituisce sempre una soluzione ottima: dimostrare che ogni
 insieme ottimo $M^\star$ di monete di valore totale $n$ contiene la scelta greedy.
+
+---
+
+### Domanda A — Ricorrenza con metodo di sostituzione
+
+Si dimostri che la ricorrenza che segue ha soluzione $T(n)=\Theta(n)$:
+
+```math
+T(n)=\frac{2}{3}T(n-1)+2n.
+```

@@ -50,7 +50,7 @@ Per gli **Algoritmi Greedy**, mi concentro soprattutto su:
 
 | Esercizio | Argomento principale | Stato |
 |---|---|---|
-| Esercizio 33 | Soste minime ai distributori | [Da completare](esercizio_33.md) |
+| Esercizio 33 | Soste minime ai distributori | [Completato](esercizio_33.md) |
 | Esercizio 34 | Turni minimi per coprire richieste | [Da completare](esercizio_34.md) |
 
 ---

@@ -28,6 +28,16 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Esercizio 1 — Albero `k-bounded` | Da completare |
 | Esercizio 1 — `union(A1,A2,n)` con max-heap | Da completare |
 | DP su stringhe con Memoization | [Completato](dp_stringhe_memoizzazione.md) |
+| Domanda A - Ricorrenza con Master Theorem | [Da Completare](domanda_master_theorem.md) |
+| Domanda B - Activity Selection Greedy Sel | [Completato](greedy_sel.md) |
+| Esercizio 2 - Selezioni di Attività Compatibili | [Da Completare](activity_selection.md) |
+| Domanda B - Algoritmo di Huffman | [Da Completare](domanda_huffman_1.md) |
+| Domanda B - Hashing con doppio hashing | [Da Completare](double_hashing.md) |
+| Esercizio 2 - Scheduling greedy e somma dei tempi di completamento | [Da Completare] |
+| Domanda A — Ricorrenze e classe Ω esponenziale | [Da Completare] |
+| Domanda B — Longest Common Subsequence (LCS) | [Da Completare]|
+| Esercizio 1 — Ordinamento in loco (TriSort) | [Da Completare] |
+| Esercizio 2 — Algoritmo greedy per il resto delle monete | [Da Completare] |
 
 ---
 
@@ -242,3 +252,200 @@ $$
 
 - **(1)** Scrivere una coppia di algoritmi `INIT_L(X)` e `REC_L(i, j)` per il calcolo memoizzato di $\ell(1, n)$.
 - **(2)** Si determini la complessità al caso migliore $T_{\text{best}}(n)$ supponendo che le uniche operazioni di costo unitario e non nullo siano i confronti tra caratteri.
+
+---
+
+### Domanda A - Ricorrenza con Master Theorem
+
+Si determini la soluzione asintotica della seguente equazione di ricorrenza:
+
+```math
+T(n)=3T(n/3)+n^2+1.
+```
+
+---
+
+### Domanda B - Activity Selection Greedy Sel
+
+Si consideri il problema di selezione di attività compatibili:
+
+**(a)** Definire il problema.
+
+**(b)** Descrivere brevemente l'algoritmo ottimo `GREEDY-SEL` visto in classe.
+
+**(c)** Fornire un esempio di algoritmo greedy *non* ottimo, motivandone la non
+ottimalità.
+
+---
+
+### Esercizio 2 - Selezioni di Attività Compatibili
+
+Si consideri il problema di selezione di attività compatibili, con $n$ attività
+$a_1, \dots, a_n$ che ci vengono date attraverso due vettori $\mathbf{s}$ e $\mathbf{f}$ di
+tempi di inizio e fine, e ordinate per tempo di *inizio*, cioè:
+
+$$ 0 < s_1 \le s_2 \le \dots \le s_n $$
+
+**(a)** Scrivere un algoritmo greedy iterativo che implementa la scelta greedy
+di selezionare l'attività che inizia per ultima.
+
+**(b)** Determinare l'insieme di attività restituito dall'algoritmo al punto
+(a) quando eseguito sul seguente insieme di 6 attività, caratterizzate dai
+seguenti vettori $\mathbf{s}$ e $\mathbf{f}$ di tempi di inizio e fine:
+
+$$ \mathbf{s} = (1, 2, 3, 5, 7, 10) $$
+$$ \mathbf{f} = (3, 9, 10, 7, 11, 12) $$
+
+**(c)** Dimostrare la proprietà di scelta greedy, cioè che esiste soluzione
+ottima che contiene l'attività che inizia per ultima.
+
+---
+
+### Domanda B - Algoritmo di Huffman
+
+Indicare, in forma di albero binario, il codice prefisso ottenuto tramite
+l'algoritmo di Huffman per l'alfabeto:
+
+```math
+\{a,b,c,d,e,f\},
+```
+
+supponendo che ogni simbolo appaia con le seguenti frequenze:
+
+| Simbolo | a | b | c | d | e | f |
+|---|---:|---:|---:|---:|---:|---:|
+| Frequenza | 12 | 7 | 14 | 30 | 10 | 27 |
+
+Spiegare brevemente il processo di costruzione del codice.
+
+---
+
+### Domanda B - Hashing con doppio hashing 
+
+Si consideri una tabella hash di dimensione $m=7$, e indirizzamento aperto con
+doppio hash basato sulle funzioni:
+
+```math
+h_1(k)=k \bmod m
+```
+
+e
+
+```math
+h_2(k)=1+k \bmod (m-2).
+```
+
+Si descriva sinteticamente come avviene l'inserimento degli elementi e si
+specifichi il risultato dell'inserzione della sequenza di chiavi:
+
+```math
+10,20,34,35,48.
+```
+
+Sarebbe appropriato lavorare con una tabella di dimensione $m=8$ e le stesse
+funzioni hash?
+
+---
+
+### Esercizio 2 - Scheduling greedy e somma dei tempi di completamento
+
+Abbiamo $n$ programmi da eseguire sul nostro computer. Ogni programma $j$, con:
+
+```math
+j \in \{1,2,\ldots,n\},
+```
+
+ha lunghezza $\ell_j$, che rappresenta la quantità di tempo richiesta per la sua
+esecuzione.
+
+Dato un ordine di esecuzione:
+
+```math
+\sigma = j_1,j_2,\ldots,j_n
+```
+
+dei programmi, cioè una permutazione di $\{1,2,\ldots,n\}$, il tempo di
+completamento $C_{j_i}(\sigma)$ del programma $j_i$ è dato dalla somma delle
+lunghezze dei programmi:
+
+```math
+j_1,j_2,\ldots,j_i.
+```
+
+L'obiettivo è trovare un ordine di esecuzione $\sigma$ che minimizza la somma dei
+tempi di completamento di tutti i programmi, cioè:
+
+```math
+\sum_{j=1}^{n} C_j(\sigma).
+```
+
+### Punto (a)
+
+Dare un semplice algoritmo greedy per questo problema, e valutarne la
+complessità.
+
+### Punto (b)
+
+Dimostrare la proprietà di scelta greedy dell'algoritmo del punto (a), cioè che
+esiste un ordine di esecuzione ottimo $\sigma^\star$ che contiene la scelta
+greedy.
+
+---
+
+### Domanda A — Ricorrenze e classe Ω esponenziale
+
+Data la ricorrenza:
+
+$$ 
+T(n) = \frac{3}{2}T(n-1) + 2 
+$$
+
+mostrare che la soluzione è $O(2^n)$.
+
+Vale anche $T(n) = \Omega(2^n)$? Motivare la risposta.
+
+---
+
+### Domanda B — Longest Common Subsequence (LCS)
+
+Scrivere la ricorrenza sulle lunghezze $\ell(i,j)$ per il problema della longest
+common subsequence (LCS).
+
+---
+
+### Esercizio 1 — Ordinamento in loco (TriSort)
+
+Realizzare una procedura `TriSort(A)` che dato un array $A[1 \dots n]$ di $n$
+elementi, con valori in $\{0, 1, 2\}$, lo ordina in modo crescente.
+
+L'unica operazione ammessa per modificare l'array è:
+
+$$ 
+A[i] \leftrightarrow A[j] 
+$$
+
+il cui effetto è quello di scambiare gli elementi in posizione $i$ e $j$.
+
+Dare lo pseudocodice e motivarne la correttezza. Valutare la complessità asintotica,
+indicando anche il numero di confronti e di scambi nel caso peggiore.
+
+---
+
+### Esercizio 2 — Algoritmo greedy per il resto delle monete
+
+Supponiamo di avere un numero illimitato di monete di ciascuno dei seguenti
+valori: $\{50, 20, 1\}$. Dato un numero intero positivo $n$, l'obiettivo è selezionare il
+più piccolo numero di monete tale che il loro valore totale sia $n$. Consideriamo
+l'algoritmo greedy che consiste nel selezionare ripetutamente la moneta di
+valore più grande possibile.
+
+### Punto (a)
+
+Fornire un valore di $n$ per cui l'algoritmo greedy non restituisce una
+soluzione ottima.
+
+### Punto (b)
+
+Supponiamo ora che i valori delle monete siano $\{10, 5, 1\}$. In questo caso
+l'algoritmo greedy restituisce sempre una soluzione ottima: dimostrare che ogni
+insieme ottimo $M^\star$ di monete di valore totale $n$ contiene la scelta greedy.

@@ -1,8 +1,13 @@
 # Domanda Greedy-Sel
 
-**(a) Definire il problema.**
-**(b) Descrivere brevemente l'algoritmo ottimo GREEDY-SEL visto in classe.**
-**(c) Fornire un esempio di algoritmo greedy non ottimo, motivandone la non ottimalità.**
+Si consideri il problema di selezione di attività compatibili:
+
+**(a)** Definire il problema.
+
+**(b)** Descrivere brevemente l'algoritmo ottimo `GREEDY-SEL` visto in classe.
+
+**(c)** Fornire un esempio di algoritmo greedy *non* ottimo, motivandone la non
+ottimalità.
 
 ---
 

@@ -19,13 +19,13 @@ Ogni esercizio completato contiene una soluzione in stile esame, con passaggi al
 | Domanda 3 — `T(n) = 4T(n/2) + n√n` | Da completare |
 | Domanda 4 — `T(n) = T(n - 2) + 2n` | Da completare |
 | Domanda 5 — Ricorrenza esatta con `T(n - 1) + 2` | Da completare |
-| Domanda 6 — `3T(n/5) + T(n/6) + n` | Da completare |
+| Domanda 6 — `3T(n/5) + T(n/6) + n` | [Completato](domanda_6.md) |
 | Domanda 7 — `5T(⌊n/3⌋) + 2n²` | [Completato](domanda_7.md) |
 | Domanda 8 — `T(n) = T(n - 1) + log n` | [Completato](esercizio_8.md) |
 | Domanda 9 — `T(n/2) + T(√n/2) + 2n` | [Completato](domanda_9.md) |
 | Domanda 10 — `T(4n/5) + n/2 + log n` | [Completato](domanda_10.md) |
 | Domanda 11 — `1/2 T(n - 1) + n` | Da completare |
-| Domanda 12 — Definizione di Ω e ricorrenza con sommatoria | Da completare |
+| Domanda 12 — Definizione di Ω e ricorrenza con sommatoria | [Completato](domanda_12.md) |
 | Domanda 13 — Definizione di O e ricorrenza `2/3 T(n - 1) + 2n` | [Completato](esercizio_13.md) |
 | Domanda 14 — `3T(n/2) + n(n + 1)` | Da completare |
 | Domanda 15 — `T(n/2) + T(n/3) + √n + 2` | Da completare |

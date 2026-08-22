@@ -2,8 +2,11 @@
 
 Sia data la seguente equazione di ricorrenza:
 
-$$
-T(n) = \begin{cases} 1 & \text{se } n = 1 \\ 3T(n/5) + T(n/6) + n & \text{se } n > 1 \end{cases}
+$$ 
+T(n) = \begin{cases} 
+1 & \text{se } n = 1 \\ 
+3T(n/5) + T(n/6) + n & \text{se } n > 1 
+\end{cases} 
 $$
 
 Si fornisca un limite asintotico stretto per la soluzione.

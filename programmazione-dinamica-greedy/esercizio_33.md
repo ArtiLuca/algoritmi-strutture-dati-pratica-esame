@@ -62,7 +62,8 @@ $$S^{\prime} = (S^{\ast} \setminus \{D_x\}) \cup \{D_k\}$$
 La soluzione è ancora ammissibile poiché per definizione si ha che $d_{0,k} \le d$. Inoltre, ripartire da $D_k$ verso la sosta successiva è più vantaggioso rispetto a ripartire da $D_x$, essendoci spostati in avanti.
 La soluzione rimane ottimale, perché abbiamo solo effettuato uno scambio di un distributore con un altro, e quindi la cardinalità resta invariata.
 
-Ovvero, il costo (numero totale di soste) rimane uguale ($c(S^{\prime}) = c(S^{\ast})$). Quindi abbiamo dimostrato così la proprietà della scelta greedy.
+Ovvero, il costo (numero totale di soste) rimane uguale $c(S^{\prime}) = c(S^{\ast})$ 
+Quindi abbiamo dimostrato così la proprietà della scelta greedy.
 
 ---
 

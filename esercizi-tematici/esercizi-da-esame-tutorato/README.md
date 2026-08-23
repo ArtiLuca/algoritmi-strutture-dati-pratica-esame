@@ -28,17 +28,17 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Esercizio 1 — Albero `k-bounded` | Da completare |
 | Esercizio 1 — `union(A1,A2,n)` con max-heap | Da completare |
 | DP su stringhe con Memoization | [Completato](dp_stringhe_memoizzazione.md) |
-| Domanda A - Ricorrenza con Master Theorem | [Da Completare](domanda_master_theorem.md) |
+| Domanda A - Ricorrenza con Master Theorem | [Completato](domanda_master_theorem.md) |
 | Domanda B - Activity Selection Greedy Sel | [Completato](greedy_sel.md) |
-| Esercizio 2 - Selezioni di Attività Compatibili | [Da Completare](activity_selection.md) |
+| Esercizio 2 - Selezioni di Attività Compatibili | [Completato](activity_selection.md) |
 | Domanda B - Algoritmo di Huffman | [Da Completare](domanda_huffman_1.md) |
-| Domanda B - Hashing con doppio hashing | [Da Completare](double_hashing.md) |
+| Domanda B - Hashing con doppio hashing | [Completato](double_hashing.md) |
 | Esercizio 2 - Scheduling greedy e somma dei tempi di completamento | [Da Completare] |
 | Domanda A — Ricorrenze e classe Ω esponenziale | [Da Completare] |
 | Domanda B — Longest Common Subsequence (LCS) | [Da Completare]|
 | Esercizio 1 — Ordinamento in loco (TriSort) | [Da Completare] |
 | Esercizio 2 — Algoritmo greedy per il resto delle monete | [Da Completare] |
-| Domanda A — Ricorrenza con metodo di sostituzione | [Da Completare](domanda_ricorrenza_sostituzione.md) |
+| Domanda A — Ricorrenza con metodo di sostituzione | [Completato](domanda_ricorrenza_sostituzione.md) |
 
 ---
 

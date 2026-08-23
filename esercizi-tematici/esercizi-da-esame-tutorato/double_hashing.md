@@ -32,6 +32,7 @@ Inseriamo la sequenza passo dopo passo:
 
 - **Inserimento di 34:**
   $h(34, 0) = 34 \bmod 7 = 6$ (Collisione)
+
   $h(34, 1) = (6 + 1 \cdot (1 + 34 \bmod 5)) \bmod 7 = (6 + 1 + 4) \bmod 7 = 11 \bmod 7 = 4$ (Inserito in 4)
 
 - **Inserimento di 35:**
@@ -39,9 +40,13 @@ Inseriamo la sequenza passo dopo passo:
 
 - **Inserimento di 48:**
   $h(48, 0) = 48 \bmod 7 = 6$ (Collisione)
+
   $h(48, 1) = (6 + 1 \cdot (1 + 48 \bmod 5)) \bmod 7 = (6 + 1 + 3) \bmod 7 = 10 \bmod 7 = 3$ (Collisione)
+
   $h(48, 2) = (6 + 2 \cdot 4) \bmod 7 = 14 \bmod 7 = 0$ (Collisione)
+
   $h(48, 3) = (6 + 3 \cdot 4) \bmod 7 = 18 \bmod 7 = 4$ (Collisione)
+
   $h(48, 4) = (6 + 4 \cdot 4) \bmod 7 = 22 \bmod 7 = 1$ (Inserito in 1)
 
 La tabella finale quindi si presenta così:

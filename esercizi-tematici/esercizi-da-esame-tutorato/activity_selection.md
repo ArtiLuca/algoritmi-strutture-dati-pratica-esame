@@ -1,20 +1,23 @@
 # Esercizio - Selezione Attività Compatibili
 
-Si consideri il problema di selezione di attività compatibili, con $n$ attività $a_1, \dots, a_n$ che ci vengono date attraverso due vettori $\mathbf{s}$ e $\mathbf{f}$ di tempi di inizio e fine, e ordinate per tempo di inizio, cioè:
+Si consideri il problema di selezione di attività compatibili, con $n$ attività
+$a_1, \dots, a_n$ che ci vengono date attraverso due vettori $\mathbf{s}$ e $\mathbf{f}$ di
+tempi di inizio e fine, e ordinate per tempo di *inizio*, cioè:
 
-$$
-0 < s_1 \le s_2 \le \dots \le s_n
-$$
+$$ 0 < s_1 \le s_2 \le \dots \le s_n $$
 
-**(a) Scrivere un algoritmo greedy iterativo che implementa la scelta greedy di selezionare l'attività che inizia per ultima.**
-**(b) Determinare l'insieme di attività restituito dall'algoritmo al punto (a) quando eseguito sul seguente insieme di 6 attività:**
-$$
-\mathbf{s} = (1, 2, 3, 5, 7, 10)
-$$
-$$
-\mathbf{f} = (3, 9, 10, 7, 11, 12)
-$$
-**(c) Dimostrare la proprietà di scelta greedy, cioè che esiste soluzione ottima che contiene l'attività che inizia per ultima.**
+**(a)** Scrivere un algoritmo greedy iterativo che implementa la scelta greedy
+di selezionare l'attività che inizia per ultima.
+
+**(b)** Determinare l'insieme di attività restituito dall'algoritmo al punto
+(a) quando eseguito sul seguente insieme di 6 attività, caratterizzate dai
+seguenti vettori $\mathbf{s}$ e $\mathbf{f}$ di tempi di inizio e fine:
+
+$$ \mathbf{s} = (1, 2, 3, 5, 7, 10) $$
+$$ \mathbf{f} = (3, 9, 10, 7, 11, 12) $$
+
+**(c)** Dimostrare la proprietà di scelta greedy, cioè che esiste soluzione
+ottima che contiene l'attività che inizia per ultima.
 
 ---
 

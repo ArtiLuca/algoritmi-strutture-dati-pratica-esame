@@ -32,7 +32,7 @@ $f_i \le s_j$ oppure $f_j \le s_i$.
 In questo caso la scelta greedy richiesta è quella di selezionare l’attività che inizia per ultima. Quindi, se le attività sono ordinate per tempo di inizio crescente, allora la scelta greedy equivale all’attività $a_n$.
 Dopodiché, si scorrono le attività da $n-1 \dots 1$ e si seleziona un’attività $a_m$ solo se è compatibile con l’ultima attività selezionata (indicata con `last`). Ovvero, solo se l’attività $a_m$ finisce prima (o nel momento esatto) che inizia l’ultima attività selezionata ($f_m \le s_{\text{last}}$), nel qual caso viene aggiornato `last` per indicare l’ultima attività selezionata.
 
-```text
+```algorithmic
 GreedySelLast(s, f) // s,f vettori di tempo di inizio/fine
 
     // inizialmente, la soluzione contiene l'attività che inizia per ultima

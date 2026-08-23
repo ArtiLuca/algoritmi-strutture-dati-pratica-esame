@@ -72,7 +72,7 @@ Quindi inizialmente $S = \{a_6\}$ e $last = 6$.
 Quindi alla fine l’algoritmo restituisce come soluzione l’insieme:
 
 $$
-S = \{a_6, a_4, a_1\}
+S = (\{a_6, a_4, a_1\})
 $$
 
 ---
@@ -84,12 +84,12 @@ Vogliamo dimostrare che $\exists$ una soluzione ottima $A_{ij}^{\ast}$ che conti
 Possiamo indicare la soluzione ottima $A_{ij}^{\ast}$ con la nostra scelta greedy come:
 
 $$
-A_{ij}^{\ast} = A_{im}^{\ast} \cup \{a_m\} \cup A_{mj}^{\ast}
+A_{ij}^{\ast} = A_{im}^{\ast} \cup (\{a_m\}) \cup A_{mj}^{\ast}
 $$
 
 dove $A_{im}^{\ast}$ è soluzione ottima per il sottoproblema $S_{im}$ mentre $A_{mj}^{\ast}$ è soluzione ottima per il sottoproblema $S_{mj}$, dove possiamo vedere che $S_{mj} = \emptyset$ necessariamente, perché non esiste alcuna attività che inizia dopo $a_m$ (essendo $a_m$ la nostra scelta greedy che inizia per ultima).
 
-Quindi, sia $A_{ij}^{\ast}$ una soluzione ottima per il problema $S_{ij}$ di selezione di attività compatibili di cardinalità massima, e sia $a_k$ l'attività al suo interno che inizia per ultima, ovvero $s_k = \max\{s_l : a_l \in A_{ij}^{\ast}\}$.
+Quindi, sia $A_{ij}^{\ast}$ una soluzione ottima per il problema $S_{ij}$ di selezione di attività compatibili di cardinalità massima, e sia $a_k$ l'attività al suo interno che inizia per ultima, ovvero $s_k = \max(\{s_l : a_l \in A_{ij}^{\ast}\})$.
 
 - Se $a_k = a_m$ allora coincide con la nostra scelta greedy e quindi abbiamo finito.
 - Altrimenti, se $a_k \ne a_m$, allora sia $A_{ij}^{\ast}$ una soluzione ottima che non contiene la nostra scelta greedy.
@@ -97,7 +97,7 @@ Quindi, sia $A_{ij}^{\ast}$ una soluzione ottima per il problema $S_{ij}$ di sel
 Se unissimo questa soluzione con la nostra scelta greedy scambiandola con $a_k$, ovvero:
 
 $$
-A_{ij}^{\prime} = (A_{ij}^{\ast} \setminus \{a_k\}) \cup \{a_m\}
+A_{ij}^{\prime} = (A_{ij}^{\ast} \setminus (\{a_k\})) \cup (\{a_m\})
 $$
 
 otterremmo una soluzione ancora ammissibile.

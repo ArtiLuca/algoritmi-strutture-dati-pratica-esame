@@ -8,8 +8,8 @@ Data la ricorrenza $T(n) = 5T(n/3) + (n - 2)^2$, trovare la soluzione asintotica
 
 Provo ad usare il Master Theorem identificando i parametri:
 - $f(n) = (n-2)^2$
-- $a = 5 > 1$
-- $b = 3 \ge 1$
+- $a = 5 \ge 1$
+- $b = 3 > 1$
 
 Calcoliamo lo spartiacque asintotico:
 

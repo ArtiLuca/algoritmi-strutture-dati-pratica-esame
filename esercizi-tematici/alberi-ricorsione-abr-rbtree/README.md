@@ -16,7 +16,7 @@ L'obiettivo è allenarsi a scrivere soluzioni complete in stile esame, con pseud
 | Esercizio | Stato |
 |---|---|
 | Domanda 26 — `MaxPath(T)` | [Completato](domanda_26.md) |
-| Domanda 27 — `Level(T)` | Da completare |
+| Domanda 27 — `Level(T)` | [Completato](domanda_27.md) |
 | Domanda 28 — `IsSumHeap(T)` | Da completare |
 | Esercizio 10 — `printFair(T)` | Da completare |
 | Esercizio 11 — `sdegree(T)` | Da completare |

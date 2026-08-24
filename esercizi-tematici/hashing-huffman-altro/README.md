@@ -28,6 +28,8 @@ Ogni esercizio completato conterrà una soluzione in stile esame, con passaggi e
 | Domanda 44 — Codice di Huffman (7 simboli) | Da completare |
 | Domanda 45 — Codice di Huffman (7 simboli) | Da completare |
 | Domanda 46 — Codice di Huffman (7 simboli) | Da completare |
+| Esercizio Huffman Esame A | [Completato](domanda_esame_huffman_A.md) |
+| Esercizio Huffman Esame A | [Completato](domanda_esame_huffman_B.md) |
 | Esercizio 35 — Struttura dati (Half min, ammortizzata) | Da completare |
 | Esercizio 36 — OrderedStack (ammortizzata) | Da completare |
 | Esercizio 37 — Struttura dati (Half max, ammortizzata) | Da completare |
@@ -199,6 +201,38 @@ $$
 & a & b & c & d & e & f & g \\ 
 \hline
 \text{frequenza} & 2 & 12 & 16 & 8 & 6 & 9 & 3
+\end{array}
+$$
+
+Spiegare il processo di costruzione del codice.
+
+---
+
+### Domanda Esame A — 5 punti
+
+Indicare, in forma di albero binario, il codice libero da prefissi ottenuto tramite l'algoritmo di Huffman per l'alfabeto $\{a,b,c,d,e\}$ supponendo che ogni carattere appaia con le seguenti frequenze:
+
+$$
+\begin{array}{c|ccccc}
+& a & b & c & d & e \\ 
+\hline
+\text{frequenza} & 12 & 10 & 13 & 57 & 8
+\end{array}
+$$
+
+Spiegare il processo di costruzione del codice.
+
+---
+
+### Domanda Esame B — 5 punti
+
+Indicare, in forma di albero binario, il codice libero da prefissi ottenuto tramite l'algoritmo di Huffman per l'alfabeto $\{a, b, c, d, e, f\}$ supponendo che ogni carattere appaia con le seguenti frequenze:
+
+$$
+\begin{array}{c|cccccc}
+& a & b & c & d & e & f \\
+\hline
+\text{frequenza} & 45 & 13 & 12 & 16 & 9 & 5
 \end{array}
 $$
 

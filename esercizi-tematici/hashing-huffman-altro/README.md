@@ -84,7 +84,8 @@ Indicare, in forma di albero binario, il codice libero da prefissi ottenuto tram
 
 $$
 \begin{array}{c|ccccc}
-& a & b & c & d & e \\ \hline
+& a & b & c & d & e \\ 
+\hline
 \text{frequenza} & 12 & 10 & 13 & 57 & 8
 \end{array}
 $$
@@ -99,7 +100,8 @@ Indicare il codice prefisso ottenuto utilizzando l’algoritmo di Huffmann per l
 
 $$
 \begin{array}{c|ccccccc}
-& a & b & c & d & e & f & g \\ \hline
+& a & b & c & d & e & f & g \\ 
+\hline
 \text{frequenza} & 16 & 12 & 2 & 8 & 3 & 9 & 6
 \end{array}
 $$
@@ -114,7 +116,8 @@ Indicare il codice prefisso ottenuto utilizzando l’algoritmo di Huffmann per l
 
 $$
 \begin{array}{c|ccccccc}
-& a & b & c & d & e & f & g \\ \hline
+& a & b & c & d & e & f & g \\ 
+\hline
 \text{frequenza} & 5 & 9 & 3 & 3 & 1 & 1 & 6
 \end{array}
 $$
@@ -129,7 +132,8 @@ Indicare il codice prefisso ottenuto utilizzando l’algoritmo di Huffmann per l
 
 $$
 \begin{array}{c|ccccccc}
-& a & b & c & d & e & f & g \\ \hline
+& a & b & c & d & e & f & g \\ 
+\hline
 \text{frequenza} & 6 & 21 & 12 & 8 & 3 & 23 & 8
 \end{array}
 $$
@@ -144,7 +148,8 @@ Indicare il codice prefisso ottenuto utilizzando l’algoritmo di Huffmann per l
 
 $$
 \begin{array}{c|ccccccc}
-& a & b & c & d & e & f & g \\ \hline
+& a & b & c & d & e & f & g \\ 
+\hline
 \text{frequenza} & 37 & 4 & 12 & 6 & 9 & 17 & 8
 \end{array}
 $$
@@ -159,7 +164,8 @@ Indicare il codice prefisso ottenuto utilizzando l’algoritmo di Huffmann per l
 
 $$
 \begin{array}{c|ccccccc}
-& a & b & c & d & e & f & g \\ \hline
+& a & b & c & d & e & f & g \\ 
+\hline
 \text{frequenza} & 10 & 6 & 2 & 8 & 19 & 31 & 15
 \end{array}
 $$
@@ -174,7 +180,8 @@ Indicare il codice prefisso ottenuto utilizzando l’algoritmo di Huffmann per l
 
 $$
 \begin{array}{c|ccccccc}
-& a & b & c & d & e & f & g \\ \hline
+& a & b & c & d & e & f & g \\ 
+\hline
 \text{frequenza} & 3 & 8 & 7 & 12 & 6 & 23 & 21
 \end{array}
 $$
@@ -189,7 +196,8 @@ Indicare il codice prefisso ottenuto utilizzando l’algoritmo di Huffmann per l
 
 $$
 \begin{array}{c|ccccccc}
-& a & b & c & d & e & f & g \\ \hline
+& a & b & c & d & e & f & g \\ 
+\hline
 \text{frequenza} & 2 & 12 & 16 & 8 & 6 & 9 & 3
 \end{array}
 $$

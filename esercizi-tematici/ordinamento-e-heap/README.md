@@ -23,7 +23,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con pseudocodic
 | Domanda 22 — Successore della radice in min-heap | [Completato](sndmin.md) |
 | Domanda 23 — `IsMaxHeap(A)` | [Completato](is_max_heap.md) |
 | Domanda 24 — `HeapExtractMin(A)` | [Completato](heap_extract_min.md) |
-| Domanda 25 — `BuildMaxHeap` su array dato | Da completare |
+| Domanda 25 — `BuildMaxHeap` su array dato | [Completato](build_max_heap.md) |
 | Minimo tra Min-Heap e Max-Heap — `min(A,B)` | [Completato](minimo_heap.md) |
 | Esercizio SortJoin | [Completato](sort_join.md) |
 

@@ -29,7 +29,7 @@ Ogni esercizio completato conterrà una soluzione in stile esame, con passaggi e
 | Domanda 45 — Codice di Huffman (7 simboli) | Da completare |
 | Domanda 46 — Codice di Huffman (7 simboli) | Da completare |
 | Esercizio Huffman Esame A | [Completato](domanda_esame_huffman_A.md) |
-| Esercizio Huffman Esame A | [Completato](domanda_esame_huffman_B.md) |
+| Esercizio Huffman Esame B | [Completato](domanda_esame_huffman_B.md) |
 | Esercizio 35 — Struttura dati (Half min, ammortizzata) | Da completare |
 | Esercizio 36 — OrderedStack (ammortizzata) | Da completare |
 | Esercizio 37 — Struttura dati (Half max, ammortizzata) | Da completare |

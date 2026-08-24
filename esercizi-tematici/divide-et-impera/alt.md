@@ -35,14 +35,19 @@ Uso una procedura principale `alt(A, n)` che agisce da wrapper e una procedura r
 ```algorithmic
 // restituisce true se l'array è alternante, false altrimenti
 alt(A, n)
+
     // se ha meno di tre elementi, non può essere alternante
     if n < 3
         return false
 
-    if A[1] < A[2]
-        dir = true  // indica che l'alternanza inizialmente sale
+    else if A[1] == A[2]
+        return false
+
     else
-        dir = false // indica che l'alternanza inizialmente scende
+        if A[1] < A[2]
+            dir = true  // indica che l'alternanza inizialmente sale
+        else
+            dir = false // indica che l'alternanza inizialmente scende
 
     return altRec(A, 1, n, dir)
 

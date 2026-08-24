@@ -15,10 +15,11 @@ Ogni esercizio completato conterrà una soluzione in stile esame, con passaggi e
 | Esercizio | Stato |
 |---|---|
 | Domanda 31 — Tabella hash (doppio hash, $m=8$) | Da completare |
-| Domanda 32 — Tabella hash (doppio hash, $m=8$) | Da completare |
+| Domanda 32 — Tabella hash (doppio hash, $m=8$) | [Completato](domanda_32.md) |
 | Domanda 33 — Tabella hash (doppio hash, $m=8$) | Da completare |
-| Domanda 34 — Tabella hash (chaining, $m=8$) | Da completare |
-| Domanda 35 — Tabella hash (doppio hash, $m=9$) | Da completare |
+| Domanda 34 — Tabella hash (chaining, $m=8$) | [Completato](domanda_34.md) |
+| Domanda 35 — Tabella hash (doppio hash, $m=9$) | [Completato](domanda_35.md) |
+| Domanda B Esame — Hashing con doppio hash | [Completato](domanda_esame_doppio_hashing.md) |
 | Domanda Esame — Codice di Huffman (5 simboli, 5 punti) | Da completare |
 | Domanda 40 — Codice di Huffman (7 simboli) | Da completare |
 | Domanda 41 — Codice di Huffman (7 simboli) | Da completare |
@@ -64,6 +65,16 @@ Si consideri una tabella hash di dimensione $m = 8$, gestita mediante chaining (
 ### **Domanda 35**
 
 Si consideri una tabella hash di dimensione $m = 9$, e indirizzamento aperto con doppio hash basato sulle funzioni $h_1(k) = k \bmod m$ e $h_2(k) = 1 + (k \bmod (m - 2))$. Si descriva in dettaglio come avviene l'inserimento della sequenza di chiavi: 12, 3, 22, 14, 38.
+
+---
+
+### Domanda B Esame — Hashing con doppio hash
+
+Si consideri una tabella hash di dimensione $m=7$, e indirizzamento aperto con doppio hash basato sulle funzioni:
+$h_1(k) = k \bmod m$ e $h_2(k) = 1 + k \bmod (m-2)$.
+Si descriva sinteticamente come avviene l'inserimento degli elementi e si specifichi il risultato dell'inserzione della sequenza di chiavi: $10, 20, 34, 35, 48$.
+
+Sarebbe appropriato lavorare con una tabella di dimensione $m=8$ e le stesse funzioni hash?
 
 ---
 

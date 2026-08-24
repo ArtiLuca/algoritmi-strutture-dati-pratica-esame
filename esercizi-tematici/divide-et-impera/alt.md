@@ -32,7 +32,7 @@ Ci fermiamo quando $i + 2 > n$ per evitare di sforare i limiti dell'array (*out-
 
 Uso una procedura principale `alt(A, n)` che agisce da wrapper e una procedura ricorsiva `altRec(A, i, n, dir)` per verificare che la terna in $A[i \dots i+2]$ soddisfi la definizione.
 
-```text
+```algorithmic
 // restituisce true se l'array è alternante, false altrimenti
 alt(A, n)
     // se ha meno di tre elementi, non può essere alternante
@@ -73,10 +73,10 @@ altRec(A, i, n, dir)
 
 - **Complessità Temporale:** La ricorrenza associata all'algoritmo è:
 
-  $$
-  T(n) = T(n-1) + \Theta(1) \implies \Theta(n)
-  $$
+$$
+T(n) = T(n-1) + \Theta(1) \implies \Theta(n)
+$$
 
-  L'algoritmo effettua una singola scansione lineare esaminando gli elementi in tempo costante per ciascun passo ricorsivo.
+L'algoritmo effettua una singola scansione lineare esaminando gli elementi in tempo costante per ciascun passo ricorsivo.
 
 - **Complessità Spaziale:** Lo spazio utilizzato nel caso peggiore è $\Theta(n)$ a causa della profondità dello stack di ricorsione, che nel caso di array alternanti validi cresce linearmente con la dimensione dell'input $n$.

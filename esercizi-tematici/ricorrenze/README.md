@@ -28,8 +28,8 @@ Ogni esercizio completato contiene una soluzione in stile esame, con passaggi al
 | Domanda 12 — Definizione di Ω e ricorrenza con sommatoria | [Completato](domanda_12.md) |
 | Domanda 13 — Definizione di O e ricorrenza `2/3 T(n - 1) + 2n` | [Completato](esercizio_13.md) |
 | Domanda 14 — `3T(n/2) + n(n + 1)` | Da completare |
-| Domanda 15 — `T(n/2) + T(n/3) + √n + 2` | Da completare |
-| Domanda 16 — `5T(n/3) + (n - 2)²` | Da completare |
+| Domanda 15 — `T(n/2) + T(n/3) + √n + 2` | [Completato](domanda_15.md) |
+| Domanda 16 — `5T(n/3) + (n - 2)²` | [Completato](domanda_16.md) |
 | Domanda 17 — Transitività di Ω | [Completato](domanda_17.md) |
 | Domanda 18 — Relazione tra Θ, O e Ω | Da completare |
 

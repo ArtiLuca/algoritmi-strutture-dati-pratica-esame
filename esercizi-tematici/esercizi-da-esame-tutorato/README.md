@@ -491,5 +491,27 @@ $$
 
 ### Esercizio 1 — Split con divide et impera
 
-Sia dato un array $V[1 \dots n]$ i cui valori rappresentano la variazione giornaliera del valore di un titolo azionario. È noto che il titolo è stato prima in perdita, poi ha iniziato a oscillare, e infine si è stabilizzato su valori positivi. Dunque nella sequenza non ci possono essere due giorni positivi seguiti da un negativo.
-Realizzare un algoritmo divide et impera `Split(V)` che individua il giorno in cui il titolo ha iniziato a essere stabile su valori positivi. Valutarne correttezza e complessità.
+Sia dato un array $V[1..n]$ i cui valori rappresentano la variazione giornaliera del valore di un titolo azionario.
+
+È noto che il titolo è stato prima in perdita, con valori sempre negativi, poi ha iniziato a oscillare in giorni consecutivi tra valori positivi e negativi, e infine si è stabilizzato su valori positivi. Dunque nella sequenza **non possono esserci due giorni positivi seguiti da un negativo**.
+
+Realizzare un algoritmo divide et impera `Split(V)` che individua il giorno in cui il titolo ha iniziato a essere stabile su valori positivi, ovvero il minimo indice
+
+$$
+i \in [1,n]
+$$
+
+tale che
+
+$$
+\forall j \ge i,\quad V[j] > 0.
+$$
+
+Se il titolo non si stabilizza su valori positivi, ritornare `0`.
+
+Esempi:
+
+- per $V=[-1,-2,2,-1,6,3]$ si deve ritornare $5$;
+- per $V=[-1,-2,2,-1,6,-3]$ si deve ritornare `0`.
+
+Fornire lo pseudocodice di `Split(V)`, motivarne la correttezza e individuarne la complessità. Si assuma che non ci siano valori nulli.

@@ -39,6 +39,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Esercizio 1 — Ordinamento in loco (TriSort) | [Da Completare] |
 | Esercizio 2 — Algoritmo greedy per il resto delle monete | [Da Completare] |
 | Domanda A — Ricorrenza con metodo di sostituzione | [Completato](domanda_ricorrenza_sostituzione.md) |
+| Esercizio 2 - Programmazione dinamica bottom-up | [Completato](esercizio_dp_bottom_up_esame.md) |
 
 ---
 
@@ -460,3 +461,27 @@ Si dimostri che la ricorrenza che segue ha soluzione $T(n)=\Theta(n)$:
 ```math
 T(n)=\frac{2}{3}T(n-1)+2n.
 ```
+
+---
+
+### Esercizio 2 — Programmazione dinamica bottom-up
+
+Date due stringhe $X = \langle x_1, x_2, \dots, x_m \rangle$ e $Y = \langle y_1, y_2, \dots, y_n \rangle$, si consideri la seguente quantità $\ell(i, j)$, definita per ogni coppia di valori $i, j$ con $0 \le i \le m$ e $0 \le j \le n$:
+
+$$
+\ell(i, j) =
+\begin{cases}
+1 & \text{se } i = 0 \text{ oppure } j = 0 \\
+3 \cdot \ell(i, j - 1) & \text{se } i, j > 0 \text{ e } x_i = y_j \\
+2 \cdot \ell(i - 1, j - 1) - \ell(i - 1, j) & \text{se } i, j > 0 \text{ e } x_i \ne y_j
+\end{cases}
+$$
+
+Si vuole calcolare la quantità:
+
+$$
+q = \max \{ \ell(i, j) : 0 \le i \le m, 0 \le j \le n \}
+$$
+
+**(a) Scrivere un algoritmo bottom-up per il calcolo di $q$.**
+**(b) Determinare la complessità esatta dell'algoritmo, supponendo che le uniche operazioni di costo unitario e non nullo siano i confronti tra caratteri.**

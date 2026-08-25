@@ -40,6 +40,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Esercizio 2 — Algoritmo greedy per il resto delle monete | [Da Completare] |
 | Domanda A — Ricorrenza con metodo di sostituzione | [Completato](domanda_ricorrenza_sostituzione.md) |
 | Esercizio 2 - Programmazione dinamica bottom-up | [Completato](esercizio_dp_bottom_up_esame.md) |
+| Esercizio 1 — Split con divide et impera | [Completato](split.md) | 
 
 ---
 
@@ -485,3 +486,10 @@ $$
 
 - **(a)** Scrivere un algoritmo bottom-up per il calcolo di $q$.
 - **(b)** Determinare la complessità esatta dell'algoritmo, supponendo che le uniche operazioni di costo unitario e non nullo siano i confronti tra caratteri.
+
+---
+
+### Esercizio 1 — Split con divide et impera
+
+Sia dato un array $V[1 \dots n]$ i cui valori rappresentano la variazione giornaliera del valore di un titolo azionario. È noto che il titolo è stato prima in perdita, poi ha iniziato a oscillare, e infine si è stabilizzato su valori positivi. Dunque nella sequenza non ci possono essere due giorni positivi seguiti da un negativo.
+Realizzare un algoritmo divide et impera `Split(V)` che individua il giorno in cui il titolo ha iniziato a essere stabile su valori positivi. Valutarne correttezza e complessità.

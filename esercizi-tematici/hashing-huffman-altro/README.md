@@ -21,7 +21,7 @@ Ogni esercizio completato conterrà una soluzione in stile esame, con passaggi e
 | Domanda 35 — Tabella hash (doppio hash, $m=9$) | [Completato](domanda_35.md) |
 | Domanda B Esame — Hashing con doppio hash | [Completato](domanda_esame_doppio_hashing.md) |
 | Domanda Esame — Codice di Huffman (5 simboli, 5 punti) | Da completare |
-| Domanda 40 — Codice di Huffman (7 simboli) | Da completare |
+| Domanda 40 — Codice di Huffman (7 simboli) | [Completato](domanda_40.md) |
 | Domanda 41 — Codice di Huffman (7 simboli) | Da completare |
 | Domanda 42 — Codice di Huffman (7 simboli) | Da completare |
 | Domanda 43 — Codice di Huffman (7 simboli) | Da completare |

@@ -483,5 +483,5 @@ $$
 q = \max \{ \ell(i, j) : 0 \le i \le m, 0 \le j \le n \}
 $$
 
--- **(a) Scrivere un algoritmo bottom-up per il calcolo di $q$.**
--- **(b) Determinare la complessità esatta dell'algoritmo, supponendo che le uniche operazioni di costo unitario e non nullo siano i confronti tra caratteri.**
+- **(a)** Scrivere un algoritmo bottom-up per il calcolo di $q$.
+- **(b)** Determinare la complessità esatta dell'algoritmo, supponendo che le uniche operazioni di costo unitario e non nullo siano i confronti tra caratteri.

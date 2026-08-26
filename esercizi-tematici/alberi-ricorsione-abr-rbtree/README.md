@@ -18,7 +18,7 @@ L'obiettivo è allenarsi a scrivere soluzioni complete in stile esame, con pseud
 | Domanda 26 — `MaxPath(T)` | [Completato](domanda_26.md) |
 | Domanda 27 — `Level(T)` | [Completato](domanda_27.md) |
 | Domanda 28 — `IsSumHeap(T)` | [Completato](domanda_28.md) |
-| Esercizio 10 — `printFair(T)` | Da completare |
+| Esercizio 10 — `printFair(T)` | [Completato](esercizio_10.md) |
 | Esercizio 11 — `sdegree(T)` | Da completare |
 | Esercizio 12 — `bal1(T)` | Da completare |
 | Esercizio 13 — `k-bound(T, k)` | Da completare |

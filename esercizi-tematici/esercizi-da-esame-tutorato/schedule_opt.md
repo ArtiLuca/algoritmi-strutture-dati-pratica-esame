@@ -47,7 +47,7 @@ ScheduleOPT(l, n)
 
 Vogliamo dimostrare che esiste una soluzione ottimale che contiene la nostra scelta greedy, ovvero eseguire per primo il programma con tempo di esecuzione minore.
 
-Sia $\sigma^\star$ una soluzione ottimale, ovvero un ordine di esecuzione che minimizza il tempo di completamento totale. Sia $j_m$ il programma che ha il tempo di esecuzione minore fra tutti, ovvero tale che $\ell_{j_m} = \min\{\ell_{j_h} : j_h \in \sigma^\star\}$.
+Sia $\sigma^\star$ una soluzione ottimale, ovvero un ordine di esecuzione che minimizza il tempo di completamento totale. Sia $j_m$ il programma che ha il tempo di esecuzione minore fra tutti, ovvero tale che $\ell_{j_m} = \min(\{\ell_{j_h} : j_h \in \sigma^\star\})$.
 
 - Se $j_m$ coincide con il primo programma eseguito in $\sigma^\star$, allora la scelta greedy è già contenuta nell'ottimo e abbiamo dimostrato il teorema.
 - Altrimenti, se $j_m$ non è il primo programma in assoluto in $\sigma^\star$, significa che esiste un programma $j_k$ che precede immediatamente l’esecuzione di $j_m$. Essendo che $j_m$ è per definizione il programma di lunghezza minima, avremo che vale $\ell_k \ge \ell_m$.

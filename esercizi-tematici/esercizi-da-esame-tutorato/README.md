@@ -19,6 +19,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Domanda A — Ricorrenza `T(n)=4T(n/2)+n^3+1` | [Completato](ricorrenza_master_theorem_domanda_A.md) |
 | Domanda A — Ricorrenza `T(n)=T(n-1)+2n-1` | Da completare |
 | Domanda A — Proprietà di `Θ(g(n))` | Da completare |
+| Domanda A - Dimostrazione Notazione Asintotica | [Completato](notazione_asintotica_dimostrazione_domanda_A.md) |
 | Esercizio Ricorrenze (Sostituzione & Master Theorem) | [Completato](esercizio_ricorrenze_sostituzione_master.md) |
 | Esercizio 1 — `triplet(A)` | [Completato](triplet.md) |
 | Domanda B — Albero Binario di Ricerca | Da completare |
@@ -86,6 +87,13 @@ $$
 $$
 f(n)\cdot f'(n)\in\Theta(g(n)).
 $$
+
+---
+
+### Domanda A — Classi $\mathcal{O}$ e $\Omega$
+
+Dare la definizione formale delle classi $\mathcal{O}(f(n))$ e $\Omega(f(n))$ per una funzione $f(n)$.
+Mostrare che se $f(n) = \mathcal{O}(n)$ e $g(n) = n^2 - f(n),$ allora $g(n) = \Omega(n^2)$.
 
 ---
 

@@ -3,8 +3,8 @@
 Abbiamo $n$ programmi da eseguire sul nostro computer. Ogni programma $j$, con $j \in \{1, 2, \dots, n\}$, ha lunghezza $\ell_j$, che rappresenta la quantità di tempo richiesta per la sua esecuzione. Dato un ordine di esecuzione $\sigma = j_1, j_2, \dots, j_n$, il tempo di completamento $C_{j_i}(\sigma)$ del programma $j_i$ è dato dalla somma delle lunghezze dei programmi fino a $i$: $j_1, j_2, \dots, j_i$.
 L'obiettivo è trovare un ordine di esecuzione $\sigma$ che minimizza la somma dei tempi di completamento di tutti i programmi, cioè: $\sum_{j=1}^{n} C_j(\sigma)$.
 
-**(a) Dare un semplice algoritmo greedy per questo problema, e valutarne la complessità.**
-**(b) Dimostrare la proprietà di scelta greedy dell'algoritmo del punto (a), cioè che esiste un ordine di esecuzione ottimo $\sigma^\star$ che contiene la scelta greedy.**
+- **(a)** Dare un semplice algoritmo greedy per questo problema, e valutarne la complessità.
+- **(b)** Dimostrare la proprietà di scelta greedy dell'algoritmo del punto (a), cioè che esiste un ordine di esecuzione ottimo $\sigma^\star$ che contiene la scelta greedy.
 
 ---
 

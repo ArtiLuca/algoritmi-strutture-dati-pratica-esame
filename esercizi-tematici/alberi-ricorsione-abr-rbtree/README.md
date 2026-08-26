@@ -24,7 +24,7 @@ L'obiettivo è allenarsi a scrivere soluzioni complete in stile esame, con pseud
 | Esercizio 13 — `k-bound(T, k)` | Da completare |
 | Domanda 29 — Albero binario completo | Da completare |
 | Domanda 30 — Massima differenza tra cammini | Da completare |
-| Domanda 36 — Predecessore in un ABR | Da completare |
+| Domanda 36 — Predecessore in un ABR | [Completato](pred.md) |
 | Domanda 37 — `IsABR(A)` su rappresentazione array | Da completare |
 | Domanda 38 — Inserimento in ABR con campo `pred` | Da completare |
 | Esercizio 14 — Costruzione di ABR di altezza minima | Da completare |

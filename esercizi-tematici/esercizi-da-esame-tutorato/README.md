@@ -20,9 +20,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Domanda A — Ricorrenza `T(n)=T(n-1)+2n-1` | Da completare |
 | Domanda A — Proprietà di `Θ(g(n))` | Da completare |
 | Esercizio Ricorrenze (Sostituzione & Master Theorem) | [Completato](esercizio_ricorrenze_sostituzione_master.md) |
-| Esercizio 1 — Centro di array semi-ordinato | Da completare |
 | Esercizio 1 — `triplet(A)` | [Completato](triplet.md) |
-| Domanda B — `toTree(A)` | Da completare |
 | Domanda B — Albero Binario di Ricerca | Da completare |
 | Domanda C — `diff(T)` | Da completare |
 | Esercizio 1 — Albero `k-bounded` | Da completare |
@@ -33,7 +31,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Esercizio 2 - Selezioni di Attività Compatibili | [Completato](activity_selection.md) |
 | Domanda B - Algoritmo di Huffman | [Da Completare](domanda_huffman_1.md) |
 | Domanda B - Hashing con doppio hashing | [Completato](double_hashing.md) |
-| Esercizio 2 - Scheduling greedy e somma dei tempi di completamento | [Da Completare] |
+| Esercizio 2 - Scheduling greedy e somma dei tempi di completamento | [Completato](schedule_opt.md) |
 | Domanda A — Ricorrenze e classe Ω esponenziale | [Da Completare] |
 | Domanda B — Longest Common Subsequence (LCS) | [Da Completare]|
 | Esercizio 1 — Ordinamento in loco (TriSort) | [Da Completare] |
@@ -41,6 +39,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Domanda A — Ricorrenza con metodo di sostituzione | [Completato](domanda_ricorrenza_sostituzione.md) |
 | Esercizio 2 - Programmazione dinamica bottom-up | [Completato](esercizio_dp_bottom_up_esame.md) |
 | Esercizio 1 — Split con divide et impera | [Completato](split.md) | 
+| Esercizio 2 — Programmazione dinamica (DP 2023) | [Completato](esercizio_dp_bottom_up_stringhe.md) |
 
 ---
 
@@ -99,40 +98,6 @@ $$
 
 ---
 
-### Esercizio 1 — 10 punti
-
-Diciamo che un array senza ripetizioni $A[1,n]$ è **semi-ordinato** se esiste un indice $k$, con
-
-$$
-1\leq k<n,
-$$
-
-tale che
-
-$$
-A[k+1..n]A[1..k]
-$$
-
-sia ordinato, ovvero i sottoarray $A[k+1..n]$ e $A[1..k]$ sono ordinati e
-
-$$
-A[n]<A[1].
-$$
-
-In questo caso l'indice $k$ viene detto il **centro** dell'array.
-
-Ad esempio l'array che segue è semi-ordinato con centro $k=4$:
-
-| Indice | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| A | 4 | 9 | 12 | 18 | -1 | 1 | 2 |
-
-Scrivere una funzione `centre(A)` che dato un array $A$ semi-ordinato ne restituisce il centro.
-
-Giustificare la correttezza dell'algoritmo e valutarne la complessità.
-
----
-
 ### Esercizio 1 — 9 punti
 
 Realizzare una procedura `triplet(A)` che dato un array $A[1,n]$ di interi verifica se esistono tre indici, non necessariamente distinti, $i$, $j$ e $k$ tali che
@@ -142,23 +107,6 @@ A[i]+A[j]=A[k].
 $$
 
 Fornire lo pseudocodice, motivare la correttezza della soluzione e valutarne la complessità.
-
----
-
-### Domanda B — 7 punti — `toTree(A)`
-
-Scrivere una funzione `toTree(A)` che, dato un array $A$ organizzato a max-heap (dimensione `A.heapSize`), lo trasforma in un albero binario realizzato con strutture linked, ancora organizzato a max-heap, e ritorna la radice di tale albero.
-
-Il nuovo albero è costituito da nodi $x$ con i campi:
-
-- `x.p` (parent);
-- `x.k` (chiave);
-- `x.l` (figlio sinistro);
-- `x.r` (figlio destro).
-
-Per allocare un nuovo nodo si assuma di avere a disposizione un costruttore `node()`.
-
-Valutare la complessità.
 
 ---
 
@@ -515,3 +463,28 @@ Esempi:
 - per $V=[-1,-2,2,-1,6,-3]$ si deve ritornare `0`.
 
 Fornire lo pseudocodice di `Split(V)`, motivarne la correttezza e individuarne la complessità. Si assuma che non ci siano valori nulli.
+
+---
+
+### Esercizio 2 — Programmazione dinamica (DP 2023)
+
+Per $n > 0$, siano dati due vettori a componenti intere $a, b \in \mathbb{Z}^n$.
+Si consideri la quantità $c(i, j)$ con $0 \le i \le j \le n-1$, definita come segue:
+
+$$
+c(i, j) =
+\begin{cases}
+a_i & \text{se } 0 < i \le n-1 \text{ e } j = n-1 \\
+b_j & \text{se } i = 0 \text{ e } 0 \le j \le n-1 \\
+c(i-1, j-1) \cdot c(i, j+1) & \text{se } 0 < i \le j < n-1
+\end{cases}
+$$
+
+Si vuole calcolare la quantità:
+
+$$
+m = \max \{ c(i, j) : 0 \le i \le j \le n-1 \}
+$$
+
+- **(a)** Fornire un algoritmo iterativo bottom-up per il calcolo di $m$.
+- **(b)** Valutare la complessità esatta dell’algoritmo, associando costo unitario alla moltiplicazione tra numeri interi e costo nullo a tutte le altre operazioni.

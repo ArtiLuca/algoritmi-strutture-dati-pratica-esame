@@ -41,6 +41,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Esercizio 2 - Programmazione dinamica bottom-up | [Completato](esercizio_dp_bottom_up_esame.md) |
 | Esercizio 1 — Split con divide et impera | [Completato](split.md) | 
 | Esercizio 2 — Programmazione dinamica (DP 2023) | [Completato](esercizio_dp_bottom_up_stringhe.md) |
+| Domanda A — Classe $\Omega$ | [Completato](notazione_asintotica_dimostrazione_domanda_B.md) | 
 
 ---
 
@@ -496,3 +497,13 @@ $$
 
 - **(a)** Fornire un algoritmo iterativo bottom-up per il calcolo di $m$.
 - **(b)** Valutare la complessità esatta dell’algoritmo, associando costo unitario alla moltiplicazione tra numeri interi e costo nullo a tutte le altre operazioni.
+
+---
+
+### Domanda A — Classe $\Omega$
+
+Assumendo che $f(n) = \Omega(n^2)$, si dimostri se la seguente affermazione è vera:
+$$f(n) + g(n) = \Omega(n^2 + g(n))$$
+Vale anche la seguente?
+$$f(n) - g(n) = \Omega(n^2 - g(n))$$
+Dimostrarlo oppure fornire un controesempio.

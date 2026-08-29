@@ -28,10 +28,12 @@ L'obiettivo è allenarsi a scrivere soluzioni complete in stile esame, con pseud
 | Domanda 37 — `IsABR(A)` su rappresentazione array | Da completare |
 | Domanda 38 — Inserimento in ABR con campo `pred` | Da completare |
 | Esercizio 14 — Costruzione di ABR di altezza minima | [Completato](bst.md) |
-| Esercizio 15 — Inserimento in ABR con campo `even` | Da completare |
+| Esercizio 15 — Inserimento in ABR con campo `even` | [Completato](esercizio_15.md) |
 | Esercizio 16 — Stampa ordinata di un intervallo di chiavi | Da completare |
 | Domanda 39 — Altezza nera | Da completare |
 | Esercizio 17 — Verifica di Red-Black tree | Da completare |
+| Esercizio 1 — Distanza minima in un albero binario di ricerca | [Completato](mdist.md) |
+| Esercizio 1 — ABR arricchito con numero di foglie | [Completato](leaves.md) |
 
 
 ## Testi degli Esercizi
@@ -138,3 +140,31 @@ Scrivere una funzione `blackHeight(T)` che dato in input un albero binario di ri
 ### **Esercizio 17**
 
 Scrivere una funzione `RBTree(T)` che dato in input un albero binario di ricerca `T`, i cui nodi $x$, oltre ai campi `x.key`, `x.left` e `x.right`, hanno un campo `x.col` che può essere B (per "black") oppure R (per "red"), verifica se questo è un Red-Black tree. In caso negativo, restituisce -1, altrimenti restituisce l'altezza nera della radice. Valutarne la complessità.
+
+---
+
+### **Esercizio 1 — Distanza minima in un albero binario di ricerca**
+
+Realizzare una funzione `mdist(T, v)` che, dato un albero binario di ricerca $T$ e una chiave $v$, restituisca un nodo $x$ di $T$ la cui chiave abbia distanza minima da $v$, ovvero tale che il valore $|x.key - v|$ sia minimo.
+Fornire lo pseudocodice, la complessità e una giustificazione della correttezza.
+
+Ad esempio, dato il seguente albero:
+```text
+              10
+             /  \
+            5    20
+           / \   / \
+          2   6 15  30
+               \    /
+                9  25
+```
+la funzione `mdist(T, 8)` restituisce il nodo con chiave 9, mentre `mdist(T, 28)` restituisce il nodo con chiave 30.
+
+---
+
+### **Esercizio 1 — ABR arricchito con numero di foglie**
+
+Realizzare un arricchimento degli alberi binari di ricerca che permetta di ottenere per ogni nodo $x$, in tempo costante, il numero delle foglie nel sottoalbero radicato in $x$.
+Indicare quali campi occorre aggiungere ai nodi.
+Fornire il codice per la funzione `leaves(x)` che restituisce il numero delle foglie nel sottoalbero radicato in $x$ e per la procedura di inserimento di un nodo `insert(T, z)`.
+Per entrambe valutare la complessità.

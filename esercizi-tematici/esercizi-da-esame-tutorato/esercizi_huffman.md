@@ -11,6 +11,7 @@ $$
 \text{frequenza} & 37 & 4 & 12 & 6 & 9 & 17 & 8
 \end{array}
 $$
+
 Spiegare il processo di costruzione del codice.
 
 ---

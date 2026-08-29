@@ -26,7 +26,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Domanda C — `diff(T)` | Da completare |
 | Esercizio 1 — Albero `k-bounded` | Da completare |
 | Esercizio 1 — `union(A1,A2,n)` con max-heap | Da completare |
-| Esercizio - Indice stabile in array ordinato | [Completato](stab,md) |
+| Esercizio - Indice stabile in array ordinato | [Completato](stab.md) |
 | DP su stringhe con Memoization | [Completato](dp_stringhe_memoizzazione.md) |
 | Domanda A - Ricorrenza con Master Theorem | [Completato](domanda_master_theorem.md) |
 | Domanda B - Activity Selection Greedy Sel | [Completato](greedy_sel.md) |

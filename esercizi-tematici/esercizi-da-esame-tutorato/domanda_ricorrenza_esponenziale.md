@@ -89,4 +89,4 @@ $$
 T(n) \approx 2 \cdot 2 \cdot \left(\frac{3}{2}\right)^n = 4 \cdot \left(\frac{3}{2}\right)^n - 4 = \Theta\left(1.5^n\right)
 $$
 
-Avendo dimostrato che la ricorrenza cresce esattamente come $\Theta(1.5^n)$, possiamo concludere con certezza matematica che non può valere $T(n) = \Omega(2^n)$, poiché $1.5 < 2$ e quindi la funzione asintoticamente è strettamente più lenta (appartiene a $o(2^n)$). L'affermazione è pertanto **falsa**.
+Avendo dimostrato che la ricorrenza cresce esattamente come $\Theta(1.5^n)$, possiamo concludere con certezza matematica che non può valere $T(n) = \Omega(2^n)$, poiché $1.5 < 2$ e quindi la funzione asintoticamente è strettamente più lenta. L'affermazione è pertanto **falsa**.

@@ -2,8 +2,8 @@
 
 Definire formalmente la classe $\Theta(g(n))$. Dimostrare le seguenti affermazioni o fornire un controesempio:
 
-(i) se $f(n), f'(n) \in \Theta(g(n))$ allora $f(n) + f'(n) \in \Theta(g(n))$
-(ii) se $f(n), f'(n) \in \Theta(g(n))$ allora $f(n) \cdot f'(n) \in \Theta(g(n))$
+- (i) se $f(n), f'(n) \in \Theta(g(n))$ allora $f(n) + f'(n) \in \Theta(g(n))$
+- (ii) se $f(n), f'(n) \in \Theta(g(n))$ allora $f(n) \cdot f'(n) \in \Theta(g(n))$
 
 ---
 

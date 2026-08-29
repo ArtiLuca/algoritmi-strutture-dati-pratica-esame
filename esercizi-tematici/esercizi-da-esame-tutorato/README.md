@@ -18,11 +18,11 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 |---|---|
 | Domanda A — Ricorrenza `T(n)=4T(n/2)+n^3+1` | [Completato](ricorrenza_master_theorem_domanda_A.md) |
 | Domanda A — Ricorrenza `T(n)=T(n-1)+2n-1` | Da completare |
-| Domanda A — Proprietà di `Θ(g(n))` | Da completare |
+| Domanda A — Proprietà di `Θ(g(n))` | [Completato](domanda_classe_theta.md) |
 | Domanda A - Proprietà di classi $\mathcal{O}$ e $\Omega$ | [Completato](notazione_asintotica_dimostrazione_domanda_A.md) |
 | Esercizio Ricorrenze (Sostituzione & Master Theorem) | [Completato](esercizio_ricorrenze_sostituzione_master.md) |
 | Esercizio 1 — `triplet(A)` | [Completato](triplet.md) |
-| Domanda B — Albero Binario di Ricerca | Da completare |
+| Domanda B — Albero Binario di Ricerca | [Completato](domanda_teoria_abr.md) |
 | Domanda C — `diff(T)` | Da completare |
 | Esercizio 1 — Albero `k-bounded` | Da completare |
 | Esercizio 1 — `union(A1,A2,n)` con max-heap | Da completare |
@@ -33,15 +33,16 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Domanda B - Algoritmo di Huffman | [Da Completare](domanda_huffman_1.md) |
 | Domanda B - Hashing con doppio hashing | [Completato](double_hashing.md) |
 | Esercizio 2 - Scheduling greedy e somma dei tempi di completamento | [Completato](schedule_opt.md) |
-| Domanda A — Ricorrenze e classe Ω esponenziale | [Da Completare] |
-| Domanda B — Longest Common Subsequence (LCS) | [Da Completare]|
+| Domanda A — Ricorrenze e classe Ω esponenziale | [Completato](domanda_ricorrenza_esponenziale.md) |
+| Domanda B — Longest Common Subsequence (LCS) | [Completato](domanda_LCS.md) |
 | Esercizio 1 — Ordinamento in loco (TriSort) | [Da Completare] |
-| Esercizio 2 — Algoritmo greedy per il resto delle monete | [Da Completare] |
+| Esercizio 2 — Algoritmo greedy per il resto delle monete | [Completato](greedy_monete.md) |
 | Domanda A — Ricorrenza con metodo di sostituzione | [Completato](domanda_ricorrenza_sostituzione.md) |
 | Esercizio 2 - Programmazione dinamica bottom-up | [Completato](esercizio_dp_bottom_up_esame.md) |
 | Esercizio 1 — Split con divide et impera | [Completato](split.md) | 
 | Esercizio 2 — Programmazione dinamica (DP 2023) | [Completato](esercizio_dp_bottom_up_stringhe.md) |
 | Domanda A — Classe $\Omega$ | [Completato](notazione_asintotica_dimostrazione_domanda_B.md) | 
+| Esercizi Huffman | [Completato](esercizi_huffman.md) |
 
 ---
 
@@ -507,3 +508,25 @@ $$f(n) + g(n) = \Omega(n^2 + g(n))$$
 Vale anche la seguente?
 $$f(n) - g(n) = \Omega(n^2 - g(n))$$
 Dimostrarlo oppure fornire un controesempio.
+
+---
+
+### Esercizi Huffman
+
+**Esercizio 1**
+
+Indicare il codice prefisso ottenuto utilizzando l’algoritmo di Huffman per l’alfabeto $\{a, b, c, d, e, f, g\}$, supponendo che ogni simbolo appaia con le seguenti frequenze:
+
+$$
+\begin{array}{c|ccccccc}
+& a & b & c & d & e & f & g \\
+\hline
+\text{frequenza} & 37 & 4 & 12 & 6 & 9 & 17 & 8
+\end{array}
+$$
+
+Spiegare il processo di costruzione del codice.
+
+**Esercizio 2**
+
+Dato un file sull'alfabeto $\{A,B,C,D,E\}$ con frequenze, rispettivamente, 12%, 11%, 53%, 10%, 14%, si determinino le 5 codeword ottenute con la codifica di Huffman.

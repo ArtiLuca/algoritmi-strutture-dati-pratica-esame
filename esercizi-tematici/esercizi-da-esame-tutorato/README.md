@@ -26,6 +26,7 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Domanda C — `diff(T)` | Da completare |
 | Esercizio 1 — Albero `k-bounded` | Da completare |
 | Esercizio 1 — `union(A1,A2,n)` con max-heap | Da completare |
+| Esercizio - Indice stabile in array ordinato | [Completato](stab,md) |
 | DP su stringhe con Memoization | [Completato](dp_stringhe_memoizzazione.md) |
 | Domanda A - Ricorrenza con Master Theorem | [Completato](domanda_master_theorem.md) |
 | Domanda B - Activity Selection Greedy Sel | [Completato](greedy_sel.md) |
@@ -194,6 +195,14 @@ possibilmente non in questo ordine, ovvero l'elemento $2$ non è duplicato.
 Valutare la complessità della funzione definita.
 
 Qualora il risultato $A$ potesse contenere duplicati ci sarebbero soluzioni più efficienti?
+
+---
+
+### Esercizio 1 — Indice stabile
+
+Dato un array $A[1 \dots n]$ di interi, un indice $i$ si dice stabile se $A[i] = i$.
+Realizzare una procedura `stab(A, n)` che, dato in input un array $A[1 \dots n]$ di interi distinti, ordinato in modo crescente, ritorna un indice stabile, se esiste, e ritorna $0$ altrimenti.
+Dimostrarne la correttezza e valutarne la complessità.
 
 ---
 

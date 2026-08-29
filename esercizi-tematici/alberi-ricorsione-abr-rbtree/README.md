@@ -27,7 +27,7 @@ L'obiettivo è allenarsi a scrivere soluzioni complete in stile esame, con pseud
 | Domanda 36 — Predecessore in un ABR | [Completato](pred.md) |
 | Domanda 37 — `IsABR(A)` su rappresentazione array | Da completare |
 | Domanda 38 — Inserimento in ABR con campo `pred` | Da completare |
-| Esercizio 14 — Costruzione di ABR di altezza minima | Da completare |
+| Esercizio 14 — Costruzione di ABR di altezza minima [Completato](bst.md) |
 | Esercizio 15 — Inserimento in ABR con campo `even` | Da completare |
 | Esercizio 16 — Stampa ordinata di un intervallo di chiavi | Da completare |
 | Domanda 39 — Altezza nera | Da completare |

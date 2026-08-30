@@ -78,6 +78,6 @@ $$
 T(n) = \Theta(n^{\log_b a}) = \Theta(n)
 $$
 
-*(Questo è anche logicamente sensato: l'algoritmo visita e crea esattamente una volta ciascuno degli $n$ nodi).*
+*(Questo è anche logicamente sensato: l'algoritmo visita e crea esattamente una volta ciascuno degli* $n$ *nodi).*
 
 - **Complessità Spaziale:** Lo spazio ausiliario è dato esclusivamente dallo stack delle chiamate ricorsive. Essendo garantito che l'albero prodotto è perfettamente bilanciato, la profondità massima della ricorsione (e quindi lo spazio in memoria) sarà pari all'altezza dell'albero, ovvero $\mathcal{O}(\log n)$.

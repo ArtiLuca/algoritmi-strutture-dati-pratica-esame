@@ -70,10 +70,15 @@ $$
 
 Possiamo risolverla con il **Master Theorem**, avendo parametri $a = 1, b = 2$ e $f(n) = \Theta(1)$.
 Calcoliamo lo spartiacque asintotico:
-$$n^{\log_b a} = n^{\log_2 1} = n^0 = 1 = \Theta(1)$$
+
+$$
+n^{\log_b a} = n^{\log_2 1} = n^0 = 1 = \Theta(1)
+$$
 
 Poiché $f(n) = \Theta(n^{\log_b a})$, ricadiamo esattamente nel **CASO 2** del Master Theorem. Moltiplicando per $\log n$, la complessità temporale risulta essere:
+
 $$
 T(n) = \Theta(n^{\log_b a} \cdot \log n) = \Theta(1 \cdot \log n) = \Theta(\log n)
 $$
-*(La complessità spaziale ammonta a $\mathcal{O}(\log n)$ per lo stack delle chiamate ricorsive, che può essere abbattuta a $\mathcal{O}(1)$ implementando una variante iterativa).*
+
+*(La complessità spaziale ammonta a* $\mathcal{O}(\log n)$ *per lo stack delle chiamate ricorsive, che può essere abbattuta a* $\mathcal{O}(1)$ *implementando una variante iterativa).*

@@ -28,7 +28,7 @@ $$
 ### ii. Dimostrazione (Argomento di Scambio)
 
 Dimostriamo la correttezza della scelta greedy tramite un argomento di scambio.
-Supponiamo per assurdo che esista una soluzione ottima $\sigma^^{\ast}$ che *non* rispetta la nostra regola greedy. Questo significa che in $\sigma^{\ast}$ deve esistere almeno una coppia di file adiacenti in cui un file $f_j$ precede un file $f_i$ contravvenendo alla regola, ovvero tale che $\frac{p_i}{s_i} > \frac{p_j}{s_j}$,
+Supponiamo per assurdo che esista una soluzione ottima $\sigma^{\ast}$ che *non* rispetta la nostra regola greedy. Questo significa che in $\sigma^{\ast}$ deve esistere almeno una coppia di file adiacenti in cui un file $f_j$ precede un file $f_i$ contravvenendo alla regola, ovvero tale che $\frac{p_i}{s_i} > \frac{p_j}{s_j}$,
 che implica $p_i s_j - p_j s_i > 0$.
 
 Sia $W$ la somma delle dimensioni di tutti i file che precedono la coppia $(f_j, f_i)$ in $\sigma^{\ast}$.

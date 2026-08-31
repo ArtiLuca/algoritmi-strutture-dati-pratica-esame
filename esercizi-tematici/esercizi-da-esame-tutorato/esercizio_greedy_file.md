@@ -60,7 +60,7 @@ Per la nostra ipotesi iniziale sui due file scambiati, sappiamo che $p_i s_j - p
 Di conseguenza, 
 
 $$
-\text{Costo}(\sigma^*) - \text{Costo}(\sigma') > 0 \implies \text{Costo}(\sigma') < \text{Costo}(\sigma^*)
+\text{Costo}(\sigma^{\ast}) - \text{Costo}(\sigma^{\prime}) > 0 \implies \text{Costo}(\sigma^{\prime}) < \text{Costo}(\sigma^{\ast})
 $$
 
 Ma questo è un assurdo! Abbiamo appena trovato un ordine $\sigma'$ che ha un costo strettamente inferiore a $\sigma^*$, contraddicendo l'ottimalità di $\sigma^*$.

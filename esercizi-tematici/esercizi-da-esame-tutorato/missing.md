@@ -12,7 +12,7 @@ Fornire pseudocodice, dimostrazione di correttezza e complessità.
 
 Assumendo che l’array $A[1\dots n]$ contenga interi distinti sempre crescenti, stiamo cercando l’elemento $k \in \{1, 2, \dots, n+1\}$ tale che $k \notin A$. Essendo che gli elementi partono idealmente da $1$ e crescono di $+1$, finché non incontriamo l'elemento mancante avremo un allineamento perfetto tra gli indici e i valori, ovvero $A[i] = i$.
 
-Non appena manca un elemento, tutti i valori successivi "scalano" di una posizione rispetto al loro indice ideale, per cui avremo $A[i] > i$. Questo ci fornisce un predicato formidabile per una ricerca binaria:
+Non appena manca un elemento, tutti i valori successivi "scalano" di una posizione rispetto al loro indice ideale, per cui avremo $A[i] > i$. Questo ci fornisce un predicato per una ricerca binaria:
 - Se $A[q] == q$, l'elemento mancante si trova sicuramente alla destra di $q$.
 - Se $A[q] > q$, l'elemento mancante è proprio $q$ oppure si trova alla sinistra di $q$.
 

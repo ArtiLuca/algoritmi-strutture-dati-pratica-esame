@@ -87,4 +87,4 @@ $$
 
 dove $n$ è il numero totale di nodi presenti nell'albero.
 
-- **Complessità Spaziale:** Lo spazio ausiliario è determinato dallo stack delle chiamate ricorsive. Nel caso pessimo sarà proporzionale all'altezza dell'albero, ovvero $\mathcal{O}(h)$. (Se l'albero in input risultasse essere un RB-Tree valido, potremmo dire con precisione $\mathcal{O}(\log n)$, ma trattandosi di una funzione di validazione che potrebbe ricevere in input alberi del tutto degeneri, il limite corretto da dichiarare è $\mathcal{O}(h)$).
+- **Complessità Spaziale:** Lo spazio ausiliario è determinato dallo stack delle chiamate ricorsive. Nel caso pessimo sarà proporzionale all'altezza dell'albero, ovvero $\mathcal{O}(h)$. (Se l'albero in input risultasse essere un RB-Tree valido, potremmo dire con precisione $\mathcal{O}(\log n)$, ma trattandosi di una funzione di validazione che potrebbe ricevere in input alberi del tutto degeneri, il limite corretto da dichiarare è $\mathcal{O}(h)$.

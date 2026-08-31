@@ -44,6 +44,13 @@ Ogni esercizio completato contiene una soluzione in stile esame, con idea dell'a
 | Esercizio 2 — Programmazione dinamica (DP 2023) | [Completato](esercizio_dp_bottom_up_stringhe.md) |
 | Domanda A — Classe $\Omega$ | [Completato](notazione_asintotica_dimostrazione_domanda_B.md) | 
 | Esercizi Huffman | [Completato](esercizi_huffman.md) |
+| Domanda B — Alberi Red-Black | [Completato](domanda_rb_tree.md) |
+| Domanda A - Domanda Classe Omega | [Completato](domanda_classe_omega.md) |
+| Esercizio - Reverse Print Max Heap | [Completato](reverse_print_max_heap.md) |
+| Domanda B - Domanda Doppio Hashing con m=11 | [Completato](domanda_doppio_hashing.md) |
+| Esercizio 2 - Greedy Costo Minimo File Sequenziali | [Completato](esercizio_greedy_file.md) |
+| Esercizio 1 - Missing Divide-et-Impera | [Completato](missing.md) |
+| Domanda B - Domanda Teoria Huffman | [Completato](domanda_huffman.md) |
 
 ---
 
@@ -539,3 +546,84 @@ Spiegare il processo di costruzione del codice.
 **Esercizio 2**
 
 Dato un file sull'alfabeto $\{A,B,C,D,E\}$ con frequenze, rispettivamente, 12%, 11%, 53%, 10%, 14%, si determinino le 5 codeword ottenute con la codifica di Huffman.
+
+---
+
+### Domanda B — Alberi Red-Black 
+
+Enunciare le proprietà degli alberi Red-Black.
+Successivamente, spiegare come verificare ricorsivamente se un albero binario di ricerca colorato soddisfa le seguenti proprietà:
+1. nessun nodo rosso ha un figlio rosso;
+2. ogni cammino da un nodo a una foglia nil discendente contiene lo stesso numero di nodi neri.
+
+La procedura ricorsiva deve restituire entrambe le seguenti informazioni: validità del sottoalbero, e altezza nera del sottoalbero.
+Valutare la complessità.
+
+---
+
+### Domanda A — Dimostrazione Formale con Notazione Asintotica
+
+Definire formalmente la classe $\mathcal{O}(g(n))$.
+Dimostrare oppure confutare le seguenti affermazioni.
+
+- **(i)** Se $f(n) = \mathcal{O}(g(n))$ e $h(n) = \mathcal{O}(g(n))$, allora $f(n) + h(n) = \mathcal{O}(g(n))$.
+- **(ii)** Se $f(n) = \mathcal{O}(g(n))$, allora $2^{f(n)} = \mathcal{O}(2^{g(n)})$.
+
+Per ciascuna affermazione, fornire una dimostrazione usando la definizione formale oppure un controesempio.
+
+---
+
+### Esercizio 1 — Ordinamento usando Strutture Note
+
+Sia dato un array $A[1..n]$ che rappresenta un max-heap valido.
+Realizzare un algoritmo che stampi tutti gli elementi di $A$ in ordine decrescente senza modificare $A$.
+Fornire pseudocodice, dimostrazione di correttezza, complessità temporale e complessità spaziale ausiliaria.
+
+---
+
+### Domanda B — Tabelle Hash
+
+Si consideri una tabella hash di dimensione $m = 11$ che usa indirizzamento aperto con doppio hashing dove $h_1(k) = k \bmod 11$ e $h_2(k) = 1 + (k \bmod 9)$.
+Inserire nell'ordine le seguenti chiavi: $22, 31, 4, 15, 28, 17$.
+
+Mostrare la tabella finale.
+
+Successivamente, rispondere alla seguente domanda: perché è utile che $h_2(k)$ non sia mai uguale a zero?
+
+---
+
+### Esercizio 2 — Greedy con Argomento di Scambio
+
+Si hanno $n$ file memorizzati in sequenza. Il file $i$ ha dimensione $s_i > 0$ e probabilità di accesso $p_i > 0$.
+
+Dato un ordine $\sigma$, il costo atteso di accesso è: 
+
+$\sum_i p_i C_i(\sigma)$,
+
+dove $C_i(\sigma)$ è la somma delle dimensioni dei file che precedono il file $i$ nell'ordine, più la dimensione del file $i$ stesso.
+
+Trovare un ordinamento dei file che minimizzi il costo atteso.
+Fornire la regola greedy, una dimostrazione tramite scambio di elementi adiacenti e la complessità.
+
+---
+
+### Esercizio 1 — Missing(A,n)
+
+Sia dato un array $A[1..n]$ ordinato in modo crescente, contenente $n$ interi distinti scelti dall'insieme $\{1, 2, \dots, n+1\}$. 
+Esattamente un numero dell'insieme non compare in $A$.
+
+Realizzare un algoritmo divide et impera `Missing(A, n)` che restituisca il numero mancante in tempo $\mathcal{O}(\log n)$.
+Fornire pseudocodice, dimostrazione di correttezza e complessità.
+
+---
+
+### Esercizio — 9 punti
+
+Si consideri un file definito sull'alfabeto $\{a, b, c\}$ con frequenze $f(a), f(b), f(c)$.
+Per ognuna delle seguenti codifiche determinare, se esiste, un opportuno assegnamento di valori alle $3$ frequenze per cui l'algoritmo di Huffman restituisca tale codifica, oppure argomentare che tale codifica non è mai ottenibile.
+
+1. $e(a)=0,\qquad e(b)=10,\qquad e(c)=11$
+2. $e(a)=1,\qquad e(b)=0,\qquad e(c)=11$
+3. $e(a)=10,\qquad e(b)=01,\qquad e(c)=00$
+
+---

@@ -57,7 +57,11 @@ $$
 $$
 
 Per la nostra ipotesi iniziale sui due file scambiati, sappiamo che $p_i s_j - p_j s_i > 0$.
-Di conseguenza, $\text{Costo}(\sigma^*) - \text{Costo}(\sigma') > 0 \implies \text{Costo}(\sigma') < \text{Costo}(\sigma^*)$.
+Di conseguenza, 
+
+$$
+\text{Costo}(\sigma^*) - \text{Costo}(\sigma') > 0 \implies \text{Costo}(\sigma') < \text{Costo}(\sigma^*)
+$$
 
 Ma questo è un assurdo! Abbiamo appena trovato un ordine $\sigma'$ che ha un costo strettamente inferiore a $\sigma^*$, contraddicendo l'ottimalità di $\sigma^*$.
 Quindi, una soluzione ottima non può contenere "inversioni" rispetto alla regola greedy. Possiamo perciò concludere che l'ordinamento prodotto dalla regola greedy è sempre globalmente ottimo.
